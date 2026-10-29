@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>晨霧美睫 Morning Mist Lash｜預約制美睫工作室（虛構示範站）</title>
+<meta name="description" content="虛構示範：晨霧美睫，一人預約制美睫工作室。本頁為「小門牌」範例網站，店名與所有資訊皆為虛構。">
+<meta property="og:title" content="晨霧美睫 Morning Mist Lash（虛構示範站）">
+<meta property="og:description" content="一人預約制美睫工作室。範例網站，資訊皆為虛構。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F1F6;--paper:#FFFFFF;--ink:#3A3448;--soft:#7A7289;--lilac:#B9A9D6;--lilac-d:#7E6AA8;--mist:#E6E0EF;--sage:#A7B8A8;--line:#DDD6E6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.serif{font-family:"Noto Serif TC","Songti TC",serif}
+.en{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;letter-spacing:.04em}
+.demo-bar{display:flex;align-items:center;justify-content:center;gap:10px;background:#2F4F3A;color:#F6F0E2;font-size:12.5px;line-height:1.5;padding:8px 14px;text-align:left}
+.demo-bar img{width:28px;height:28px;border-radius:7px;flex:none;object-fit:cover}
+.demo-bar a{color:#F6F0E2;font-weight:700}
+header.nav{position:sticky;top:0;z-index:20;background:rgba(244,241,246,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1040px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;gap:12px}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.15}
+.brand b{font-family:"Noto Serif TC",serif;font-weight:600;font-size:19px;letter-spacing:.18em}
+.brand span{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:13px;color:var(--lilac-d);letter-spacing:.08em}
+nav ul{display:flex;gap:26px;list-style:none;font-size:14px;letter-spacing:.08em}
+nav a{text-decoration:none;color:var(--soft)}nav a:hover{color:var(--lilac-d)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 26px;border-radius:999px;font-weight:500;text-decoration:none;font-size:15px;letter-spacing:.1em;border:1px solid transparent;transition:.2s}
+.btn-main{background:var(--ink);color:#fff}.btn-main:hover{background:var(--lilac-d)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}.btn-ghost:hover{background:var(--paper)}
+.btn-sm{padding:7px 16px;font-size:13px}
+.wrap{max-width:1040px;margin:auto;padding:0 20px}
+section{padding:64px 0}
+.eyebrow{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--lilac-d);font-size:18px;letter-spacing:.08em}
+h2{font-family:"Noto Serif TC",serif;font-weight:600;font-size:26px;letter-spacing:.12em;margin:2px 0 10px}
+.lead{color:var(--soft);font-size:15px;max-width:560px}
+/* hero */
+.hero{padding:40px 0 56px;overflow:hidden}
+.hero-in{display:grid;gap:30px;align-items:center}
+.arch{position:relative;width:min(62vw,300px);aspect-ratio:3/4;margin:0 auto;border-radius:999px 999px 24px 24px;background:radial-gradient(120% 80% at 30% 20%,#fff 0%,#EDE6F5 40%,#CFC2E4 75%,#B9A9D6 100%);box-shadow:0 30px 60px -30px rgba(126,106,168,.6)}
+.arch:before{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.8);border-radius:999px 999px 16px 16px}
+.lash{position:absolute;left:50%;top:50%;width:62%;transform:translate(-50%,-30%)}
+.arch .tagline{position:absolute;bottom:26px;left:0;right:0;text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;color:#5D4F7A;font-size:20px}
+.dot{position:absolute;border-radius:50%;background:#fff;opacity:.7}
+.hero h1{font-family:"Noto Serif TC",serif;font-weight:600;font-size:34px;line-height:1.45;letter-spacing:.1em}
+.hero h1 em{font-style:normal;color:var(--lilac-d)}
+.hero p{color:var(--soft);margin:14px 0 24px;font-size:15.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chip{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13px;color:var(--soft)}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+/* price */
+.menu{display:grid;gap:16px;margin-top:26px}
+.card{background:var(--paper);border-radius:22px;padding:22px 22px 18px;border:1px solid var(--line)}
+.card h3{font-family:"Noto Serif TC",serif;font-weight:600;font-size:17px;letter-spacing:.12em;display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.card h3:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lilac)}
+.item{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.item:last-child{border-bottom:0}
+.item b{font-weight:500;font-size:15.5px}
+.item .p{font-family:"Noto Serif TC",serif;font-weight:600;font-size:17px;color:var(--ink);white-space:nowrap}
+.item small{grid-column:1/-1;color:var(--soft);font-size:13px;line-height:1.6}
+.note{font-size:13px;color:var(--soft);margin-top:14px}
+/* steps */
+.steps{display:grid;gap:12px;margin-top:24px;counter-reset:s}
+.step{display:flex;gap:16px;background:var(--paper);border-radius:18px;padding:16px 18px;border:1px solid var(--line)}
+.step:before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:28px;color:var(--lilac-d);line-height:1;min-width:34px}
+.step b{display:block;font-weight:500}
+.step span{color:var(--soft);font-size:14px}
+/* care */
+.care{background:var(--mist)}
+.care-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.tip{background:rgba(255,255,255,.75);border-radius:18px;padding:16px}
+.tip i{display:block;font-style:normal;font-size:22px;margin-bottom:4px}
+.tip b{display:block;font-size:15px;font-weight:500}
+.tip span{font-size:13px;color:var(--soft);line-height:1.6;display:block;margin-top:2px}
+.book{display:grid;gap:12px;margin-top:22px}
+.book li{list-style:none;background:var(--paper);border-left:3px solid var(--lilac);border-radius:4px 14px 14px 4px;padding:12px 16px;font-size:14.5px}
+.book li b{font-weight:500}
+/* visit */
+.visit-grid{display:grid;gap:18px;margin-top:24px}
+.info{background:var(--paper);border-radius:22px;padding:20px 22px;border:1px solid var(--line)}
+.info dl{display:grid;grid-template-columns:72px 1fr;gap:10px 10px;font-size:14.5px}
+.info dt{color:var(--lilac-d);font-weight:500;letter-spacing:.1em}
+.hours{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:4px}
+.hours td{padding:7px 0;border-bottom:1px dashed var(--line)}
+.hours td:last-child{text-align:right}
+.hours .off{color:#B07A8E}
+.map{position:relative;height:260px;border-radius:22px;overflow:hidden;background:#ECE8F0;border:1px solid var(--line)}
+.map .road{position:absolute;background:#fff}
+.map .pin{position:absolute;left:54%;top:44%;transform:translate(-50%,-100%);text-align:center}
+.map .pin i{display:block;width:34px;height:34px;margin:0 auto;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--lilac-d);box-shadow:0 6px 12px rgba(58,52,72,.3)}
+.map .pin span{display:inline-block;margin-top:8px;background:var(--ink);color:#fff;font-size:12px;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.map .lbl{position:absolute;font-size:11px;color:#9B93A8;letter-spacing:.1em}
+.map .fake{position:absolute;right:10px;bottom:10px;font-size:11px;background:rgba(255,255,255,.85);padding:2px 8px;border-radius:6px;color:var(--soft)}
+.park{position:absolute;left:8%;top:62%;width:26%;height:24%;border-radius:12px;background:#D7E2D6}
+/* faq */
+details{background:var(--paper);border-radius:16px;padding:14px 18px;border:1px solid var(--line);margin-top:10px}
+summary{cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary:after{content:"+";color:var(--lilac-d);font-size:20px;line-height:1.2}
+details[open] summary:after{content:"−"}
+details p{color:var(--soft);font-size:14px;margin-top:8px}
+footer{background:var(--ink);color:#D9D3E4;padding:40px 0 100px;font-size:13px;text-align:center}
+footer b{font-family:"Noto Serif TC",serif;font-size:18px;letter-spacing:.2em;color:#fff;font-weight:600}
+footer .demo{margin-top:16px;opacity:.75;line-height:1.7}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:flex;gap:8px;background:rgba(58,52,72,.92);backdrop-filter:blur(8px);padding:8px;border-radius:999px}
+.sticky a{flex:1;text-align:center;color:#fff;text-decoration:none;font-size:14px;padding:9px 0;border-radius:999px;letter-spacing:.08em}
+.sticky a.main{background:var(--lilac);color:var(--ink);font-weight:700}
+@media(max-width:759px){nav ul{display:none}}
+@media(min-width:760px){
+ .hero{padding:72px 0 84px}
+ .hero-in{grid-template-columns:1.1fr .9fr}
+ .hero h1{font-size:46px}
+ .menu{grid-template-columns:1fr 1fr}
+ .steps{grid-template-columns:repeat(4,1fr)}
+ .step{flex-direction:column;gap:6px}
+ .care-grid{grid-template-columns:repeat(4,1fr)}
+ .visit-grid{grid-template-columns:1fr 1fr}
+ .map{height:100%;min-height:320px}
+ .sticky{display:none}
+ footer{padding-bottom:40px}
+ h2{font-size:30px}
+}
+</style>
+</head>
+<body>
+<div class="demo-bar"><img src="logo.jpg" alt="小門牌 logo"><div>此為小門牌範例網站，店家為虛構，僅供展示。<span style="white-space:nowrap">想做一個？IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">@xiaomenpai</a></span></div></div>
+
+<header class="nav"><div class="nav-in">
+ <a class="brand" href="#top"><b>晨霧美睫</b><span>Morning Mist Lash</span></a>
+ <nav><ul><li><a href="#menu">價目表</a></li><li><a href="#first">第一次來</a></li><li><a href="#care">保養與預約</a></li><li><a href="#visit">營業時間</a></li><li><a href="#faq">常見問題</a></li></ul></nav>
+ <a class="btn btn-main btn-sm" href="#care">預約方式</a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-in">
+ <div>
+  <div class="eyebrow">one-to-one lash studio</div>
+  <h1>睜開眼，<br>就是<em>剛剛好</em>的自己</h1>
+  <p>一人預約制美睫工作室。每次只服務一位客人，<br>先聊眼型和習慣，再決定長度和濃密度。</p>
+  <div class="chips"><span class="chip">一人預約制</span><span class="chip">單根嫁接</span><span class="chip">角蛋白翹睫</span><span class="chip">附術後保養卡</span></div>
+  <div class="cta"><a class="btn btn-main" href="#menu">看價目表</a><a class="btn btn-ghost" href="#care">怎麼預約</a></div>
+ </div>
+ <div class="arch" aria-hidden="true">
+  <span class="dot" style="width:10px;height:10px;left:22%;top:22%"></span><span class="dot" style="width:6px;height:6px;left:70%;top:30%"></span><span class="dot" style="width:8px;height:8px;left:62%;top:16%"></span>
+  <svg class="lash" viewBox="0 0 200 90" fill="none" stroke="#3A3448" stroke-linecap="round">
+   <path d="M20 50 Q100 95 180 50" stroke-width="3.2"/>
+   <g stroke-width="2.2"><path d="M34 58 L24 38"/><path d="M48 64 L42 40"/><path d="M63 68 L60 38"/><path d="M79 71 L78 35"/><path d="M95 72 L96 33"/><path d="M111 72 L114 34"/><path d="M127 70 L133 37"/><path d="M142 66 L151 40"/><path d="M156 60 L168 42"/></g>
+  </svg>
+  <div class="tagline">soft · natural · light</div>
+ </div>
+</div></section>
+
+<section id="menu" style="padding-top:20px"><div class="wrap">
+ <div class="eyebrow">menu</div>
+ <h2>價目表</h2>
+ <p class="lead">價格已含卸除舊睫毛以外的所有費用。不確定選哪一款，預約時說一聲，現場再一起決定。</p>
+ <div class="menu">
+  <div class="card"><h3>單根嫁接</h3>
+   <div class="item"><b>自然款｜80–100 根</b><span class="p">NT$1,200</span><small>像沒化妝但精神很好，上班上課都適合。約 75 分鐘。</small></div>
+   <div class="item"><b>日常款｜120–140 根</b><span class="p">NT$1,500</span><small>最多人選，眼妝感明顯一點。約 90 分鐘。</small></div>
+   <div class="item"><b>濃密款｜160 根以上</b><span class="p">NT$1,800</span><small>喜歡有存在感的眼神。約 110 分鐘。</small></div>
+  </div>
+  <div class="card"><h3>翹睫與其他</h3>
+   <div class="item"><b>角蛋白翹睫</b><span class="p">NT$1,300</span><small>用自己的睫毛，不嫁接。約 60 分鐘，可維持 4–6 週。</small></div>
+   <div class="item"><b>補睫｜3 週內</b><span class="p">NT$800 起</span><small>本店做的款式，依剩餘狀況調整價格。</small></div>
+   <div class="item"><b>卸除睫毛</b><span class="p">NT$300</span><small>他店嫁接卸除；接著在本店重做則免費。</small></div>
+  </div>
+ </div>
+ <p class="note">＊以上為範例價格，店家與價格皆為虛構。</p>
+</div></section>
+
+<section id="first" style="padding-top:20px"><div class="wrap">
+ <div class="eyebrow">first visit</div>
+ <h2>第一次來，會這樣進行</h2>
+ <div class="steps">
+  <div class="step"><div><b>聊眼型與習慣</b><span>平常戴眼鏡嗎？會不會趴睡？一起挑長度和捲度。</span></div></div>
+  <div class="step"><div><b>卸妝、清潔睫毛</b><span>眼妝不用先卸，現場幫你清乾淨。</span></div></div>
+  <div class="step"><div><b>閉眼休息嫁接</b><span>躺著閉眼就好，很多人會直接睡著。</span></div></div>
+  <div class="step"><div><b>照鏡子、帶走保養卡</b><span>滿意再結帳，附一張術後保養提醒。</span></div></div>
+ </div>
+</div></section>
+
+<section id="care" class="care"><div class="wrap">
+ <div class="eyebrow">aftercare &amp; booking</div>
+ <h2>術後保養</h2>
+ <p class="lead">做完之後這樣照顧，睫毛可以撐比較久。</p>
+ <div class="care-grid">
+  <div class="tip"><i>💧</i><b>6 小時內不碰水</b><span>讓膠完全乾燥，洗臉先避開眼睛。</span></div>
+  <div class="tip"><i>🪮</i><b>每天輕輕梳</b><span>用睫毛刷由下往上梳順。</span></div>
+  <div class="tip"><i>🧴</i><b>避開油性卸妝</b><span>改用水性卸妝，不要用力搓。</span></div>
+  <div class="tip"><i>🌙</i><b>盡量不要趴睡</b><span>側睡、趴睡容易壓歪。</span></div>
+ </div>
+ <h2 style="margin-top:40px">預約須知</h2>
+ <ul class="book">
+  <li><b>預約方式：</b>IG 私訊或電話預約，告訴我們想要的日期、時段和款式。</li>
+  <li><b>改期：</b>請在前一天晚上 9 點前通知，可免費改期一次。</li>
+  <li><b>遲到：</b>超過 15 分鐘可能需要改做較短的款式，或另約時間。</li>
+  <li><b>來之前：</b>當天請不要刷睫毛膏、不要戴隱形眼鏡。</li>
+ </ul>
+</div></section>
+
+<section id="visit"><div class="wrap">
+ <div class="eyebrow">visit us</div>
+ <h2>營業時間與位置</h2>
+ <div class="visit-grid">
+  <div class="info">
+   <table class="hours">
+    <tr><td>週二 – 週五</td><td>11:00 – 20:00</td></tr>
+    <tr><td>週六 – 週日</td><td>10:00 – 18:00</td></tr>
+    <tr><td>週一</td><td class="off">公休</td></tr>
+   </table>
+   <dl style="margin-top:18px">
+    <dt>地址</dt><dd>台北市虛構區晨霧路 18 巷 3 號 2 樓（範例地址）</dd>
+    <dt>交通</dt><dd>捷運「範例站」2 號出口步行約 5 分鐘</dd>
+    <dt>電話</dt><dd>02-0000-0000（範例號碼）</dd>
+    <dt>IG</dt><dd>@morningmist.lash（範例帳號）</dd>
+   </dl>
+  </div>
+  <div class="map" aria-label="示意地圖">
+   <div class="park"></div>
+   <div class="road" style="left:0;right:0;top:38%;height:18px"></div>
+   <div class="road" style="left:0;right:0;top:72%;height:10px"></div>
+   <div class="road" style="top:0;bottom:0;left:40%;width:16px"></div>
+   <div class="road" style="top:0;bottom:0;left:78%;width:10px"></div>
+   <span class="lbl" style="left:6%;top:31%">晨霧路</span>
+   <span class="lbl" style="left:35%;top:76%;writing-mode:vertical-rl">18 巷</span>
+   <span class="lbl" style="left:12%;top:70%">小公園</span>
+   <div class="pin"><i></i><span>晨霧美睫 2F</span></div>
+   <div class="fake">示意圖・非真實地點</div>
+  </div>
+ </div>
+</div></section>
+
+<section id="faq" style="padding-top:20px"><div class="wrap">
+ <div class="eyebrow">faq</div>
+ <h2>常見問題</h2>
+ <details><summary>嫁接會痛嗎？</summary><p>過程中只需要閉眼躺著，不會痛。如果眼睛容易敏感，預約時先告訴我們。</p></details>
+ <details><summary>大概可以維持多久？</summary><p>一般約 3–4 週，跟睫毛生長週期和保養習慣有關，建議 3 週左右補睫。</p></details>
+ <details><summary>戴眼鏡可以做嗎？</summary><p>可以，會幫你挑不容易碰到鏡片的長度。</p></details>
+ <details><summary>可以刷卡或轉帳嗎？</summary><p>可以現金、轉帳或行動支付。（範例內容）</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <b>晨霧美睫</b><div class="en" style="margin-top:4px">Morning Mist Lash</div>
+ <div class="demo">本頁為「小門牌」製作的範例網站，店名、地址、電話、價格皆為虛構，僅供展示。<br>想替你的小店做一個網站？IG @xiaomenpai</div>
+</div></footer>
+
+<div class="sticky"><a href="#menu">價目表</a><a href="#visit">營業時間</a><a class="main" href="#care">預約方式</a></div>
+</body>
+</html>
