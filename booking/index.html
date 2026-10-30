@@ -4,13 +4,14 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <title>線上預約｜巷口剪髮室 Alley Cut（虛構示範站・表單自動化 Demo）</title>
 <meta name="description" content="虛構示範：巷口剪髮室線上預約表單。送出後自動寫入 Google 試算表並寄出確認信。小門牌作品集示範。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <style>
-:root{--bg:#141414;--bg2:#1c1b1a;--card:#201f1d;--line:#34312d;--ink:#f1ece4;--soft:#a9a198;--gold:#c9a36a;--gold-d:#a8834c;--line-green:#06c755;--err:#ff8a7a;--ok:#8fd19e}
+:root{--bg:#141414;--bg2:#1c1b1a;--card:#201f1d;--line:#34312d;--ink:#f1ece4;--soft:#a9a198;--gold:#c9a36a;--gold-d:#a8834c;--line-green:#04803a;--err:#ff8a7a;--ok:#8fd19e}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-text-size-adjust:100%}
@@ -66,14 +67,41 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
 @media (max-width:640px){.grid,.notes{grid-template-columns:1fr}form{padding:24px 18px}.head{padding-top:40px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://waynejman.github.io/xiaomenpai-demo/booking/#page",
+   "url": "https://waynejman.github.io/xiaomenpai-demo/booking/",
+   "name": "線上預約申請｜巷口剪髮室 Alley Cut（虛構示範）",
+   "inLanguage": "zh-Hant",
+   "description": "【虛構示範】預約表單功能示範，店家為虛構。",
+   "isPartOf": {
+    "@id": "https://waynejman.github.io/xiaomenpai-demo/#website"
+   },
+   "about": {
+    "@id": "https://waynejman.github.io/xiaomenpai-demo/hair/#business"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://waynejman.github.io/xiaomenpai-demo/#website",
+   "url": "https://waynejman.github.io/xiaomenpai-demo/",
+   "name": "小門牌範例網站"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <div class="demo-bar">小門牌範例網站｜店家為虛構｜表單為功能示範</div>
 
 <header class="nav">
   <div class="nav-in">
-    <a class="brand" href="./">巷口剪髮室<small>ALLEY CUT</small></a>
-    <a class="back" href="./">← 回到首頁</a>
+    <a class="brand" href="../hair/">巷口剪髮室<small>ALLEY CUT</small></a>
+    <a class="back" href="../hair/">← 回到巷口剪髮室</a>
   </div>
 </header>
 
