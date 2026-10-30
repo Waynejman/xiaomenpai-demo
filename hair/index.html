@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <title>巷口剪髮室 Alley Cut｜預約制剪染燙護（虛構示範站）</title>
 <meta name="description" content="虛構示範：巷口剪髮室，預約制美髮工作室。本頁為「小門牌」作品集示範，店名與所有資訊皆為虛構。">
 <meta property="og:title" content="巷口剪髮室 Alley Cut（虛構示範站）">
@@ -12,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#141414;--bg2:#1c1b1a;--card:#201f1d;--line:#34312d;--ink:#f1ece4;--soft:#a9a198;--gold:#c9a36a;--gold-d:#a8834c;--line-green:#06c755}
+:root{--bg:#141414;--bg2:#1c1b1a;--card:#201f1d;--line:#34312d;--ink:#f1ece4;--soft:#a9a198;--gold:#c9a36a;--gold-d:#a8834c;--line-green:#04803a}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-text-size-adjust:100%}
@@ -27,7 +28,7 @@ nav ul{display:flex;gap:26px;list-style:none;font-size:14px;letter-spacing:.08em
 nav a{text-decoration:none;color:var(--soft)}nav a:hover{color:var(--gold)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 26px;border-radius:2px;font-weight:700;text-decoration:none;border:1px solid transparent;font-size:15px;letter-spacing:.1em;font-family:inherit;cursor:pointer;transition:background .2s,color .2s}
 .btn-line{background:var(--line-green);color:#fff}
-.btn-line:hover{background:#05a847}
+.btn-line:hover{background:#036b30}
 .btn-gold{background:var(--gold);color:#1a1510}
 .btn-gold:hover{background:#d8b57e}
 .btn-ghost{border-color:#5a554d;color:var(--ink);background:transparent}
@@ -121,9 +122,160 @@ footer{padding:36px 0 100px;font-size:13.5px;color:var(--soft)}
 }
 @media (max-width:420px){.brand small{display:none}.row .p{font-size:15px}}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "HairSalon",
+   "@id": "https://waynejman.github.io/xiaomenpai-demo/hair/#business",
+   "name": "巷口剪髮室 Alley Cut",
+   "url": "https://waynejman.github.io/xiaomenpai-demo/hair/",
+   "description": "【虛構示範】預約制美髮工作室，店名、地址、價格與聯絡方式皆為虛構，僅供「小門牌」作品集展示。",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "示範路 0 號 1 樓（虛構地址）",
+    "addressLocality": "北投區",
+    "addressRegion": "台北市",
+    "addressCountry": "TW"
+   },
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "11:00",
+     "closes": "20:00"
+    }
+   ],
+   "priceRange": "NT$200–5,200",
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "服務與價目（示範價格）",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "name": "設計師剪髮",
+      "price": "1200",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "設計師剪髮"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "首席設計師剪髮",
+      "price": "1600",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "首席設計師剪髮"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "單色染髮",
+      "price": "2800",
+      "priceCurrency": "TWD",
+      "description": "此為示範用虛構價格（「起」＝最低價）",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "單色染髮"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "冷燙 / 溫塑燙",
+      "price": "3200",
+      "priceCurrency": "TWD",
+      "description": "此為示範用虛構價格（「起」＝最低價）",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "冷燙 / 溫塑燙"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "基礎修護",
+      "price": "800",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "基礎修護"
+      }
+     }
+    ]
+   },
+   "areaServed": "台北市北投區",
+   "isPartOf": {
+    "@id": "https://waynejman.github.io/xiaomenpai-demo/#website"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "可以現場直接來剪嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "以預約為主。若當天剛好有空檔可以現場候位，但不保證，建議先用 LINE 詢問。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "第一次來，要帶什麼？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "如果有想要的髮型，帶一到三張參考圖就夠了。沒有也沒關係，我們會先聊你的日常，再給建議。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "染髮可以先看顏色嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "可以。預約時傳目前髮色照片，我們會先評估漂髮次數與預估價格，到店再用色卡確認。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "可以刷卡或行動支付嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "可以現金、轉帳與常見行動支付。（示範文字，實際依店家支付方式調整）"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "有收訂金嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "一般剪髮不收。染、燙、漂髮等長時段服務，示範設定為訂金 NT$500，結帳折抵。"
+     }
+    }
+   ],
+   "@id": "https://waynejman.github.io/xiaomenpai-demo/hair/#faq"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://waynejman.github.io/xiaomenpai-demo/#website",
+   "url": "https://waynejman.github.io/xiaomenpai-demo/",
+   "name": "小門牌範例網站"
+  }
+ ]
+}
+</script>
 </head>
 <body>
-<div class="demo-bar">此為小門牌範例網站，店家為虛構｜店名、地址、價格與聯絡方式皆非真實｜IG @xiaomenpai</div>
+<div class="demo-bar">小門牌範例網站｜店家為虛構｜店名、地址、價格與聯絡方式皆非真實</div>
 
 <header class="nav">
   <div class="nav-in">
@@ -259,7 +411,7 @@ footer{padding:36px 0 100px;font-size:13.5px;color:var(--soft)}
   <div class="wrap">
     <h2>準備好換個髮型了嗎？</h2>
     <p>傳一則 LINE 訊息就可以預約，不用打電話。</p>
-    <div class="cta"><a class="btn btn-line" href="#book">LINE 預約</a><a class="btn btn-ghost" href="#services">再看一次價目</a></div>
+    <div class="cta"><a class="btn btn-line" href="#book">LINE 預約</a><a class="btn btn-gold" href="../booking/">線上預約申請</a><a class="btn btn-ghost" href="#services">再看一次價目</a></div>
   </div>
 </div>
 </main>
