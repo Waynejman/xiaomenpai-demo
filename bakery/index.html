@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>窗台小麥麵包舖｜每日出爐・可預訂（虛構示範站）</title>
+<meta name="description" content="虛構示範：窗台小麥麵包舖，社區小麵包店。本頁為「小門牌」範例網站，店名與所有資訊皆為虛構。">
+<meta property="og:title" content="窗台小麥麵包舖（虛構示範站）">
+<meta property="og:description" content="出爐時間、麵包價目、預訂與取貨方式。範例網站，資訊皆為虛構。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{--kraft:#EBD9BC;--cream:#FFF8EC;--paper:#FFFDF7;--crust:#8A5A2B;--ink:#4A3220;--soft:#7B6450;--tomato:#C8573A;--butter:#F2C66D;--line:#D9C3A0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.8;font-size:16px;-webkit-text-size-adjust:100%;
+ background-image:radial-gradient(rgba(138,90,43,.06) 1px,transparent 1.2px);background-size:14px 14px}
+a{color:inherit}
+.serif,h1,h2,h3{font-family:"Noto Serif TC","Noto Serif CJK TC","Songti TC",serif}
+.en{font-family:"Fraunces",Georgia,serif;letter-spacing:.03em}
+.demo-bar{display:flex;align-items:center;justify-content:center;gap:10px;background:#2F4F3A;color:#F6F0E2;font-size:12.5px;line-height:1.5;padding:8px 14px}
+.lg{display:inline-block;flex:none;overflow:hidden;border-radius:7px;width:28px;height:28px;position:relative;vertical-align:middle}
+.lg img{position:absolute;width:282%;height:282%;max-width:none;left:-90%;top:-75%}
+.demo-bar a{color:#F6F0E2;font-weight:700}
+header.nav{position:sticky;top:0;z-index:20;background:rgba(255,248,236,.92);backdrop-filter:blur(8px);border-bottom:2px dashed var(--line)}
+.nav-in{max-width:1040px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;gap:12px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand .mark{width:38px;height:38px;border-radius:50%;background:var(--butter);display:grid;place-items:center;font-size:20px;border:2px solid var(--crust)}
+.brand b{display:block;font-family:"Noto Serif TC","Noto Serif CJK TC",serif;font-weight:900;font-size:18px;letter-spacing:.12em;line-height:1.2}
+.brand small{display:block;font-family:"Fraunces",Georgia,serif;font-size:11.5px;color:var(--crust);letter-spacing:.08em;line-height:1.2}
+nav ul{display:none;gap:22px;list-style:none;font-size:14px}
+nav a{text-decoration:none;color:var(--soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px;letter-spacing:.08em;border:2px solid var(--ink)}
+.btn-main{background:var(--tomato);border-color:var(--tomato);color:#fff}
+.btn-ghost{background:var(--paper);color:var(--ink)}
+.btn-sm{padding:6px 14px;font-size:13px}
+.wrap{max-width:1040px;margin:auto;padding:0 18px}
+section{padding:56px 0}
+.eyebrow{font-family:"Fraunces",Georgia,serif;color:var(--tomato);font-size:15px;letter-spacing:.14em;text-transform:uppercase}
+h2{font-weight:900;font-size:27px;letter-spacing:.1em;margin:2px 0 8px}
+.lead{color:var(--soft);font-size:15px;max-width:560px}
+/* hero */
+.hero{padding:30px 0 44px}
+.hero-in{display:grid;gap:26px;align-items:center}
+.sign{position:relative;background:var(--kraft);border-radius:28px;padding:26px 22px 22px;border:2px solid var(--crust);box-shadow:6px 6px 0 var(--crust);overflow:hidden}
+.sign:before{content:"";position:absolute;inset:8px;border:1.5px dashed rgba(138,90,43,.45);border-radius:20px;pointer-events:none}
+.sign .today{display:inline-block;background:var(--ink);color:var(--cream);font-size:12.5px;letter-spacing:.15em;padding:3px 12px;border-radius:999px}
+.sign ul{list-style:none;margin-top:12px}
+.sign li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1.5px dotted rgba(74,50,32,.35);font-size:15.5px}
+.sign li:last-child{border-bottom:0}
+.sign li b{font-family:"Noto Serif TC","Noto Serif CJK TC",serif;font-weight:700}
+.sign li span{color:var(--crust);font-family:"Fraunces",Georgia,serif;font-weight:600;white-space:nowrap}
+.sign .loaf{position:absolute;right:-8px;top:-6px;font-size:58px;transform:rotate(12deg);opacity:.9}
+.hero h1{font-weight:900;font-size:34px;line-height:1.4;letter-spacing:.08em}
+.hero h1 em{font-style:normal;color:var(--tomato);background:linear-gradient(transparent 62%,rgba(242,198,109,.6) 62%)}
+.hero p{color:var(--soft);margin:12px 0 20px;font-size:15.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:3px 13px;font-size:13px;color:var(--soft)}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+/* bake times */
+.bake{background:var(--kraft)}
+.timeline{margin-top:24px;display:grid;gap:12px}
+.slot{display:grid;grid-template-columns:78px 1fr;gap:14px;align-items:start;background:var(--paper);border-radius:20px;padding:14px 16px;border:2px solid var(--line)}
+.slot time{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:22px;color:var(--tomato);line-height:1.3}
+.slot b{display:block;font-family:"Noto Serif TC","Noto Serif CJK TC",serif;font-weight:700;font-size:16px}
+.slot span{color:var(--soft);font-size:13.5px;line-height:1.6;display:block}
+/* menu */
+.menu{display:grid;gap:18px;margin-top:24px}
+.card{background:var(--paper);border-radius:24px;padding:20px 20px 12px;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--line)}
+.card h3{font-weight:900;font-size:18px;letter-spacing:.1em;display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.card h3 i{font-style:normal}
+.item{display:grid;grid-template-columns:1fr auto;gap:0 12px;padding:10px 0;border-bottom:1.5px dashed var(--line)}
+.item:last-child{border-bottom:0}
+.item b{font-weight:500;font-size:15.5px}
+.item .p{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:17px;color:var(--crust);white-space:nowrap}
+.item small{grid-column:1/-1;color:var(--soft);font-size:13px;line-height:1.6}
+.tag{display:inline-block;font-size:11px;background:var(--butter);color:var(--ink);border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:2px;font-weight:700}
+.note{font-size:13px;color:var(--soft);margin-top:14px}
+/* order */
+.steps{display:grid;gap:12px;margin-top:22px;counter-reset:s}
+.step{display:flex;gap:14px;background:var(--paper);border-radius:20px;padding:14px 16px;border:2px solid var(--line)}
+.step:before{counter-increment:s;content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;background:var(--tomato);color:#fff;display:grid;place-items:center;font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:17px;line-height:1}
+.step b{display:block;font-weight:700}
+.step span{color:var(--soft);font-size:14px;line-height:1.65;display:block}
+.rules{margin-top:18px;background:var(--kraft);border-radius:20px;padding:16px 18px;border:2px dashed var(--crust)}
+.rules h3{font-size:16px;font-weight:900;letter-spacing:.08em;margin-bottom:6px}
+.rules li{margin-left:1.2em;font-size:14px;color:var(--ink);line-height:1.75}
+/* visit */
+.visit-grid{display:grid;gap:18px;margin-top:22px}
+.info{background:var(--paper);border-radius:24px;padding:18px 20px;border:2px solid var(--line)}
+.info dl{display:grid;grid-template-columns:70px 1fr;gap:8px 10px;font-size:14.5px}
+.info dt{color:var(--tomato);font-weight:700;letter-spacing:.08em}
+.hours{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:4px}
+.hours td{padding:6px 0;border-bottom:1.5px dashed var(--line)}
+.hours td:last-child{text-align:right}
+.hours .off{color:var(--tomato)}
+.map{border-radius:24px;overflow:hidden;border:2px solid var(--ink);background:var(--kraft);position:relative}
+.map iframe{display:block;width:100%;height:280px;border:0}
+.map p{font-size:12.5px;color:var(--soft);padding:8px 14px;background:var(--paper);border-top:2px solid var(--ink)}
+/* faq */
+details{background:var(--paper);border-radius:18px;padding:13px 18px;border:2px solid var(--line);margin-top:10px}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--tomato);font-size:20px;line-height:1.2}
+details[open] summary:after{content:"−"}
+details p{color:var(--soft);font-size:14px;margin-top:6px}
+footer{background:var(--ink);color:#EBD9BC;padding:36px 0 100px;font-size:13px;text-align:center}
+footer b{font-family:"Noto Serif TC","Noto Serif CJK TC",serif;font-size:19px;letter-spacing:.18em;color:#fff;font-weight:900}
+footer .demo{margin-top:14px;opacity:.8;line-height:1.7}
+footer .demo .lg{width:34px;height:34px;margin-right:6px}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:flex;gap:8px;background:rgba(74,50,32,.94);padding:7px;border-radius:999px;box-shadow:0 8px 20px rgba(74,50,32,.3)}
+.sticky a{flex:1;text-align:center;color:#fff;text-decoration:none;font-size:14px;font-weight:700;padding:9px 0;border-radius:999px}
+.sticky a.hl{background:var(--tomato)}
+@media(min-width:820px){
+ nav ul{display:flex}
+ .hero-in{grid-template-columns:1.1fr .9fr}
+ .hero h1{font-size:44px}
+ .menu{grid-template-columns:1fr 1fr}
+ .timeline{grid-template-columns:repeat(2,1fr)}
+ .visit-grid{grid-template-columns:1fr 1fr}
+ .map iframe{height:100%;min-height:340px}
+ .sticky{display:none}
+ footer{padding-bottom:40px}
+}
+</style>
+</head>
+<body id="top">
+<div class="demo-bar"><span class="lg"><img src="logo.jpg" alt="小門牌 logo"></span><div>此為小門牌範例網站，店家為虛構，僅供展示 · <span style="white-space:nowrap">IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">@xiaomenpai</a></span></div></div>
+
+<header class="nav"><div class="nav-in">
+ <a class="brand" href="#top"><span class="mark" aria-hidden="true">🥐</span><span><b>窗台小麥</b><small>Windowsill Bakery</small></span></a>
+ <nav><ul><li><a href="#bake">出爐時間</a></li><li><a href="#menu">麵包價目</a></li><li><a href="#order">預訂取貨</a></li><li><a href="#visit">營業時間</a></li><li><a href="#faq">常見問題</a></li></ul></nav>
+ <a class="btn btn-main btn-sm" href="#order">預訂方式</a>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap hero-in">
+ <div>
+  <div class="eyebrow">Fresh from the oven</div>
+  <h1>幾點出爐、<br>可以預訂嗎？<br><em>這一頁都寫好了</em></h1>
+  <p>窗台小麥是一間社區小麵包舖，每天分三個時段出爐。出爐時間、價目和預訂方式都放在這裡，出門前先看一眼就好。</p>
+  <div class="chips"><span class="chip">每日三次出爐</span><span class="chip">前一天預訂可留麵包</span><span class="chip">現場自取</span></div>
+  <div class="cta"><a class="btn btn-main" href="#order">怎麼預訂</a><a class="btn btn-ghost" href="#bake">看出爐時間</a></div>
+ </div>
+ <div class="sign" aria-label="今日出爐看板（範例）">
+  <span class="loaf" aria-hidden="true">🍞</span>
+  <span class="today">今日出爐看板・範例</span>
+  <ul>
+   <li><b>☀️ 早安吐司・餐包</b><span>08:00</span></li>
+   <li><b>🥐 可頌・菠蘿・紅豆</b><span>11:00</span></li>
+   <li><b>🥖 歐式・鹽可頌</b><span>15:30</span></li>
+  </ul>
+ </div>
+</div></section>
+
+<section class="bake" id="bake"><div class="wrap">
+ <div class="eyebrow">Baking times</div>
+ <h2>出爐時間</h2>
+ <p class="lead">不用再私訊問「現在有什麼麵包」。每天大致照這個時間出爐，賣完就提早休息。</p>
+ <div class="timeline">
+  <div class="slot"><time>08:00</time><div><b>第一爐｜早餐系</b><span>生吐司、全麥吐司、牛奶餐包、肉鬆麵包</span></div></div>
+  <div class="slot"><time>11:00</time><div><b>第二爐｜甜麵包</b><span>奶酥菠蘿、日式紅豆、可頌、肉桂捲（週六限定）</span></div></div>
+  <div class="slot"><time>15:30</time><div><b>第三爐｜歐式・下午茶</b><span>鹽可頌、核桃鄉村、蔓越莓乳酪、佛卡夏</span></div></div>
+ </div>
+ <p class="note">※ 出爐時間可能前後 15 分鐘。臨時變動會在 IG 限時動態公告（範例）。</p>
+</div></section>
+
+<section id="menu"><div class="wrap">
+ <div class="eyebrow">Menu</div>
+ <h2>麵包價目</h2>
+ <p class="lead">價格皆含稅，數量有限。標「可預訂」的品項可以先留。</p>
+ <div class="menu">
+  <div class="card"><h3><i>🍞</i>吐司・餐包</h3>
+   <div class="item"><b>北海道生吐司<span class="tag">可預訂</span></b><span class="p">$95</span><small>一條約 450g，可代切（厚片／薄片）</small></div>
+   <div class="item"><b>全麥核桃吐司<span class="tag">可預訂</span></b><span class="p">$110</span><small>加了烤過的核桃，早餐抹奶油剛好</small></div>
+   <div class="item"><b>牛奶餐包（6 入）</b><span class="p">$80</span><small>小朋友很好入口的軟餐包</small></div>
+   <div class="item"><b>肉鬆麵包</b><span class="p">$45</span><small>美乃滋＋肉鬆，台式經典</small></div>
+  </div>
+  <div class="card"><h3><i>🥐</i>甜麵包・可頌</h3>
+   <div class="item"><b>奶酥菠蘿</b><span class="p">$40</span><small>外皮酥、內餡是自己炒的奶酥</small></div>
+   <div class="item"><b>日式紅豆麵包</b><span class="p">$40</span><small>顆粒紅豆餡，甜度偏低</small></div>
+   <div class="item"><b>奶油可頌</b><span class="p">$55</span><small>發酵奶油，現烤最香</small></div>
+   <div class="item"><b>肉桂捲<span class="tag">週六</span></b><span class="p">$65</span><small>只有週六出爐，建議預訂</small></div>
+  </div>
+  <div class="card"><h3><i>🥖</i>歐式・鹹麵包</h3>
+   <div class="item"><b>鹽可頌</b><span class="p">$45</span><small>底部烤得脆脆的，下午第三爐</small></div>
+   <div class="item"><b>核桃鄉村<span class="tag">可預訂</span></b><span class="p">$160</span><small>整顆約 500g，可對切</small></div>
+   <div class="item"><b>蔓越莓乳酪</b><span class="p">$75</span><small>軟歐麵包包奶油乳酪</small></div>
+   <div class="item"><b>迷迭香佛卡夏</b><span class="p">$70</span><small>橄欖油＋海鹽，配湯很好吃</small></div>
+  </div>
+  <div class="card"><h3><i>🎁</i>小盒・組合</h3>
+   <div class="item"><b>早餐小盒（4 種各 1）<span class="tag">可預訂</span></b><span class="p">$180</span><small>生吐司半條＋菠蘿＋紅豆＋可頌</small></div>
+   <div class="item"><b>下午茶盒（6 入）<span class="tag">可預訂</span></b><span class="p">$300</span><small>適合辦公室或聚會，需前 2 天預訂</small></div>
+  </div>
+ </div>
+ <p class="note">※ 本頁為虛構示範，品項與價格僅供展示。</p>
+</div></section>
+
+<section id="order" style="background:var(--paper)"><div class="wrap">
+ <div class="eyebrow">Pre-order &amp; pickup</div>
+ <h2>預訂方式・取貨</h2>
+ <p class="lead">怕去的時候賣完？前一天預訂，我們幫你把麵包留起來。</p>
+ <div class="steps">
+  <div class="step"><div><b>前一天 18:00 前私訊預訂</b><span>透過 LINE 官方帳號或 IG 私訊，告訴我們：品項、數量、取貨日期與時段、姓名。</span></div></div>
+  <div class="step"><div><b>收到確認訊息才算預訂成功</b><span>我們會回覆確認，再附上取貨時間。大量訂購（10 個以上）請提早 2 天。</span></div></div>
+  <div class="step"><div><b>到店報名字取貨、現場付款</b><span>預訂麵包保留到當天 18:00，可付現金或行動支付。</span></div></div>
+ </div>
+ <div class="rules">
+  <h3>📝 預訂小提醒</h3>
+  <ul>
+   <li>當天臨時預訂不一定有，建議直接看出爐時間來買。</li>
+   <li>要更改或取消，請在取貨前一天說一聲。</li>
+   <li>目前只提供自取，沒有外送。</li>
+   <li>吐司、鄉村麵包可以代切，預訂時備註就好。</li>
+  </ul>
+ </div>
+</div></section>
+
+<section id="visit"><div class="wrap">
+ <div class="eyebrow">Visit us</div>
+ <h2>營業時間・位置</h2>
+ <div class="visit-grid">
+  <div class="info">
+   <table class="hours">
+    <tr><td>週二 – 週五</td><td>07:30 – 18:30</td></tr>
+    <tr><td>週六</td><td>08:00 – 17:00</td></tr>
+    <tr><td>週日</td><td>08:00 – 14:00</td></tr>
+    <tr><td class="off">週一</td><td class="off">公休</td></tr>
+   </table>
+   <dl style="margin-top:14px">
+    <dt>區域</dt><dd>台北市北投區（虛構店家，無實際地址）</dd>
+    <dt>預訂</dt><dd>LINE 官方帳號／IG 私訊（範例）</dd>
+    <dt>付款</dt><dd>現金、行動支付</dd>
+    <dt>提醒</dt><dd>賣完會提早休息，以 IG 限動公告為準</dd>
+   </dl>
+  </div>
+  <div class="map">
+   <iframe title="台北市北投區地圖（示意）" src="https://www.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8C%97%E6%8A%95%E5%8D%80&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <p>📍 地圖僅為區域示意，此店家為虛構，並無實際門市。</p>
+  </div>
+ </div>
+</div></section>
+
+<section id="faq" style="background:var(--kraft)"><div class="wrap">
+ <div class="eyebrow">FAQ</div>
+ <h2>常見問題</h2>
+ <details open><summary>今天有什麼麵包？</summary><p>每天大致依「出爐時間」那一區的品項出爐，當天特別口味會在 IG 限時動態公告。</p></details>
+ <details><summary>麵包可以放多久？</summary><p>建議當天吃完最好吃；吐司可冷凍保存約一週，吃之前回烤即可。</p></details>
+ <details><summary>可以訂生日或活動用的大量麵包嗎？</summary><p>可以，10 個以上請提早 2 天私訊，我們會先確認當天產能。</p></details>
+ <details><summary>有沒有素食或無蛋奶的麵包？</summary><p>核桃鄉村與佛卡夏不含蛋奶（但同一廚房製作），有過敏需求請先私訊詢問。</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <b>窗台小麥麵包舖</b>
+ <div style="margin-top:6px">Windowsill Bakery・每日三次出爐</div>
+ <div class="demo"><span class="lg"><img src="logo.jpg" alt=""></span>本頁為「小門牌」製作的範例網站，店家、品項與價格皆為虛構，僅供展示。<br>想要一個像這樣的網站？IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener" style="color:#fff;font-weight:700">@xiaomenpai</a></div>
+</div></footer>
+
+<div class="sticky"><a href="#bake">出爐時間</a><a href="#menu">價目</a><a class="hl" href="#order">預訂</a></div>
+</body>
+</html>
