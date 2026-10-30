@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <title>窗台小麥麵包舖｜每日出爐・可預訂（虛構示範站）</title>
 <meta name="description" content="虛構示範：窗台小麥麵包舖，社區小麵包店。本頁為「小門牌」範例網站，店名與所有資訊皆為虛構。">
 <meta property="og:title" content="窗台小麥麵包舖（虛構示範站）">
@@ -12,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
 <style>
-:root{--kraft:#EBD9BC;--cream:#FFF8EC;--paper:#FFFDF7;--crust:#8A5A2B;--ink:#4A3220;--soft:#7B6450;--tomato:#C8573A;--butter:#F2C66D;--line:#D9C3A0}
+:root{--kraft:#EBD9BC;--cream:#FFF8EC;--paper:#FFFDF7;--crust:#7A4E22;--ink:#4A3220;--soft:#6B5543;--tomato:#A23B1C;--butter:#F2C66D;--line:#D9C3A0}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.8;font-size:16px;-webkit-text-size-adjust:100%;
@@ -125,9 +126,163 @@ footer .demo .lg{width:34px;height:34px;margin-right:6px}
  footer{padding-bottom:40px}
 }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Bakery",
+   "@id": "https://waynejman.github.io/xiaomenpai-demo/bakery/#business",
+   "name": "窗台小麥麵包舖 Windowsill Bakery",
+   "url": "https://waynejman.github.io/xiaomenpai-demo/bakery/",
+   "description": "【虛構示範】社區小麵包舖，每日三次出爐；店家、品項與價格皆為虛構，僅供「小門牌」作品集展示。",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "北投區",
+    "addressRegion": "台北市",
+    "addressCountry": "TW"
+   },
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+     ],
+     "opens": "07:30",
+     "closes": "18:30"
+    },
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Saturday"
+     ],
+     "opens": "08:00",
+     "closes": "17:00"
+    },
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Sunday"
+     ],
+     "opens": "08:00",
+     "closes": "14:00"
+    }
+   ],
+   "priceRange": "NT$40–300",
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "麵包價目（示範價格）",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "name": "北海道生吐司",
+      "price": "95",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "北海道生吐司"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "奶酥菠蘿",
+      "price": "40",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "奶酥菠蘿"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "奶油可頌",
+      "price": "55",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "奶油可頌"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "鹽可頌",
+      "price": "45",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "鹽可頌"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "下午茶盒（6 入）",
+      "price": "300",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "下午茶盒（6 入）"
+      }
+     }
+    ]
+   },
+   "areaServed": "台北市北投區",
+   "isPartOf": {
+    "@id": "https://waynejman.github.io/xiaomenpai-demo/#website"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "今天有什麼麵包？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "每天大致依「出爐時間」那一區的品項出爐，當天特別口味會在 IG 限時動態公告。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "麵包可以放多久？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "建議當天吃完最好吃；吐司可冷凍保存約一週，吃之前回烤即可。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "可以訂生日或活動用的大量麵包嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "可以，10 個以上請提早 2 天私訊，我們會先確認當天產能。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "有沒有素食或無蛋奶的麵包？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "核桃鄉村與佛卡夏不含蛋奶（但同一廚房製作），有過敏需求請先私訊詢問。"
+     }
+    }
+   ],
+   "@id": "https://waynejman.github.io/xiaomenpai-demo/bakery/#faq"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://waynejman.github.io/xiaomenpai-demo/#website",
+   "url": "https://waynejman.github.io/xiaomenpai-demo/",
+   "name": "小門牌範例網站"
+  }
+ ]
+}
+</script>
 </head>
 <body id="top">
-<div class="demo-bar"><span class="lg"><img src="logo.jpg" alt="小門牌 logo"></span><div>此為小門牌範例網站，店家為虛構，僅供展示 · <span style="white-space:nowrap">IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">@xiaomenpai</a></span></div></div>
+<div class="demo-bar"><span class="lg"><img src="logo.jpg" alt="小門牌 logo"></span><div>小門牌範例網站｜店家為虛構｜店名、地址、價格與聯絡方式皆非真實</div></div>
 
 <header class="nav"><div class="nav-in">
  <a class="brand" href="#top"><span class="mark" aria-hidden="true">🥐</span><span><b>窗台小麥</b><small>Windowsill Bakery</small></span></a>
@@ -256,7 +411,7 @@ footer .demo .lg{width:34px;height:34px;margin-right:6px}
 <footer><div class="wrap">
  <b>窗台小麥麵包舖</b>
  <div style="margin-top:6px">Windowsill Bakery・每日三次出爐</div>
- <div class="demo"><span class="lg"><img src="logo.jpg" alt=""></span>本頁為「小門牌」製作的範例網站，店家、品項與價格皆為虛構，僅供展示。<br>想要一個像這樣的網站？IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener" style="color:#fff;font-weight:700">@xiaomenpai</a></div>
+ <div class="demo"><span class="lg"><img src="logo.jpg" alt=""></span>本頁為「小門牌」製作的範例網站，店家、品項與價格皆為虛構，僅供展示。<br>網站製作：<b>小門牌</b> <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener" style="color:#fff;font-weight:700">@xiaomenpai</a>（想要一個像這樣的網站？歡迎私訊）</div>
 </div></footer>
 
 <div class="sticky"><a href="#bake">出爐時間</a><a href="#menu">價目</a><a class="hl" href="#order">預訂</a></div>
