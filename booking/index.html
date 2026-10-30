@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>線上預約｜巷口剪髮室 Alley Cut（虛構示範站・表單自動化 Demo）</title>
+<meta name="description" content="虛構示範：巷口剪髮室線上預約表單。送出後自動寫入 Google 試算表並寄出確認信。小門牌作品集示範。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141414;--bg2:#1c1b1a;--card:#201f1d;--line:#34312d;--ink:#f1ece4;--soft:#a9a198;--gold:#c9a36a;--gold-d:#a8834c;--line-green:#06c755;--err:#ff8a7a;--ok:#8fd19e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.demo-bar{background:var(--gold);color:#1a1510;font-size:12.5px;text-align:center;padding:8px 12px;font-weight:500;line-height:1.5}
+header.nav{position:sticky;top:0;z-index:20;background:rgba(20,20,20,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1040px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;gap:12px}
+.brand{font-family:"Noto Serif TC",serif;font-weight:700;font-size:18px;letter-spacing:.14em;text-decoration:none;display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+.brand small{font-family:"Noto Sans TC",sans-serif;font-size:10px;letter-spacing:.3em;color:var(--gold);font-weight:500}
+.back{font-size:14px;color:var(--soft);text-decoration:none;letter-spacing:.08em}.back:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 30px;border-radius:2px;font-weight:700;text-decoration:none;border:1px solid transparent;font-size:16px;letter-spacing:.12em;font-family:inherit;cursor:pointer;transition:background .2s,color .2s}
+.btn-gold{background:var(--gold);color:#1a1510}
+.btn-gold:hover{background:#d8b57e}
+.btn[disabled]{opacity:.55;cursor:wait}
+.btn-ghost{border-color:#5a554d;color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.wrap{max-width:760px;margin:auto;padding:0 20px}
+.head{padding:64px 0 28px;position:relative;overflow:hidden}
+.eyebrow{font-size:12px;letter-spacing:.4em;color:var(--gold);margin-bottom:14px;font-weight:500}
+h1{font-family:"Noto Serif TC",serif;font-size:clamp(30px,5vw,44px);line-height:1.25;letter-spacing:.08em;font-weight:700}
+.lead{margin-top:14px;color:var(--soft);font-size:15.5px}
+form{background:var(--card);border:1px solid var(--line);padding:32px 28px;margin:12px 0 40px}
+fieldset{border:0;margin-bottom:26px}
+legend{font-family:"Noto Serif TC",serif;font-size:18px;letter-spacing:.12em;color:var(--gold);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--line);width:100%}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label,.lbl{font-size:14px;letter-spacing:.08em;color:var(--ink);font-weight:500}
+label .req{color:var(--gold);margin-left:4px}
+.hint{font-size:12.5px;color:var(--soft);line-height:1.5}
+input[type=text],input[type=tel],input[type=email],input[type=date],select,textarea{width:100%;background:var(--bg);color:var(--ink);border:1px solid #4a463f;border-radius:2px;padding:12px 14px;font:inherit;font-size:16px;line-height:1.5;color-scheme:dark}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--err)}
+.err{font-size:12.5px;color:var(--err);min-height:0;display:none}
+.field.invalid .err{display:block}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--soft);line-height:1.6}
+.check input{margin-top:5px;accent-color:var(--gold);width:18px;height:18px;flex:none}
+/* honeypot：視覺與輔助科技皆隱藏，真人不會填 */
+.hp{position:absolute!important;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:24px}
+#status{margin-top:18px;padding:14px 18px;border-left:3px solid var(--gold);background:var(--bg2);font-size:14.5px;display:none}
+#status.show{display:block}
+#status.ok{border-color:var(--ok)}
+#status.bad{border-color:var(--err);color:var(--err)}
+.notes{margin:0 0 40px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.note{border-left:2px solid var(--gold);background:var(--bg2);padding:16px 20px}
+.note b{display:block;margin-bottom:4px;letter-spacing:.08em;font-size:15px}
+.note p{font-size:14px;color:var(--soft)}
+footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px solid var(--line)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+.credit b{color:var(--gold);letter-spacing:.12em}
+@media (max-width:640px){.grid,.notes{grid-template-columns:1fr}form{padding:24px 18px}.head{padding-top:40px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="demo-bar">此為小門牌範例網站，店家為虛構｜表單自動化 Demo：送出資料會寫入試算表並寄確認信｜IG @xiaomenpai</div>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="./">巷口剪髮室<small>ALLEY CUT</small></a>
+    <a class="back" href="./">← 回到首頁</a>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <div class="head">
+    <div class="eyebrow">ONLINE BOOKING</div>
+    <h1>線上預約申請</h1>
+    <p class="lead">填寫下方表單，我們會寄一封確認信到你的信箱。設計師回覆確認時段後，預約才算完成。</p>
+  </div>
+
+  <form id="booking-form" novalidate autocomplete="on" aria-describedby="form-help">
+    <p id="form-help" class="hint" style="margin-bottom:22px">標示 <span style="color:var(--gold)">*</span> 為必填。營業時間：週二至週日 11:00–20:00，週一公休，最後一位客人 18:30 進場。</p>
+
+    <fieldset>
+      <legend>聯絡資料</legend>
+      <div class="grid">
+        <div class="field">
+          <label for="name">姓名／稱呼<span class="req">*</span></label>
+          <input type="text" id="name" name="name" required maxlength="30" autocomplete="name" placeholder="例：王小美">
+          <span class="err" id="err-name" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="phone">手機<span class="req">*</span></label>
+          <input type="tel" id="phone" name="phone" required inputmode="tel" autocomplete="tel" placeholder="0912-345-678" maxlength="20">
+          <span class="err" id="err-phone" role="alert"></span>
+        </div>
+        <div class="field full">
+          <label for="email">Email（確認信會寄到這裡）<span class="req">*</span></label>
+          <input type="email" id="email" name="email" required maxlength="100" autocomplete="email" placeholder="you@example.com">
+          <span class="err" id="err-email" role="alert"></span>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>預約內容</legend>
+      <div class="grid">
+        <div class="field">
+          <label for="service">服務項目<span class="req">*</span></label>
+          <select id="service" name="service" required>
+            <option value="">請選擇</option>
+            <option value="cut">剪髮（含洗吹）</option>
+            <option value="color">染髮</option>
+            <option value="perm">燙髮／矯正</option>
+            <option value="care">護髮／頭皮養護</option>
+            <option value="combo">多項組合（請在備註說明）</option>
+          </select>
+          <span class="err" id="err-service" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="designer">指定設計師</label>
+          <select id="designer" name="designer">
+            <option value="any">不指定</option>
+            <option value="lin">林設計師（短髮、層次）</option>
+            <option value="chen">陳設計師（染髮）</option>
+            <option value="wu">吳設計師（燙、護髮）</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="date">希望日期<span class="req">*</span></label>
+          <input type="date" id="date" name="date" required>
+          <span class="hint">週一公休；可預約明天起 60 天內</span>
+          <span class="err" id="err-date" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="time">希望時段<span class="req">*</span></label>
+          <select id="time" name="time" required>
+            <option value="">請選擇</option>
+          </select>
+          <span class="hint">染、燙請預留 2.5–4 小時，建議選上午時段</span>
+          <span class="err" id="err-time" role="alert"></span>
+        </div>
+        <div class="field full">
+          <label for="notes">備註（想做的造型、目前髮況、過敏等）</label>
+          <textarea id="notes" name="notes" maxlength="500" placeholder="參考圖可在設計師確認後，用 LINE 傳給我們"></textarea>
+          <span class="hint"><span id="notes-count">0</span> / 500</span>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- honeypot：機器人常會把所有欄位都填滿，真人看不到這格 -->
+    <div class="hp" aria-hidden="true">
+      <label for="website">請勿填寫此欄位</label>
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="field full" style="margin-bottom:8px">
+      <label class="check">
+        <input type="checkbox" id="consent" name="consent" required>
+        <span>我同意店家為「預約聯絡」目的蒐集、使用我填寫的姓名、手機與 Email，並於預約完成後依店家規定保存。（示範文字，正式案依店家個資告知內容調整）</span>
+      </label>
+      <span class="err" id="err-consent" role="alert"></span>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-gold" type="submit" id="submit-btn">送出預約申請</button>
+      <button class="btn btn-ghost" type="reset" id="reset-btn">清除重填</button>
+    </div>
+    <div id="status" role="status" aria-live="polite"></div>
+  </form>
+
+  <div class="notes">
+    <div class="note"><b>改期與取消</b><p>請於 24 小時前告知。當天臨時取消，下次預約需先付 50% 訂金。</p></div>
+    <div class="note"><b>沒收到確認信？</b><p>請先檢查垃圾郵件匣；仍找不到，請用 LINE 聯絡我們（示範站未開放）。</p></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>巷口剪髮室（虛構示範）<br><span style="opacity:.7">© 2026 示範內容，無任何真實營業資訊</span></div>
+    <div class="credit">網站製作：<b>小門牌</b> @xiaomenpai</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // ===== 設定（部署時只需要改這裡） =====
+  // 把 Apps Script 部署後的「網頁應用程式網址」貼在下面（結尾為 /exec）。
+  // 保持原樣＝示範模式：不會真的送出，只會模擬成功畫面。
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxAPGdwpaplv1O5e9tLSRbKCx6l47HLwleC962CWpPHB1NnOyQuQ2wuteE35Zzao13S/exec';
+  var TIMEOUT_MS = 20000;
+  // 營業時段：每 30 分鐘一格，18:30 為最後進場
+  var SLOT_START = 11 * 60, SLOT_LAST = 18 * 60 + 30;
+  var MAX_DAYS_AHEAD = 60;
+
+  var form = document.getElementById('booking-form');
+  var statusEl = document.getElementById('status');
+  var btn = document.getElementById('submit-btn');
+  var loadedAt = Date.now();
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function fmtDate(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+
+  // 時段選單
+  var timeSel = document.getElementById('time');
+  for (var m = SLOT_START; m <= SLOT_LAST; m += 30) {
+    var v = pad(Math.floor(m / 60)) + ':' + pad(m % 60);
+    var o = document.createElement('option'); o.value = v; o.textContent = v; timeSel.appendChild(o);
+  }
+
+  // 日期範圍：明天起 60 天（以使用者裝置日期為準，伺服端會再驗證一次）
+  var dateEl = document.getElementById('date');
+  var t0 = new Date(); t0.setHours(0, 0, 0, 0);
+  var tMin = new Date(t0); tMin.setDate(tMin.getDate() + 1);
+  var tMax = new Date(t0); tMax.setDate(tMax.getDate() + MAX_DAYS_AHEAD);
+  dateEl.min = fmtDate(tMin); dateEl.max = fmtDate(tMax);
+
+  // 備註字數
+  var notesEl = document.getElementById('notes');
+  notesEl.addEventListener('input', function () {
+    document.getElementById('notes-count').textContent = notesEl.value.length;
+  });
+
+  // ===== 驗證（與 Code.gs 規則一致；伺服端才是最終把關） =====
+  var PHONE_RE = /^(09\d{8}|0[2-8]\d{7,8})$/;
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function validate(data) {
+    var errors = {};
+    var name = (data.name || '').trim();
+    if (!name) errors.name = '請填寫姓名或稱呼';
+    else if (name.length > 30) errors.name = '姓名請在 30 字以內';
+    var phone = (data.phone || '').replace(/[\s-]/g, '');
+    if (!phone) errors.phone = '請填寫手機號碼';
+    else if (!PHONE_RE.test(phone)) errors.phone = '手機格式不正確（例：0912345678）';
+    var email = (data.email || '').trim();
+    if (!email) errors.email = '請填寫 Email';
+    else if (!EMAIL_RE.test(email) || email.length > 100) errors.email = 'Email 格式不正確';
+    if (!data.service) errors.service = '請選擇服務項目';
+    if (!data.date) errors.date = '請選擇日期';
+    else {
+      var d = new Date(data.date + 'T00:00:00');
+      if (isNaN(d.getTime())) errors.date = '日期格式不正確';
+      else if (d < tMin || d > tMax) errors.date = '僅開放明天起 ' + MAX_DAYS_AHEAD + ' 天內預約';
+      else if (d.getDay() === 1) errors.date = '週一公休，請選其他日期';
+    }
+    if (!data.time) errors.time = '請選擇時段';
+    if (!data.consent) errors.consent = '請勾選同意個資使用說明';
+    return errors;
+  }
+  function showErrors(errors) {
+    ['name', 'phone', 'email', 'service', 'date', 'time', 'consent'].forEach(function (k) {
+      var err = document.getElementById('err-' + k);
+      var field = err.closest('.field');
+      if (errors[k]) { err.textContent = errors[k]; field.classList.add('invalid'); }
+      else { err.textContent = ''; field.classList.remove('invalid'); }
+    });
+    var first = Object.keys(errors)[0];
+    if (first) { var el = document.getElementById(first); if (el) el.focus(); }
+  }
+  function setStatus(msg, kind) {
+    statusEl.textContent = msg;
+    statusEl.className = 'show' + (kind ? ' ' + kind : '');
+  }
+  function collect() {
+    function v(id) { return document.getElementById(id).value; }
+    return {
+      name: v('name'), phone: v('phone'), email: v('email'),
+      service: v('service'), designer: v('designer'),
+      date: v('date'), time: v('time'), notes: v('notes'),
+      consent: document.getElementById('consent').checked, website: v('website')
+    };
+  }
+
+  // ===== 送出 =====
+  // 重點：用 application/x-www-form-urlencoded（「簡單請求」），不會觸發 CORS preflight，
+  // Apps Script 網頁應用程式才收得到；不要改成 application/json。
+  function submitBooking(data) {
+    if (ENDPOINT.indexOf('PASTE_YOUR') === 0) {
+      return new Promise(function (resolve) {
+        setTimeout(function () { resolve({ ok: true, demo: true }); }, 600);
+      });
+    }
+    var body = new URLSearchParams();
+    Object.keys(data).forEach(function (k) { body.append(k, String(data[k])); });
+    body.append('elapsed', String(Date.now() - loadedAt)); // 填表花費毫秒數，供伺服端判斷機器人
+    body.append('page', location.href.slice(0, 200));
+    var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, TIMEOUT_MS) : null;
+    return fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+      body: body.toString(),
+      redirect: 'follow',
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function (res) {
+      if (timer) clearTimeout(timer);
+      return res.json();
+    }, function (e) { if (timer) clearTimeout(timer); throw e; });
+  }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var data = collect();
+    var errors = validate(data);
+    showErrors(errors);
+    if (Object.keys(errors).length) { setStatus('請先修正標示紅色的欄位。', 'bad'); return; }
+
+    btn.disabled = true; btn.textContent = '送出中…';
+    setStatus('送出中，請稍候…');
+    submitBooking(data).then(function (res) {
+      if (res && res.ok) {
+        form.reset();
+        document.getElementById('notes-count').textContent = '0';
+        setStatus(res.demo
+          ? '【示範模式】表單檢查通過，但尚未設定 Apps Script 網址，所以沒有真的送出。'
+          : '已收到你的預約申請！確認信已寄到你的信箱（若沒看到請檢查垃圾郵件匣）。設計師回覆確認後，預約才算完成。', 'ok');
+      } else {
+        var serverErrors = (res && res.errors) || {};
+        if (Object.keys(serverErrors).length) showErrors(serverErrors);
+        setStatus((res && res.message) || '送出失敗，請稍後再試。', 'bad');
+      }
+    }).catch(function () {
+      // 網路錯誤或逾時：無法確認是否已寫入，提醒使用者不要重複送出
+      setStatus('連線異常，無法確認是否送出。請稍候 5 分鐘，若沒收到確認信再重新送出，或改用 LINE 聯絡我們。', 'bad');
+    }).then(function () {
+      btn.disabled = false; btn.textContent = '送出預約申請';
+    });
+  });
+
+  // 供自動測試使用
+  window.__booking = { validate: validate, collect: collect };
+})();
+</script>
+</body>
+</html>
