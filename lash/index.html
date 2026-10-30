@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <title>晨霧美睫 Morning Mist Lash｜預約制美睫工作室（虛構示範站）</title>
 <meta name="description" content="虛構示範：晨霧美睫，一人預約制美睫工作室。本頁為「小門牌」範例網站，店名與所有資訊皆為虛構。">
 <meta property="og:title" content="晨霧美睫 Morning Mist Lash（虛構示範站）">
@@ -12,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F4F1F6;--paper:#FFFFFF;--ink:#3A3448;--soft:#7A7289;--lilac:#B9A9D6;--lilac-d:#7E6AA8;--mist:#E6E0EF;--sage:#A7B8A8;--line:#DDD6E6}
+:root{--bg:#F4F1F6;--paper:#FFFFFF;--ink:#3A3448;--soft:#645C75;--lilac:#B9A9D6;--lilac-d:#6A5594;--mist:#E6E0EF;--sage:#A7B8A8;--line:#DDD6E6}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:16px;-webkit-text-size-adjust:100%}
@@ -87,13 +88,13 @@ h2{font-family:"Noto Serif TC",serif;font-weight:600;font-size:26px;letter-spaci
 .hours{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:4px}
 .hours td{padding:7px 0;border-bottom:1px dashed var(--line)}
 .hours td:last-child{text-align:right}
-.hours .off{color:#B07A8E}
+.hours .off{color:#94566F}
 .map{position:relative;height:260px;border-radius:22px;overflow:hidden;background:#ECE8F0;border:1px solid var(--line)}
 .map .road{position:absolute;background:#fff}
 .map .pin{position:absolute;left:54%;top:44%;transform:translate(-50%,-100%);text-align:center}
 .map .pin i{display:block;width:34px;height:34px;margin:0 auto;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--lilac-d);box-shadow:0 6px 12px rgba(58,52,72,.3)}
 .map .pin span{display:inline-block;margin-top:8px;background:var(--ink);color:#fff;font-size:12px;padding:3px 10px;border-radius:999px;white-space:nowrap}
-.map .lbl{position:absolute;font-size:11px;color:#9B93A8;letter-spacing:.1em}
+.map .lbl{position:absolute;font-size:11px;color:#645C75;letter-spacing:.1em}
 .map .fake{position:absolute;right:10px;bottom:10px;font-size:11px;background:rgba(255,255,255,.85);padding:2px 8px;border-radius:6px;color:var(--soft)}
 .park{position:absolute;left:8%;top:62%;width:26%;height:24%;border-radius:12px;background:#D7E2D6}
 /* faq */
@@ -124,9 +125,157 @@ footer .demo{margin-top:16px;opacity:.75;line-height:1.7}
  h2{font-size:30px}
 }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BeautySalon",
+   "@id": "https://waynejman.github.io/xiaomenpai-demo/lash/#business",
+   "name": "晨霧美睫 Morning Mist Lash",
+   "url": "https://waynejman.github.io/xiaomenpai-demo/lash/",
+   "description": "【虛構示範】一人預約制美睫工作室，店名、地址、電話與價格皆為虛構，僅供「小門牌」作品集展示。",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "晨霧路 18 巷 3 號 2 樓（範例地址）",
+    "addressLocality": "虛構區（範例）",
+    "addressRegion": "台北市",
+    "addressCountry": "TW"
+   },
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+     ],
+     "opens": "11:00",
+     "closes": "20:00"
+    },
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "10:00",
+     "closes": "18:00"
+    }
+   ],
+   "priceRange": "NT$300–1,800",
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "價目表（範例價格）",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "name": "單根嫁接・自然款",
+      "price": "1200",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "單根嫁接・自然款"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "單根嫁接・日常款",
+      "price": "1500",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "單根嫁接・日常款"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "單根嫁接・濃密款",
+      "price": "1800",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "單根嫁接・濃密款"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "角蛋白翹睫",
+      "price": "1300",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "角蛋白翹睫"
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "卸除睫毛",
+      "price": "300",
+      "priceCurrency": "TWD",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "卸除睫毛"
+      }
+     }
+    ]
+   },
+   "areaServed": "台北市",
+   "isPartOf": {
+    "@id": "https://waynejman.github.io/xiaomenpai-demo/#website"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "嫁接會痛嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "過程中只需要閉眼躺著，不會痛。如果眼睛容易敏感，預約時先告訴我們。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "大概可以維持多久？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "一般約 3–4 週，跟睫毛生長週期和保養習慣有關，建議 3 週左右補睫。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "戴眼鏡可以做嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "可以，會幫你挑不容易碰到鏡片的長度。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "可以刷卡或轉帳嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "可以現金、轉帳或行動支付。（範例內容）"
+     }
+    }
+   ],
+   "@id": "https://waynejman.github.io/xiaomenpai-demo/lash/#faq"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://waynejman.github.io/xiaomenpai-demo/#website",
+   "url": "https://waynejman.github.io/xiaomenpai-demo/",
+   "name": "小門牌範例網站"
+  }
+ ]
+}
+</script>
 </head>
 <body>
-<div class="demo-bar"><img src="logo.jpg" alt="小門牌 logo"><div>此為小門牌範例網站，店家為虛構，僅供展示。<span style="white-space:nowrap">想做一個？IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">@xiaomenpai</a></span></div></div>
+<div class="demo-bar"><img src="logo.jpg" alt="小門牌 logo" width="28" height="28"><div>小門牌範例網站｜店家為虛構｜店名、地址、價格與聯絡方式皆非真實</div></div>
 
 <header class="nav"><div class="nav-in">
  <a class="brand" href="#top"><b>晨霧美睫</b><span>Morning Mist Lash</span></a>
@@ -246,7 +395,7 @@ footer .demo{margin-top:16px;opacity:.75;line-height:1.7}
 
 <footer><div class="wrap">
  <b>晨霧美睫</b><div class="en" style="margin-top:4px">Morning Mist Lash</div>
- <div class="demo">本頁為「小門牌」製作的範例網站，店名、地址、電話、價格皆為虛構，僅供展示。<br>想替你的小店做一個網站？IG @xiaomenpai</div>
+ <div class="demo">本頁為「小門牌」製作的範例網站，店名、地址、電話、價格皆為虛構，僅供展示。<br>網站製作：<b>小門牌</b> <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener" style="color:#fff;font-weight:700">@xiaomenpai</a>（想替你的小店做一個網站？歡迎私訊）</div>
 </div></footer>
 
 <div class="sticky"><a href="#menu">價目表</a><a href="#visit">營業時間</a><a class="main" href="#care">預約方式</a></div>
