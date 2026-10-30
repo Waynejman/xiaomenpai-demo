@@ -68,7 +68,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
 </style>
 </head>
 <body>
-<div class="demo-bar">此為小門牌範例網站，店家為虛構｜表單自動化 Demo：送出資料會寫入試算表並寄確認信｜IG @xiaomenpai</div>
+<div class="demo-bar">小門牌範例網站｜店家為虛構｜表單為功能示範</div>
 
 <header class="nav">
   <div class="nav-in">
@@ -82,7 +82,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
   <div class="head">
     <div class="eyebrow">ONLINE BOOKING</div>
     <h1>線上預約申請</h1>
-    <p class="lead">填寫下方表單，我們會寄一封確認信到你的信箱。設計師回覆確認時段後，預約才算完成。</p>
+    <p class="lead">填寫下方表單送出預約申請（有填 Email 會收到確認信）。設計師回覆確認時段後，預約才算完成。</p>
   </div>
 
   <form id="booking-form" novalidate autocomplete="on" aria-describedby="form-help">
@@ -102,8 +102,8 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
           <span class="err" id="err-phone" role="alert"></span>
         </div>
         <div class="field full">
-          <label for="email">Email（確認信會寄到這裡）<span class="req">*</span></label>
-          <input type="email" id="email" name="email" required maxlength="100" autocomplete="email" placeholder="you@example.com">
+          <label for="email">Email（選填，填了會收到確認信）</label>
+          <input type="email" id="email" name="email" maxlength="100" autocomplete="email" placeholder="you@example.com">
           <span class="err" id="err-email" role="alert"></span>
         </div>
       </div>
@@ -164,7 +164,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
     <div class="field full" style="margin-bottom:8px">
       <label class="check">
         <input type="checkbox" id="consent" name="consent" required>
-        <span>我同意店家為「預約聯絡」目的蒐集、使用我填寫的姓名、手機與 Email，並於預約完成後依店家規定保存。（示範文字，正式案依店家個資告知內容調整）</span>
+        <span>我同意店家為「預約聯絡」目的蒐集、使用我填寫的姓名、手機與 Email（選填），並於預約完成後依店家規定保存。（示範文字，正式案依店家個資告知內容調整）</span>
       </label>
       <span class="err" id="err-consent" role="alert"></span>
     </div>
@@ -178,7 +178,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
 
   <div class="notes">
     <div class="note"><b>改期與取消</b><p>請於 24 小時前告知。當天臨時取消，下次預約需先付 50% 訂金。</p></div>
-    <div class="note"><b>沒收到確認信？</b><p>請先檢查垃圾郵件匣；仍找不到，請用 LINE 聯絡我們（示範站未開放）。</p></div>
+    <div class="note"><b>沒收到確認信？</b><p>有填 Email 的話請先檢查垃圾郵件匣；仍找不到，請用 LINE 聯絡我們（示範站未開放）。</p></div>
   </div>
 </div>
 </main>
@@ -244,8 +244,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
     if (!phone) errors.phone = '請填寫手機號碼';
     else if (!PHONE_RE.test(phone)) errors.phone = '手機格式不正確（例：0912345678）';
     var email = (data.email || '').trim();
-    if (!email) errors.email = '請填寫 Email';
-    else if (!EMAIL_RE.test(email) || email.length > 100) errors.email = 'Email 格式不正確';
+    if (email && (!EMAIL_RE.test(email) || email.length > 100)) errors.email = 'Email 格式不正確';
     if (!data.service) errors.service = '請選擇服務項目';
     if (!data.date) errors.date = '請選擇日期';
     else {
@@ -324,7 +323,9 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
         document.getElementById('notes-count').textContent = '0';
         setStatus(res.demo
           ? '【示範模式】表單檢查通過，但尚未設定 Apps Script 網址，所以沒有真的送出。'
-          : '已收到你的預約申請！確認信已寄到你的信箱（若沒看到請檢查垃圾郵件匣）。設計師回覆確認後，預約才算完成。', 'ok');
+          : (res.mail === 'skipped'
+            ? '已收到你的預約申請！設計師會用你留的手機聯絡確認，確認後預約才算完成。'
+            : '已收到你的預約申請！確認信已寄到你的信箱（若沒看到請檢查垃圾郵件匣）。設計師回覆確認後，預約才算完成。'), 'ok');
       } else {
         var serverErrors = (res && res.errors) || {};
         if (Object.keys(serverErrors).length) showErrors(serverErrors);
