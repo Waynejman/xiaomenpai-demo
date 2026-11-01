@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>坡上珈琲室｜手沖・虹吸・自家烘焙（虛構示範站）</title>
+<meta name="description" content="虛構示範：坡上珈琲室，昭和喫茶風的社區小咖啡廳。本頁為「小門牌」範例網站，店名與所有資訊皆為虛構。">
+<meta property="og:title" content="坡上珈琲室（虛構示範站）">
+<meta property="og:description" content="菜單價目、座位與訂位方式、營業時間與地圖。範例網站，資訊皆為虛構。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root{--walnut:#3A2318;--walnut2:#4E3123;--oxblood:#8C2F25;--mustard:#D9A23F;--cream:#F3EADA;--paper:#FBF6EC;--ink:#2E1C14;--soft:#6E5546;--line:#CDB89B;--teal:#2F5C5A}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.8;font-size:16px;-webkit-text-size-adjust:100%;padding-bottom:64px}
+a{color:inherit}
+h1,h2,h3,.serif{font-family:"Noto Serif TC","Noto Serif CJK TC","Songti TC",serif}
+.en{font-family:"DM Serif Display",Georgia,serif;letter-spacing:.04em}
+.demo-bar{display:flex;align-items:center;justify-content:center;gap:10px;background:#2F4F3A;color:#F6F0E2;font-size:12.5px;line-height:1.5;padding:8px 14px}
+.lg{display:inline-block;flex:none;overflow:hidden;border-radius:7px;width:28px;height:28px;position:relative;vertical-align:middle}
+.lg img{position:absolute;width:282%;height:282%;max-width:none;left:-90%;top:-75%}
+.demo-bar a{color:#F6F0E2;font-weight:700}
+/* header */
+header.nav{position:sticky;top:0;z-index:20;background:var(--walnut);color:var(--cream);border-bottom:4px solid var(--mustard)}
+.nav-in{max-width:1040px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;gap:12px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand .mark{width:40px;height:40px;border-radius:50%;background:var(--oxblood);display:grid;place-items:center;border:2px solid var(--mustard);font-family:"Noto Serif TC",serif;font-weight:900;color:var(--mustard);font-size:19px}
+.brand b{display:block;font-family:"Noto Serif TC","Noto Serif CJK TC",serif;font-weight:900;font-size:18px;letter-spacing:.18em;line-height:1.25}
+.brand small{display:block;font-family:"DM Serif Display",Georgia,serif;font-size:12px;color:var(--mustard);letter-spacing:.12em;line-height:1.2}
+nav ul{display:none;gap:22px;list-style:none;font-size:14px}
+nav a{text-decoration:none;color:#E4D5BE}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 22px;font-weight:700;text-decoration:none;font-size:15px;letter-spacing:.1em;border:2px solid var(--walnut);border-radius:4px}
+.btn-main{background:var(--oxblood);border-color:var(--oxblood);color:#fff}
+.btn-ghost{background:transparent;color:var(--walnut)}
+.btn-sm{padding:6px 12px;font-size:13px;background:var(--mustard);color:var(--walnut);border-color:var(--mustard)}
+.wrap{max-width:1040px;margin:auto;padding:0 18px}
+section{padding:54px 0}
+.tile{height:14px;background:conic-gradient(var(--teal) 25%,var(--cream) 0 50%,var(--teal) 0 75%,var(--cream) 0) 0 0/14px 14px;opacity:.85}
+.eyebrow{font-family:"DM Serif Display",Georgia,serif;color:var(--oxblood);font-size:16px;letter-spacing:.2em}
+h2{font-weight:900;font-size:27px;letter-spacing:.14em;margin:0 0 8px;display:flex;align-items:center;gap:12px}
+h2:after{content:"";flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 6px,transparent 6px 10px)}
+.lead{color:var(--soft);font-size:15px;max-width:560px}
+/* hero */
+.hero{background:var(--walnut);color:var(--cream);padding:30px 0 46px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 2px,transparent 2px 26px)}
+.hero-in{position:relative;display:grid;gap:26px;align-items:center}
+.window{position:relative;background:linear-gradient(180deg,#F1C978 0%,#D98C47 55%,#8C2F25 100%);border-radius:160px 160px 10px 10px;border:6px solid var(--walnut2);box-shadow:0 0 0 2px var(--mustard);height:270px;overflow:hidden;max-width:340px;margin:0 auto;width:100%}
+.window .bars{position:absolute;inset:0;background:linear-gradient(90deg,transparent calc(50% - 3px),var(--walnut2) calc(50% - 3px) calc(50% + 3px),transparent 0),linear-gradient(180deg,transparent 46%,var(--walnut2) 46% calc(46% + 6px),transparent 0)}
+.window .cup{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);font-size:64px;filter:drop-shadow(0 6px 6px rgba(0,0,0,.25))}
+.window .vt{position:absolute;right:20px;top:46px;writing-mode:vertical-rl;font-family:"Noto Serif TC",serif;font-weight:900;font-size:22px;letter-spacing:.3em;color:var(--walnut);background:rgba(251,246,236,.85);padding:12px 6px;border-radius:4px}
+.window .vt2{position:absolute;left:20px;top:70px;writing-mode:vertical-rl;font-family:"Noto Serif TC",serif;font-weight:700;font-size:14px;letter-spacing:.3em;color:var(--cream);background:var(--oxblood);padding:10px 4px;border-radius:3px}
+.hero h1{font-weight:900;font-size:33px;line-height:1.45;letter-spacing:.1em}
+.hero h1 em{font-style:normal;color:var(--mustard)}
+.hero p{color:#DCCBB2;margin:12px 0 18px;font-size:15.5px}
+.seatnow{background:var(--paper);color:var(--ink);border-radius:6px;padding:14px 16px;margin-bottom:20px;border-left:6px solid var(--mustard)}
+.seatnow .t{font-size:12.5px;letter-spacing:.14em;color:var(--soft)}
+.seatnow .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.pill{font-size:13.5px;padding:3px 11px;border-radius:999px;background:#EDE1CD;font-weight:700}
+.pill.ok{background:#DCE8DE;color:#24503B}
+.pill.few{background:#F6E2B8;color:#7A4D0E}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.hero .btn-ghost{color:var(--cream);border-color:var(--cream)}
+/* menu */
+.board{margin-top:24px;display:grid;gap:18px}
+.mcard{background:var(--paper);border:2px solid var(--walnut);border-radius:4px;padding:18px 18px 10px;position:relative;box-shadow:0 3px 0 var(--walnut)}
+.mcard h3{font-weight:900;font-size:19px;letter-spacing:.16em;display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--walnut);padding-bottom:6px;margin-bottom:6px}
+.mcard h3 small{font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:13px;color:var(--oxblood);letter-spacing:.1em}
+.item{display:flex;align-items:baseline;gap:8px;padding:7px 0}
+.item b{font-family:"Noto Serif TC",serif;font-weight:700;font-size:16px;white-space:nowrap}
+.item i{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:16px}
+.item span{font-family:"DM Serif Display",Georgia,serif;font-size:18px;color:var(--oxblood);white-space:nowrap}
+.item .note{display:block;font-size:12.5px;color:var(--soft);font-style:normal;line-height:1.5}
+.itm{padding:2px 0 8px;border-bottom:1px solid #EADCC6}
+.itm:last-child{border-bottom:0}
+.itm .d{font-size:13px;color:var(--soft);line-height:1.55}
+.tagx{font-style:normal;font-family:"Noto Sans TC",sans-serif;font-weight:700;display:inline-block;font-size:11px;background:var(--oxblood);color:#fff;padding:0 7px;border-radius:3px;margin-left:6px;vertical-align:2px;letter-spacing:.05em}
+.set{background:var(--teal);color:#F3EADA;border-radius:4px;padding:14px 16px;margin-top:18px;font-size:14.5px}
+.set b{color:var(--mustard)}
+/* seat */
+#seat{background:var(--paper)}
+.ticket{margin-top:24px;background:var(--cream);border:2px solid var(--walnut);border-radius:6px;position:relative;overflow:hidden}
+.ticket .top{background:var(--oxblood);color:#fff;padding:12px 18px;font-family:"Noto Serif TC",serif;font-weight:900;letter-spacing:.2em;display:flex;justify-content:space-between;align-items:center}
+.ticket .top small{font-family:"DM Serif Display",Georgia,serif;font-weight:400;color:var(--mustard);letter-spacing:.1em}
+.ticket ol{list-style:none;counter-reset:s;padding:8px 18px 4px}
+.ticket li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:10px;padding:10px 0;border-bottom:2px dashed var(--line)}
+.ticket li:last-child{border-bottom:0}
+.ticket li:before{content:counter(s);width:30px;height:30px;border-radius:50%;background:var(--walnut);color:var(--mustard);display:grid;place-items:center;font-family:"DM Serif Display",serif;font-size:16px;margin-top:2px}
+.ticket li b{display:block;font-family:"Noto Serif TC",serif;font-size:16px}
+.ticket li span{font-size:13.5px;color:var(--soft);line-height:1.6;display:block}
+.perf{height:0;border-top:3px dotted var(--walnut);margin:0 18px;position:relative}
+.ticket .bottom{padding:14px 18px 18px}
+.rules{display:grid;gap:10px;margin-top:22px}
+.rule{display:flex;gap:12px;align-items:flex-start;background:var(--cream);border-radius:4px;padding:12px 14px;border:1.5px solid var(--line)}
+.rule .ic{font-size:22px;line-height:1.3}
+.rule b{display:block;font-family:"Noto Serif TC",serif;font-size:15.5px}
+.rule span{font-size:13.5px;color:var(--soft);line-height:1.6;display:block}
+/* visit */
+.visit-in{display:grid;gap:20px;margin-top:22px}
+.info{background:var(--paper);border:2px solid var(--walnut);border-radius:4px;padding:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15.5px}
+.hours td{padding:9px 0;border-bottom:1.5px dotted var(--line)}
+.hours td:last-child{text-align:right;font-family:"DM Serif Display",Georgia,serif;font-size:17px}
+.hours .off{color:var(--oxblood)}
+dl{display:grid;grid-template-columns:52px 1fr;gap:6px 10px;font-size:14px}
+dt{color:var(--oxblood);font-weight:700}
+dd{color:var(--soft)}
+.map{border:2px solid var(--walnut);border-radius:4px;overflow:hidden;background:var(--paper)}
+.map iframe{display:block;width:100%;height:280px;border:0}
+.map p{font-size:12.5px;color:var(--soft);padding:8px 12px}
+details{background:var(--paper);border-radius:4px;border:1.5px solid var(--line);margin-top:10px;padding:12px 16px}
+summary{font-family:"Noto Serif TC",serif;font-weight:700;cursor:pointer;font-size:15.5px}
+details p{color:var(--soft);font-size:14px;margin-top:6px}
+footer{background:var(--walnut);color:#DCCBB2;padding:32px 0 26px;font-size:13.5px;text-align:center}
+footer b{color:var(--cream);font-family:"Noto Serif TC",serif;font-size:18px;letter-spacing:.2em}
+footer .demo{margin-top:16px;font-size:12.5px;line-height:1.7;background:rgba(0,0,0,.25);padding:12px;border-radius:6px}
+footer .demo .lg{width:22px;height:22px;border-radius:5px;margin-right:6px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;background:var(--walnut);border-top:3px solid var(--mustard)}
+.sticky a{flex:1;text-align:center;padding:13px 0;color:var(--cream);text-decoration:none;font-weight:700;font-size:14.5px;letter-spacing:.12em}
+.sticky a.hl{background:var(--oxblood)}
+@media(min-width:760px){
+ nav ul{display:flex}
+ .hero-in{grid-template-columns:1.1fr .9fr}
+ .hero h1{font-size:44px}
+ .board{grid-template-columns:1fr 1fr}
+ .visit-in{grid-template-columns:1fr 1.2fr}
+ .map iframe{height:100%;min-height:340px}
+ .rules{grid-template-columns:1fr 1fr}
+ .sticky{display:none}
+ body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+<div class="demo-bar"><span class="lg"><img src="logo.jpg" alt="小門牌 logo"></span><div>此為小門牌範例網站，店家為虛構，僅供展示 · <span style="white-space:nowrap">IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">@xiaomenpai</a></span></div></div>
+
+<header class="nav"><div class="nav-in">
+ <a class="brand" href="#top"><span class="mark">坡</span><span><b>坡上珈琲室</b><small>SAKAUE KISSA</small></span></a>
+ <nav><ul><li><a href="#menu">菜單</a></li><li><a href="#seat">座位・訂位</a></li><li><a href="#visit">營業時間</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
+ <a class="btn btn-sm" href="#seat">訂位</a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-in">
+ <div>
+  <div class="eyebrow" style="color:var(--mustard)">SINCE 2019 · KISSATEN</div>
+  <h1>坡道上的小喫茶，<br>一杯<em>慢慢沖</em>的咖啡。</h1>
+  <p>手沖、虹吸、自家烘焙豆，還有一份老派硬布丁。<br>吧台 6 席、桌位 4 桌，來之前先看看座位。</p>
+  <div class="seatnow">
+   <div class="t">今日座位（示意）</div>
+   <div class="row"><span class="pill ok">吧台 尚有空位</span><span class="pill few">桌位 剩 1 桌</span><span class="pill">14:00 後可訂</span></div>
+  </div>
+  <div class="cta"><a class="btn btn-main" href="#seat">怎麼訂位</a><a class="btn btn-ghost" href="#menu">看菜單</a></div>
+ </div>
+ <div class="window"><div class="bars"></div><span class="vt">自家焙煎</span><span class="vt2">手沖・虹吸</span><span class="cup">☕</span></div>
+</div></section>
+<div class="tile"></div>
+
+<section id="menu"><div class="wrap">
+ <div class="eyebrow">MENU</div>
+ <h2>菜單與價目</h2>
+ <p class="lead">價格皆為含稅價。每人低消一杯飲品，甜點與輕食可加購套餐。</p>
+ <div class="board">
+  <div class="mcard"><h3>珈琲<small>COFFEE</small></h3>
+   <div class="itm"><div class="item"><b>坡上綜合<em class="tagx">招牌</em></b><i></i><span>140</span></div><div class="d">中深焙，可可與焦糖尾韻，熱／冰</div></div>
+   <div class="itm"><div class="item"><b>本日單品手沖</b><i></i><span>180–240</span></div><div class="d">依當週豆單，店員會先讓你聞豆子</div></div>
+   <div class="itm"><div class="item"><b>虹吸咖啡</b><i></i><span>200</span></div><div class="d">坐吧台可以看沖煮過程</div></div>
+   <div class="itm"><div class="item"><b>拿鐵／歐蕾</b><i></i><span>150</span></div><div class="d">可換燕麥奶 +20</div></div>
+   <div class="itm"><div class="item"><b>冰滴咖啡</b><i></i><span>180</span></div><div class="d">每日限量 12 杯</div></div>
+  </div>
+  <div class="mcard"><h3>甜點・輕食<small>FOOD</small></h3>
+   <div class="itm"><div class="item"><b>老派硬布丁<em class="tagx">人氣</em></b><i></i><span>95</span></div><div class="d">焦糖偏苦，配黑咖啡剛好</div></div>
+   <div class="itm"><div class="item"><b>咖啡凍鮮奶油</b><i></i><span>110</span></div></div>
+   <div class="itm"><div class="item"><b>奶油厚片吐司</b><i></i><span>90</span></div><div class="d">可加紅豆 +25</div></div>
+   <div class="itm"><div class="item"><b>拿坡里義大利麵</b><i></i><span>220</span></div><div class="d">11:30–14:00 限定</div></div>
+   <div class="itm"><div class="item"><b>雞蛋三明治</b><i></i><span>150</span></div></div>
+  </div>
+  <div class="mcard"><h3>不喝咖啡<small>NON-COFFEE</small></h3>
+   <div class="itm"><div class="item"><b>焙茶拿鐵</b><i></i><span>150</span></div></div>
+   <div class="itm"><div class="item"><b>蜂蜜檸檬氣泡</b><i></i><span>130</span></div></div>
+   <div class="itm"><div class="item"><b>熱可可</b><i></i><span>140</span></div></div>
+  </div>
+  <div class="mcard"><h3>豆子外帶<small>BEANS</small></h3>
+   <div class="itm"><div class="item"><b>坡上綜合 200g</b><i></i><span>380</span></div></div>
+   <div class="itm"><div class="item"><b>單品豆 200g</b><i></i><span>420–560</span></div><div class="d">可代磨，請告訴我們沖煮方式</div></div>
+  </div>
+ </div>
+ <div class="set">☕ 套餐：任一飲品 + 布丁或厚片，<b>加 80 元</b>，單點比較划算的話我們會提醒你</div>
+</div></section>
+
+<section id="seat"><div class="wrap">
+ <div class="eyebrow">SEATS &amp; RESERVATION</div>
+ <h2>座位與訂位</h2>
+ <p class="lead">店小，只有 6 個吧台位和 4 張桌子。週末很容易客滿，想坐桌位建議先訂。</p>
+ <div class="ticket">
+  <div class="top">訂位方式<small>RESERVE</small></div>
+  <ol>
+   <li><div><b>傳訊息給我們</b><span>LINE 官方帳號或 IG 私訊（範例），寫下日期、時間、人數。</span></div></li>
+   <li><div><b>等店員回覆確認</b><span>營業時間內約 1 小時內回覆，收到「已保留」才算訂位成功。</span></div></li>
+   <li><div><b>準時到店</b><span>座位保留 10 分鐘，晚到請先傳訊息，我們會盡量幫你留。</span></div></li>
+  </ol>
+  <div class="perf"></div>
+  <div class="bottom"><div class="cta"><a class="btn btn-main" href="#" onclick="alert('這是範例網站，不會真的送出喔！');return false">LINE 訂位（範例）</a><a class="btn btn-ghost" href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">IG 私訊</a></div></div>
+ </div>
+ <div class="rules">
+  <div class="rule"><span class="ic">👥</span><div><b>2–4 人可訂桌位</b><span>5 人以上請提早一天私訊，我們會幫你併桌。吧台位不開放預訂，現場候位。</span></div></div>
+  <div class="rule"><span class="ic">⏳</span><div><b>假日用餐 90 分鐘</b><span>週六日限時 90 分鐘，平日不限時。</span></div></div>
+  <div class="rule"><span class="ic">💻</span><div><b>平日可以帶電腦</b><span>靠窗 2 桌有插座；週末請不要開電腦，把位子留給聊天的客人。</span></div></div>
+  <div class="rule"><span class="ic">🐾</span><div><b>寵物需放推車或提籠</b><span>不落地即可入內。</span></div></div>
+ </div>
+</div></section>
+
+<section id="visit"><div class="wrap">
+ <div class="eyebrow">HOURS &amp; MAP</div>
+ <h2>營業時間與地圖</h2>
+ <div class="visit-in">
+  <div class="info">
+   <table class="hours">
+    <tr><td>週三 – 週五</td><td>11:00 – 19:00</td></tr>
+    <tr><td>週六 – 週日</td><td>10:00 – 19:00</td></tr>
+    <tr><td>最後點餐</td><td>18:30</td></tr>
+    <tr><td class="off">週一、週二</td><td class="off">公休</td></tr>
+   </table>
+   <dl style="margin-top:14px">
+    <dt>區域</dt><dd>台北市北投區石牌一帶（虛構店家，無實際地址）</dd>
+    <dt>交通</dt><dd>捷運站步行約 8 分鐘（示意）</dd>
+    <dt>付款</dt><dd>現金、行動支付</dd>
+    <dt>公告</dt><dd>臨時店休會在 IG 限時動態公告</dd>
+   </dl>
+  </div>
+  <div class="map">
+   <iframe title="台北市北投區地圖（示意）" src="https://www.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8C%97%E6%8A%95%E5%8D%80&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <p>📍 地圖僅為區域示意，此店家為虛構，並無實際門市。</p>
+  </div>
+ </div>
+</div></section>
+<div class="tile"></div>
+
+<section id="faq"><div class="wrap">
+ <div class="eyebrow">FAQ</div>
+ <h2>常見問題</h2>
+ <details open><summary>現在還有位子嗎？</summary><p>平日下午通常有位子；週末建議先訂桌位，吧台位現場候位。當天客滿會在 IG 限時動態公告。</p></details>
+ <details><summary>可以只點甜點嗎？</summary><p>每人低消一杯飲品，甜點可以單點，也可以加 80 元變套餐。</p></details>
+ <details><summary>有低咖啡因或不喝咖啡的選擇嗎？</summary><p>有焙茶拿鐵、熱可可和氣泡飲；低咖啡因豆不一定每天都有，可以先私訊問。</p></details>
+ <details><summary>可以包場或辦小活動嗎？</summary><p>可以，最多約 16 人，請至少提早一週私訊討論。</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <b>坡上珈琲室</b>
+ <div style="margin-top:6px">Sakaue Kissa・手沖・虹吸・自家焙煎</div>
+ <div class="demo"><span class="lg"><img src="logo.jpg" alt=""></span>本頁為「小門牌」製作的範例網站，店家、品項與價格皆為虛構，僅供展示。<br>想要一個像這樣的網站？IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener" style="color:#fff;font-weight:700">@xiaomenpai</a></div>
+</div></footer>
+
+<div class="sticky"><a href="#menu">菜單</a><a href="#visit">營業時間</a><a class="hl" href="#seat">訂位</a></div>
+</body>
+</html>
