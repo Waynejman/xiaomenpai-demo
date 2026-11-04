@@ -252,6 +252,24 @@ section { padding: 64px 0; scroll-margin-top: 120px; }
 .early strong { font-size: 28px; color: var(--green); }
 .days { margin-top: 12px; font-size: 18px; font-weight: 800; }
 .fit { margin-top: 10px; color: var(--muted); }
+.fit a { font-weight: 800; }
+.plan .pitch { margin-top: 8px; font-weight: 700; }
+.plan .includes { list-style: none; margin-top: 12px; }
+.plan .includes li { position: relative; padding: 4px 0 4px 16px; }
+.plan .includes li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--green);
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+}
+.not-in { margin-top: 16px; color: var(--muted); font-size: 15px; }
+.not-in h3 { font-size: 16px; margin-bottom: 8px; color: var(--ink); }
+.not-in ul { padding-left: 1.2em; }
+.not-in li { margin: 4px 0; }
 .terms { margin-top: 22px; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
 .terms h3 { margin-bottom: 10px; }
 .terms ul { padding-left: 1.2em; }
@@ -398,8 +416,8 @@ footer a { color: #f6f1e8; font-weight: 700; }
               <li>三步驟預約：傳訊息、付訂金、準時到店</li>
               <li>改期規則、營業時間、地圖（區域示意）、常見問題</li>
             </ul>
-            <p class="pair">另一頁<a href="#demo-nails">栗樹下指甲工作室</a>多了作品格和預約訊息，範圍比較靠近標準。</p>
-            <p class="suggest"><span>建議方案</span><strong>基礎</strong><b class="nowrap">NT$4,980</b></p>
+            <p class="pair">另一頁<a href="#demo-nails">栗樹下指甲工作室</a>多了作品格和預約訊息，範圍比較靠近預約款。</p>
+            <p class="suggest"><span>建議方案</span><strong>門面款</strong><b class="nowrap">NT$4,980</b></p>
             <a class="btn btn-main go" href="../nail/">看杏釉指彩</a>
           </article>
         </li>
@@ -416,8 +434,8 @@ footer a { color: #f6f1e8; font-weight: 700; }
               <li>預約訊息產生器：選服務、日期、時段，複製後貼到 LINE</li>
               <li>訂金與改期規則、交通方式、常見問題</li>
             </ul>
-            <p class="pair">另一頁<a href="#demo-nail">杏釉指彩</a>是比較精簡的美甲示範，建議方案是基礎。</p>
-            <p class="suggest"><span>建議方案</span><strong>標準</strong><b class="nowrap">NT$8,980</b></p>
+            <p class="pair">另一頁<a href="#demo-nail">杏釉指彩</a>是比較精簡的美甲示範，建議方案是門面款。</p>
+            <p class="suggest"><span>建議方案</span><strong>預約款</strong><b class="nowrap">NT$8,980</b></p>
             <a class="btn btn-main go" href="../">看栗樹下指甲工作室</a>
           </article>
         </li>
@@ -433,7 +451,7 @@ footer a { color: #f6f1e8; font-weight: 700; }
               <li>術後保養</li>
               <li>預約須知、營業時間、示意地圖、常見問題</li>
             </ul>
-            <p class="suggest"><span>建議方案</span><strong>基礎</strong><b class="nowrap">NT$4,980</b></p>
+            <p class="suggest"><span>建議方案</span><strong>門面款</strong><b class="nowrap">NT$4,980</b></p>
             <a class="btn btn-main go" href="../lash/">看晨霧美睫</a>
           </article>
         </li>
@@ -449,7 +467,7 @@ footer a { color: #f6f1e8; font-weight: 700; }
               <li>預約須知：改期、遲到、付款方式</li>
               <li>營業時間、地圖（區域示意）、常見問題</li>
             </ul>
-            <p class="suggest"><span>建議方案</span><strong>進階</strong><b class="nowrap">NT$14,800</b></p>
+            <p class="suggest"><span>建議方案</span><strong>預約款</strong><b class="nowrap">NT$8,980</b></p>
             <a class="btn btn-main go" href="../spa/">看沐禾芳療室</a>
           </article>
         </li>
@@ -465,8 +483,8 @@ footer a { color: #f6f1e8; font-weight: 700; }
               <li>預約須知：改期、遲到、訂金</li>
               <li>地圖示意、常見問題</li>
             </ul>
-            <p class="pair">同一間示範店的<a href="#demo-booking">線上預約表單</a>在下方，功能比較靠近進階方案。</p>
-            <p class="suggest"><span>建議方案</span><strong>標準</strong><b class="nowrap">NT$8,980</b></p>
+            <p class="pair">同一間示範店的<a href="#demo-booking">線上預約表單</a>在下方，功能比較靠近品牌款。</p>
+            <p class="suggest"><span>建議方案</span><strong>預約款</strong><b class="nowrap">NT$8,980</b></p>
             <a class="btn btn-main go" href="../hair/">看巷口剪髮室</a>
           </article>
         </li>
@@ -482,7 +500,7 @@ footer a { color: #f6f1e8; font-weight: 700; }
               <li>疫苗與安全須知</li>
               <li>常見問題</li>
             </ul>
-            <p class="suggest"><span>建議方案</span><strong>標準</strong><b class="nowrap">NT$8,980</b></p>
+            <p class="suggest"><span>建議方案</span><strong>預約款</strong><b class="nowrap">NT$8,980</b></p>
             <a class="btn btn-main go" href="../pet/">看麻糬泡泡寵物美容</a>
           </article>
         </li>
@@ -497,7 +515,7 @@ footer a { color: #f6f1e8; font-weight: 700; }
               <li>座位與訂位說明、今日座位示意</li>
               <li>營業時間、地圖（區域示意）、常見問題</li>
             </ul>
-            <p class="suggest"><span>建議方案</span><strong>標準</strong><b class="nowrap">NT$8,980</b></p>
+            <p class="suggest"><span>建議方案</span><strong>預約款</strong><b class="nowrap">NT$8,980</b></p>
             <a class="btn btn-main go" href="../cafe/">看坡上珈琲室</a>
           </article>
         </li>
@@ -513,7 +531,7 @@ footer a { color: #f6f1e8; font-weight: 700; }
               <li>預訂與取貨流程</li>
               <li>營業時間、地圖（區域示意）、常見問題</li>
             </ul>
-            <p class="suggest"><span>建議方案</span><strong>標準</strong><b class="nowrap">NT$8,980</b></p>
+            <p class="suggest"><span>建議方案</span><strong>預約款</strong><b class="nowrap">NT$8,980</b></p>
             <a class="btn btn-main go" href="../bakery/">看窗台小麥麵包舖</a>
           </article>
         </li>
@@ -529,7 +547,7 @@ footer a { color: #f6f1e8; font-weight: 700; }
               <li>自取、外送範圍、每週花訂閱</li>
               <li>營業時間、地圖（區域示意）、常見問題</li>
             </ul>
-            <p class="suggest"><span>建議方案</span><strong>基礎</strong><b class="nowrap">NT$4,980</b></p>
+            <p class="suggest"><span>建議方案</span><strong>門面款</strong><b class="nowrap">NT$4,980</b></p>
             <a class="btn btn-main go" href="../florist/">看野薄荷花室</a>
           </article>
         </li>
@@ -546,7 +564,7 @@ footer a { color: #f6f1e8; font-weight: 700; }
               <li>防機器人欄位</li>
               <li>改期與取消說明</li>
             </ul>
-            <p class="suggest"><span>建議方案</span><strong>進階</strong><b class="nowrap">NT$14,800</b></p>
+            <p class="suggest"><span>建議方案</span><strong>預約款</strong><b class="nowrap">NT$8,980</b></p>
             <a class="btn btn-main go" href="../booking/">看線上預約表單</a>
           </article>
         </li>
@@ -562,7 +580,7 @@ footer a { color: #f6f1e8; font-weight: 700; }
               <li>下單流程：看 Threads 貼文或傳 LINE，確認後寄送或面交</li>
               <li>正品保證、寄賣／收購說明（表單是示範，不會送出）</li>
             </ul>
-            <p class="suggest"><span>建議方案</span><strong>進階</strong><b class="nowrap">NT$14,800</b></p>
+            <p class="suggest"><span>建議方案</span><strong>品牌款</strong><b class="nowrap">NT$14,800</b></p>
             <a class="btn btn-main go" href="../resale/">看舊標櫃</a>
           </article>
         </li>
@@ -578,40 +596,73 @@ footer a { color: #f6f1e8; font-weight: 700; }
       <p class="sec-intro">一次買斷。前 3 位客戶 8 折（所有方案合計 3 位）。原價和折後價都寫在下面。</p>
       <div class="plans">
         <article class="plan">
-          <h3>基礎</h3>
+          <h3>門面款</h3>
+          <p class="pitch">一頁就把你是誰、在哪、怎麼聯絡講清楚。適合想先有個像樣網址的小店。</p>
           <p class="price"><span class="who">原價</span><span class="nowrap">NT$4,980</span></p>
           <p class="early"><span class="who">前 3 位客戶 8 折（所有方案合計 3 位）</span><strong class="nowrap">NT$3,984</strong></p>
           <p class="days"><span class="who">工期</span>7 個工作天</p>
-          <p class="days"><span class="who">免費除錯</span>7 天</p>
-          <p class="fit">一頁把價目、流程和預約須知寫清楚。杏釉指彩、美睫、花店是這個範圍。</p>
+          <p class="days"><span class="who">交件後</span>7 天內網站壞掉，免費修</p>
+          <ul class="includes">
+            <li>一頁滑到底，最多 6 段（例如價目、作品、地圖、怎麼聯絡）</li>
+            <li>作品照最多 8 張</li>
+          </ul>
+          <p class="fit">示範：<a href="../florist/">野薄荷花室</a>。杏釉指彩、晨霧美睫也是這個範圍。</p>
         </article>
         <article class="plan">
-          <h3>標準</h3>
+          <h3>預約款</h3>
+          <p class="pitch">讓客人自己看價目、看作品、把預約訊息整理好再傳 LINE 給你。適合美甲、美睫、髮廊、寵物這類靠預約的店。</p>
           <p class="price"><span class="who">原價</span><span class="nowrap">NT$8,980</span></p>
           <p class="early"><span class="who">前 3 位客戶 8 折（所有方案合計 3 位）</span><strong class="nowrap">NT$7,184</strong></p>
           <p class="days"><span class="who">工期</span>10 個工作天</p>
-          <p class="days"><span class="who">免費除錯</span>14 天</p>
-          <p class="fit">價目、作品或菜單，加上預約方式，做在同一頁。栗樹下指甲、髮廊、寵物美容、咖啡、麵包是這個範圍。</p>
+          <p class="days"><span class="who">交件後</span>14 天內網站壞掉，免費修</p>
+          <ul class="includes">
+            <li>含門面款能做的</li>
+            <li>一頁長版，最多 10 段；或一頁再加最多 2 頁子頁</li>
+            <li>預約流程說明、常見問題、注意事項或規範</li>
+            <li>客人選好服務和時段，整理成一段訊息，一鍵貼到 LINE</li>
+            <li>作品照最多 20 張</li>
+          </ul>
+          <p class="fit">示範：<a href="../spa/">沐禾芳療室</a>、<a href="../">栗樹下指甲工作室</a>。髮廊、寵物美容、咖啡、麵包也是這個範圍。</p>
         </article>
         <article class="plan">
-          <h3>進階</h3>
+          <h3>品牌款</h3>
+          <p class="pitch">多頁介紹＋可篩選的商品或作品型錄。適合品項多、想講品牌故事的店。</p>
           <p class="price"><span class="who">原價</span><span class="nowrap">NT$14,800</span></p>
           <p class="early"><span class="who">前 3 位客戶 8 折（所有方案合計 3 位）</span><strong class="nowrap">NT$11,840</strong></p>
           <p class="days"><span class="who">工期</span>14 個工作天</p>
-          <p class="days"><span class="who">免費除錯</span>14 天</p>
-          <p class="fit">沐禾芳療室、舊標櫃（商品列表、篩選和單品頁），以及看得到線上預約表單的那個示範，是這個範圍。預約表單正式做的時候，送出後會寄確認信。</p>
+          <p class="days"><span class="who">交件後</span>14 天內網站壞掉，免費修</p>
+          <ul class="includes">
+            <li>含預約款能做的</li>
+            <li>最多 5 頁，可以有子頁</li>
+            <li>商品或作品型錄，最多 40 件，可以篩選，也可以標示售出和加標籤</li>
+          </ul>
+          <p class="fit">示範：<a href="../resale/">舊標櫃</a>。</p>
         </article>
       </div>
       <div class="terms">
         <h3>先講清楚</h3>
         <ul>
-          <li>一次買斷。含 2 次修改。免費除錯：基礎 7 天，標準與進階各 14 天。</li>
-          <li>工期的工作天，從收到訂金和全部資料的隔天開始算。</li>
+          <li>一次買斷。含 2 次修改。交件後網站壞掉免費修：門面款 7 天，預約款與品牌款各 14 天。</li>
+          <li>工期的工作天，從收到訂金和全部素材的隔天開始算。素材沒給的區塊就不放。</li>
+          <li>手機和電腦都能看，連線有加密，也會放標題、描述和分享預覽。</li>
           <li>訂金 50%，開工前可全額退；交初稿後不退訂金。</li>
           <li>前 3 位客戶 8 折（所有方案合計 3 位）。</li>
           <li>月維護可選，NT$400／月。不加購也能用。每月 2 次小修改（文字、圖片、營業時間），加上主機和網站檢查。</li>
           <li>網域依成本加 10% 另外收。有加維護方案（NT$400／月）的客人，主機費不另外收。</li>
           <li>示範上標的建議方案，是照那一頁看得到的功能對上去的。正式要做哪些，跟我們確認。</li>
+        </ul>
+      </div>
+      <div class="not-in">
+        <h3>三個方案都不含</h3>
+        <ul>
+          <li>拍照</li>
+          <li>寫文案（只幫忙潤稿）</li>
+          <li>商標和 Logo 設計</li>
+          <li>金流和購物車</li>
+          <li>會員登入</li>
+          <li>後台 CMS</li>
+          <li>多語系</li>
+          <li>廣告投放</li>
         </ul>
       </div>
     </div>
@@ -669,7 +720,7 @@ footer a { color: #f6f1e8; font-weight: 700; }
           </ol>
           <div class="next">
             <h4>範例裡的下一步</h4>
-            <p>若先做一頁，可以把菜單、公休和訂位方式放在一起，讓手機不用放大也讀得完。這比較靠近標準方案，實際仍要再確認。</p>
+            <p>若先做一頁，可以把菜單、公休和訂位方式放在一起，讓手機不用放大也讀得完。這比較靠近預約款，實際仍要再確認。</p>
           </div>
           <p class="report-foot">本段的店名、網址和檢查結果都是虛構的，只示範一份健檢大概怎麼寫。</p>
         </div>
