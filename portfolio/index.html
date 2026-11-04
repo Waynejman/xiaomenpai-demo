@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<meta name="description" content="小門牌幫台灣巷口小店做一頁看得懂的網站。此頁是作品集：七個虛構示範，以及方案價格。不是真實店家。">
+<meta property="og:title" content="小門牌作品集（虛構示範）">
+<meta property="og:description" content="給巷口小店的一頁網站。七個店都是編的，用來看看版面，並附上方案價格。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:url" content="https://waynejman.github.io/xiaomenpai-demo/portfolio/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<title>小門牌｜巷口小店的一頁網站（作品集）</title>
+<style>
+:root {
+  --ink: #241910;
+  --muted: #4a3f36;
+  --cream: #f6f1e8;
+  --paper: #fffdfb;
+  --sand: #f3eadf;
+  --line: #e4d8c8;
+  --green: #1e3b2d;
+  --green-d: #15281f;
+  --focus: #1e3b2d;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "PingFang TC", "Hiragino Sans CNS", "Noto Sans TC", "Noto Sans CJK TC", "Microsoft JhengHei", "WenQuanYi Micro Hei", "Droid Sans Fallback", sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  font-size: 17px;
+  line-height: 1.75;
+}
+img { max-width: 100%; height: auto; }
+a { color: var(--green); }
+a:visited { color: var(--green); }
+p, li { text-wrap: pretty; }
+h1, h2, h3, h4 { text-wrap: balance; line-height: 1.3; font-weight: 800; margin: 0; }
+h1 { font-size: clamp(40px, 8vw, 64px); letter-spacing: 0.08em; }
+h2 { font-size: clamp(28px, 4vw, 40px); letter-spacing: 0.04em; }
+h3 { font-size: 22px; }
+h4 { font-size: 18px; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; }
+.skip {
+  position: absolute;
+  left: 8px;
+  top: -48px;
+  background: #fff;
+  color: var(--green);
+  padding: 10px 14px;
+  border-radius: 8px;
+  z-index: 80;
+  font-weight: 800;
+}
+.skip:focus { top: 8px; position: fixed; }
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px #f6f1e8;
+}
+.vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+.topbar {
+  background: var(--green);
+  color: #f6f1e8;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header.site {
+  position: static;
+  z-index: 20;
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+}
+.nav-in {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 16px;
+  padding: 8px 0;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  min-height: 44px;
+}
+.brand img { width: 36px; height: 36px; display: block; }
+nav ul { display: flex; flex-wrap: wrap; gap: 2px 4px; list-style: none; }
+nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 8px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+nav a:hover { color: var(--green); text-decoration: underline; text-underline-offset: 4px; }
+.hero { padding: 36px 0 28px; scroll-margin-top: 120px; }
+.hero-grid { display: grid; gap: 28px; align-items: center; }
+.kicker { color: var(--green); font-weight: 800; font-size: 14px; margin-bottom: 8px; }
+.tagline { margin-top: 12px; font-size: clamp(22px, 3vw, 30px); font-weight: 800; line-height: 1.45; letter-spacing: 0.02em; }
+.lead { margin-top: 16px; color: var(--muted); max-width: 38em; }
+.lead + .lead { margin-top: 10px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 48px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 2px solid transparent;
+  line-height: 1.3;
+  text-align: center;
+}
+.btn-main { background: var(--green); color: #f6f1e8; }
+.btn-main:visited { color: #f6f1e8; }
+.btn-main:hover { background: var(--green-d); }
+.btn-ghost { background: transparent; color: var(--green); border-color: var(--green); }
+.btn-ghost:hover { background: #e7f0ea; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 18px; list-style: none; margin-top: 22px; font-weight: 700; }
+.plate {
+  background: var(--green);
+  color: #f6f1e8;
+  border-radius: 18px;
+  padding: 36px 22px 28px;
+  position: relative;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18), 0 16px 36px rgba(36, 25, 16, 0.12);
+  text-align: center;
+}
+.screw {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d9c7a4;
+  box-shadow: inset 0 0 0 2px #8d774c;
+}
+.screw:nth-child(1) { top: 12px; left: 12px; }
+.screw:nth-child(2) { top: 12px; right: 12px; }
+.screw:nth-child(3) { bottom: 12px; left: 12px; }
+.screw:nth-child(4) { bottom: 12px; right: 12px; }
+.plate-name { font-size: 40px; letter-spacing: 0.28em; font-weight: 800; padding-left: 0.28em; }
+.plate-rule { height: 1px; background: rgba(246, 241, 232, 0.45); margin: 14px auto; width: 72%; }
+.plate-sub { letter-spacing: 0.12em; font-size: 15px; }
+.art-note { margin-top: 10px; color: var(--muted); font-size: 14px; }
+section { padding: 64px 0; scroll-margin-top: 120px; }
+#works { background: var(--paper); }
+#pricing { background: var(--sand); }
+.sec-intro { margin-top: 12px; color: var(--muted); max-width: 40em; }
+.works, .plans { display: grid; gap: 16px; margin-top: 28px; list-style: none; }
+.works > li { display: flex; min-width: 0; }
+.card, .plan, .report {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(36, 25, 16, 0.05);
+}
+.card { display: flex; flex-direction: column; gap: 8px; border-top: 6px solid var(--green); width: 100%; }
+.badge {
+  align-self: flex-start;
+  background: var(--green);
+  color: #f6f1e8;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.industry { font-size: 14px; font-weight: 800; color: var(--green); letter-spacing: 0.06em; }
+.sell { font-size: 18px; font-weight: 800; line-height: 1.55; }
+.card ul { list-style: none; color: var(--muted); padding-top: 4px; }
+.card li { position: relative; padding: 5px 0 5px 16px; }
+.card li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--green);
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+}
+.pair { color: var(--muted); font-size: 15px; }
+.pair a { font-weight: 800; text-underline-offset: 3px; }
+.suggest {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: baseline;
+  background: var(--cream);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-top: 8px;
+}
+.suggest span { color: var(--muted); font-size: 14px; font-weight: 700; }
+.suggest strong { font-size: 18px; }
+.suggest b { font-weight: 800; }
+.go { margin-top: auto; align-self: flex-start; }
+.warn {
+  background: #fff6ee;
+  border: 1px solid #e2b89a;
+  color: #5c2c12;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 15px;
+}
+.fine { margin-top: 16px; color: var(--muted); font-size: 15px; }
+.plan .who { display: block; color: var(--muted); font-size: 14px; font-weight: 700; }
+.price { font-size: 34px; font-weight: 800; letter-spacing: 0.01em; color: var(--green); margin-top: 8px; }
+.early {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: #f4e4cf;
+  color: var(--ink);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-top: 12px;
+}
+.early strong { font-size: 28px; color: var(--green); }
+.days { margin-top: 12px; font-size: 18px; font-weight: 800; }
+.fit { margin-top: 10px; color: var(--muted); }
+.terms { margin-top: 22px; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
+.terms h3 { margin-bottom: 10px; }
+.terms ul { padding-left: 1.2em; }
+.terms li { margin: 8px 0; }
+.terms li::marker { color: var(--green); }
+.report { padding: 0; overflow: hidden; }
+.report-banner {
+  background: #5c2c12;
+  color: #fff8f3;
+  font-weight: 800;
+  padding: 10px 18px;
+  letter-spacing: 0.04em;
+}
+.report-body { padding: 20px; display: grid; gap: 16px; }
+.meta { display: grid; gap: 8px; margin: 0; }
+.meta div { display: grid; gap: 2px; }
+.meta dt { font-size: 14px; font-weight: 800; color: var(--muted); }
+.findings { list-style: none; display: grid; gap: 12px; }
+.finding {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+.state { font-weight: 800; }
+.state-label {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: #5c2c12;
+}
+.next { background: var(--cream); border-radius: 12px; padding: 14px; }
+.report-foot { color: var(--muted); font-size: 15px; }
+.contact {
+  background: var(--green);
+  color: #f6f1e8;
+}
+.contact .kicker, .contact a { color: #f6f1e8; }
+.contact .sec-intro { color: #f6f1e8; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; margin-top: 22px; }
+.contact .btn-main { background: #f6f1e8; color: var(--green); }
+.contact .btn-main:visited { color: var(--green); }
+.contact .btn-main:hover { background: #fff; }
+.contact .ext { font-weight: 800; text-underline-offset: 4px; }
+footer {
+  background: var(--green-d);
+  color: #f6f1e8;
+  padding: 28px 0 40px;
+  font-size: 15px;
+}
+.foot { display: grid; gap: 10px; }
+footer a { color: #f6f1e8; font-weight: 700; }
+.nowrap { white-space: nowrap; }
+@media (min-width: 720px) {
+  header.site { position: sticky; top: 0; }
+  .works { grid-template-columns: 1fr 1fr; }
+  .meta { grid-template-columns: 1fr 1fr; }
+  .meta div:last-child { grid-column: 1 / -1; }
+}
+@media (min-width: 880px) {
+  .hero { padding: 56px 0 36px; }
+  .hero-grid { grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr); gap: 48px; }
+  .hero-art { justify-self: end; width: min(100%, 380px); }
+  .plans { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+  .plan { display: flex; flex-direction: column; }
+  .plan .fit { margin-top: auto; }
+  section { padding: 88px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+@media print {
+  .topbar, header.site, .cta, footer { position: static; }
+  .go::after { content: " (" attr(href) ")"; font-weight: 400; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到本文</a>
+<div class="topbar">作品集頁。下面的店都是編的，用來看版面，不是真實營業的店。</div>
+<header class="site">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <img src="../favicon.svg" width="36" height="36" alt="">
+      <span>小門牌</span>
+    </a>
+    <nav aria-label="本頁">
+      <ul>
+        <li><a href="#works">示範作品</a></li>
+        <li><a href="#pricing">方案價格</a></li>
+        <li><a href="#checkup">健檢範例</a></li>
+        <li><a href="#contact">聯絡</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap hero" id="top">
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">作品集</p>
+        <h1>小門牌</h1>
+        <p class="tagline">幫巷口小店，做一頁看得懂的網站。</p>
+        <p class="lead">價目、營業時間、怎麼預約、改期規則，寫在同一頁。客人自己看得懂，你就少回那些每天都在回的訊息。</p>
+        <p class="lead">下面七個網站是做來給你看的。店是編的，沒有在營業。地址、電話和價格也不能當真。</p>
+        <div class="cta">
+          <a class="btn btn-main" href="#works">看七個示範</a>
+          <a class="btn btn-ghost ext" href="https://lin.ee/tbpUAi4" target="_blank" rel="noopener noreferrer">用 LINE 聊聊<span aria-hidden="true">↗</span><span class="vh">（另開新分頁）</span></a>
+        </div>
+        <ul class="facts">
+          <li>一次買斷</li>
+          <li>含 2 次修改</li>
+          <li>七個虛構示範可先看</li>
+        </ul>
+      </div>
+      <div class="hero-art">
+        <div class="plate">
+          <span class="screw"></span>
+          <span class="screw"></span>
+          <span class="screw"></span>
+          <span class="screw"></span>
+          <p class="plate-name">小門牌</p>
+          <div class="plate-rule"></div>
+          <p class="plate-sub">巷口小店的網站</p>
+        </div>
+        <p class="art-note">這塊門牌是畫的，不是真實店家的招牌。</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="works">
+    <div class="wrap">
+      <p class="kicker">示範</p>
+      <h2>七個示範作品</h2>
+      <p class="sec-intro">每張卡片都寫著「示範作品／Demo」。店名是虛構的，請當成樣品來看。沒有放評價，也沒有服務了幾家。</p>
+      <ul class="works">
+        <li>
+          <article class="card" id="demo-nails">
+            <p class="badge">示範作品／Demo</p>
+            <p class="industry">美甲</p>
+            <h3>栗樹下指甲工作室</h3>
+            <p class="sell">客人不用來回私訊問價、問時段。</p>
+            <ul>
+              <li>服務價目與加購項目</li>
+              <li>作品展示格（色塊示意，不是實拍）</li>
+              <li>四步驟預約流程</li>
+              <li>預約訊息產生器：選服務、日期、時段，複製後貼到 LINE</li>
+              <li>訂金與改期規則、交通方式、常見問題</li>
+            </ul>
+            <p class="suggest"><span>建議方案</span><strong>標準</strong><b class="nowrap">NT$8,980</b></p>
+            <a class="btn btn-main go" href="../">看栗樹下指甲工作室</a>
+          </article>
+        </li>
+        <li>
+          <article class="card" id="demo-hair">
+            <p class="badge">示範作品／Demo</p>
+            <p class="industry">髮廊</p>
+            <h3>巷口剪髮室</h3>
+            <p class="sell">價目和規則先講清楚，比較不容易有爭議。</p>
+            <ul>
+              <li>剪、染、燙、護的價目</li>
+              <li>三位設計師介紹（虛構人名，沒有照片）</li>
+              <li>預約須知：改期、遲到、訂金</li>
+              <li>地圖示意、常見問題</li>
+            </ul>
+            <p class="pair">同一間示範店的<a href="#demo-booking">線上預約表單</a>在下方，功能比較靠近進階方案。</p>
+            <p class="suggest"><span>建議方案</span><strong>標準</strong><b class="nowrap">NT$8,980</b></p>
+            <a class="btn btn-main go" href="../hair/">看巷口剪髮室</a>
+          </article>
+        </li>
+        <li>
+          <article class="card" id="demo-lash">
+            <p class="badge">示範作品／Demo</p>
+            <p class="industry">美睫</p>
+            <h3>晨霧美睫</h3>
+            <p class="sell">一頁就能回答新客常問的事。</p>
+            <ul>
+              <li>價目表</li>
+              <li>第一次來的四個步驟</li>
+              <li>術後保養</li>
+              <li>預約須知、營業時間、示意地圖、常見問題</li>
+            </ul>
+            <p class="suggest"><span>建議方案</span><strong>基礎</strong><b class="nowrap">NT$4,980</b></p>
+            <a class="btn btn-main go" href="../lash/">看晨霧美睫</a>
+          </article>
+        </li>
+        <li>
+          <article class="card" id="demo-pet">
+            <p class="badge">示範作品／Demo</p>
+            <p class="industry">寵物美容</p>
+            <h3>麻糬泡泡寵物美容</h3>
+            <p class="sell">分級價目加上安全須知，主人比較放心。</p>
+            <ul>
+              <li>小型犬、中型犬、大型犬、貓咪的價目，以及加購</li>
+              <li>五步驟美容流程</li>
+              <li>疫苗與安全須知</li>
+              <li>常見問題</li>
+            </ul>
+            <p class="suggest"><span>建議方案</span><strong>標準</strong><b class="nowrap">NT$8,980</b></p>
+            <a class="btn btn-main go" href="../pet/">看麻糬泡泡寵物美容</a>
+          </article>
+        </li>
+        <li>
+          <article class="card" id="demo-cafe">
+            <p class="badge">示範作品／Demo</p>
+            <p class="industry">咖啡店</p>
+            <h3>坡上珈琲室</h3>
+            <p class="sell">菜單、座位、訂位方式，一次看懂。</p>
+            <ul>
+              <li>菜單價目：咖啡、其他飲料、甜點與輕食、豆子外帶</li>
+              <li>座位與訂位說明、今日座位示意</li>
+              <li>營業時間、地圖（區域示意）、常見問題</li>
+            </ul>
+            <p class="suggest"><span>建議方案</span><strong>標準</strong><b class="nowrap">NT$8,980</b></p>
+            <a class="btn btn-main go" href="../cafe/">看坡上珈琲室</a>
+          </article>
+        </li>
+        <li>
+          <article class="card" id="demo-bakery">
+            <p class="badge">示範作品／Demo</p>
+            <p class="industry">麵包店／烘焙</p>
+            <h3>窗台小麥麵包舖</h3>
+            <p class="sell">不用再私訊問現在有什麼麵包。</p>
+            <ul>
+              <li>出爐時間看板</li>
+              <li>麵包價目（可預訂的會標出來）</li>
+              <li>預訂與取貨流程</li>
+              <li>營業時間、地圖（區域示意）、常見問題</li>
+            </ul>
+            <p class="suggest"><span>建議方案</span><strong>標準</strong><b class="nowrap">NT$8,980</b></p>
+            <a class="btn btn-main go" href="../bakery/">看窗台小麥麵包舖</a>
+          </article>
+        </li>
+        <li>
+          <article class="card" id="demo-booking">
+            <p class="badge">示範作品／Demo</p>
+            <p class="industry">髮廊・線上預約表單</p>
+            <h3>巷口剪髮室・線上預約</h3>
+            <p class="sell">表單送出後，有填 Email 會收到確認信。</p>
+            <ul>
+              <li>可選服務、設計師、日期、時段，並留備註</li>
+              <li>填了 Email 會收到確認信</li>
+              <li>個資同意文字</li>
+              <li>防機器人欄位</li>
+              <li>改期與取消說明</li>
+            </ul>
+            <p class="warn"><strong>請只看版面。</strong>不要填寫、也不要送出。按下送出會真的寄信。</p>
+            <p class="suggest"><span>建議方案</span><strong>進階</strong><b class="nowrap">NT$14,800</b></p>
+            <a class="btn btn-main go" href="../booking/">看線上預約表單</a>
+          </article>
+        </li>
+      </ul>
+      <p class="fine">作品照片和地圖有些是色塊或區域示意。正式做的時候，會換成店家自己的照片和正確位置。</p>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <p class="kicker">價格</p>
+      <h2>方案與價格</h2>
+      <p class="sec-intro">一次買斷。前 3 位客戶以 8 折計，原價和折後價都寫在下面。</p>
+      <div class="plans">
+        <article class="plan">
+          <h3>基礎</h3>
+          <p class="price"><span class="who">原價</span><span class="nowrap">NT$4,980</span></p>
+          <p class="early"><span class="who">前 3 位客戶 8 折</span><strong class="nowrap">NT$3,984</strong></p>
+          <p class="days"><span class="who">工期</span>7 個工作天</p>
+          <p class="fit">一頁把價目、流程和預約須知寫清楚。美睫示範是這個範圍。</p>
+        </article>
+        <article class="plan">
+          <h3>標準</h3>
+          <p class="price"><span class="who">原價</span><span class="nowrap">NT$8,980</span></p>
+          <p class="early"><span class="who">前 3 位客戶 8 折</span><strong class="nowrap">NT$7,184</strong></p>
+          <p class="days"><span class="who">工期</span>10 個工作天</p>
+          <p class="fit">價目、菜單或作品、預約方式做在同一頁。美甲、髮廊、寵物美容、咖啡、麵包這幾個示範是這個範圍。</p>
+        </article>
+        <article class="plan">
+          <h3>進階</h3>
+          <p class="price"><span class="who">原價</span><span class="nowrap">NT$14,800</span></p>
+          <p class="early"><span class="who">前 3 位客戶 8 折</span><strong class="nowrap">NT$11,840</strong></p>
+          <p class="days"><span class="who">工期</span>14 個工作天</p>
+          <p class="fit">看得到線上預約表單的那個示範，是這個範圍。表單送出後會寄確認信。</p>
+        </article>
+      </div>
+      <div class="terms">
+        <h3>先講清楚</h3>
+        <ul>
+          <li>一次買斷。含 2 次修改，以及 7 天或 14 天的免費除錯（天數依方案）。</li>
+          <li>月維護可選，NT$400／月。不加購也能用。例如每月小幅文字或價目更新。</li>
+          <li>網域費另計，大約 NT$800／年，實際價格依註冊商。</li>
+          <li>示範上標的建議方案，是照那一頁看得到的功能對上去的。正式要做哪些，跟我們確認。</li>
+          <li>這些示範放在 GitHub Pages，只給人看版面。若要線上訂購或收款，正式網站會放在適合的地方。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="checkup">
+    <div class="wrap">
+      <p class="kicker">範例交付物</p>
+      <h2>網站健檢長什麼樣子</h2>
+      <p class="sec-intro">下面用一頁範例，讓你看健檢整理完大概長什麼樣子。店是編的，不是上面任何一個示範，也不是真實檢測。</p>
+      <article class="report" aria-labelledby="report-title">
+        <p class="report-banner">範例交付物・虛構店家・不是真實檢測</p>
+        <div class="report-body">
+          <h3 id="report-title">海鳥小灶　網站健檢</h3>
+          <dl class="meta">
+            <div>
+              <dt>店名</dt>
+              <dd>海鳥小灶（虛構早午餐，沒有這家店）</dd>
+            </div>
+            <div>
+              <dt>網址</dt>
+              <dd>example.com（示意，沒有真的網站）</dd>
+            </div>
+            <div>
+              <dt>這份是</dt>
+              <dd>格式範例，不是評分，也不能當成報價</dd>
+            </div>
+          </dl>
+          <ol class="findings">
+            <li class="finding">
+              <h4>用手機打開</h4>
+              <p class="state"><span class="state-label">狀況</span>字偏小，要放大才舒服</p>
+              <p>價目是一張橫向的圖，手機上得左右滑。</p>
+            </li>
+            <li class="finding">
+              <h4>價目有沒有寫</h4>
+              <p class="state"><span class="state-label">狀況</span>首頁沒有價格</p>
+              <p>只寫「歡迎光臨」，客人還是得傳訊息問多少錢。</p>
+            </li>
+            <li class="finding">
+              <h4>怎麼訂位</h4>
+              <p class="state"><span class="state-label">狀況</span>只留了一支電話</p>
+              <p>沒寫可以訂位的時段，也沒寫公休。</p>
+            </li>
+            <li class="finding">
+              <h4>地址和地圖</h4>
+              <p class="state"><span class="state-label">狀況</span>地址有，地圖打不開</p>
+              <p>路名有寫，地圖連結是失效的。</p>
+            </li>
+            <li class="finding">
+              <h4>別人搜尋找不找得到</h4>
+              <p class="state"><span class="state-label">狀況</span>標題只有店名</p>
+              <p>沒有寫「早午餐」和地區，搜尋時比較不容易對上。</p>
+            </li>
+          </ol>
+          <div class="next">
+            <h4>範例裡的下一步</h4>
+            <p>若先做一頁，可以把菜單、公休和訂位方式放在一起，讓手機不用放大也讀得完。這比較靠近標準方案，實際仍要再確認。</p>
+          </div>
+          <p class="report-foot">本段的店名、網址和檢查結果都是虛構的，只示範一份健檢大概怎麼寫。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="kicker">聯絡</p>
+      <h2>想先聊聊你的店</h2>
+      <p class="sec-intro">用 LINE 跟我們說店名、你現在怎麼接客人（私訊、電話或限動），還有客人最常問的一件事。先看適不適合，再談方案。</p>
+      <div class="contact-actions">
+        <a class="btn btn-main ext" href="https://lin.ee/tbpUAi4" target="_blank" rel="noopener noreferrer">加 LINE 官方帳號<span aria-hidden="true">↗</span><span class="vh">（另開新分頁）</span></a>
+        <a class="ext" href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener noreferrer">IG @xiaomenpai<span aria-hidden="true">↗</span><span class="vh">（另開新分頁）</span></a>
+      </div>
+      <p class="sec-intro">按下 LINE 會開到加入頁面。</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p><strong>小門牌</strong>　給台灣在地小店做一頁網站。</p>
+    <p>這一頁是作品集。連出去的店都是虛構示範，沒有放評價、店家標誌或服務家數。</p>
+    <p><a href="#top">回到上面</a>　<a class="ext" href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener noreferrer">IG @xiaomenpai<span aria-hidden="true">↗</span><span class="vh">（另開新分頁）</span></a></p>
+  </div>
+</footer>
+</body>
+</html>
