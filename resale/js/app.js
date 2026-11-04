@@ -22,7 +22,7 @@
     product: document.getElementById("view-product"),
     auth: document.getElementById("view-auth"),
     consign: document.getElementById("view-consign"),
-    visit: document.getElementById("view-visit")
+    order: document.getElementById("view-order")
   };
   const grid = document.getElementById("grid");
   const countEl = document.getElementById("count");
@@ -291,13 +291,19 @@
       span.textContent = "已售出";
       actions.appendChild(span);
     } else {
+      const threads = document.createElement("a");
+      threads.href = "#";
+      threads.className = "btn btn-threads";
+      threads.setAttribute("data-demo", "threads");
+      threads.textContent = "看 Threads 貼文";
+      threads.addEventListener("click", function (e) { e.preventDefault(); });
       const line = document.createElement("a");
       line.href = "#";
       line.className = "btn btn-line";
-      line.setAttribute("data-line", "");
-      line.textContent = "LINE 詢問這件";
+      line.setAttribute("data-demo", "line");
+      line.textContent = "傳 LINE 私訊";
       line.addEventListener("click", function (e) { e.preventDefault(); });
-      actions.appendChild(line);
+      actions.append(threads, line);
     }
     const back = document.createElement("a");
     back.href = "#/";
@@ -329,7 +335,7 @@
     const next = parts[0] === "p" ? "product"
       : parts[0] === "auth" ? "auth"
       : parts[0] === "consign" ? "consign"
-      : parts[0] === "visit" ? "visit"
+      : parts[0] === "order" ? "order"
       : "home";
     if (currentView === "home" && next !== "home") listScroll = window.scrollY;
     currentView = next;
@@ -348,10 +354,13 @@
   }
 
   document.addEventListener("click", function (e) {
-    const line = e.target.closest("[data-line]");
-    if (line) {
+    const demo = e.target.closest("[data-demo]");
+    if (demo) {
       e.preventDefault();
-      toast("示範：不會送出（也不會開啟 LINE，沒有連到任何帳號）");
+      const kind = demo.getAttribute("data-demo");
+      toast(kind === "threads"
+        ? "示範：不會送出（也不會開啟 Threads，沒有連到任何帳號）"
+        : "示範：不會送出（也不會開啟 LINE，沒有連到任何帳號）");
       return;
     }
     const rack = e.target.closest("[data-rack]");

@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <title>舊標櫃 OLD TAG｜二手潮牌選品（虛構示範站）</title>
-<meta name="description" content="虛構示範：舊標櫃，台北二手潮牌與設計師選品。本頁為「小門牌」範例網站，店名、價格、地址與電話皆為虛構。">
+<meta name="description" content="虛構示範：舊標櫃，只在 Threads 賣的二手潮牌選品，沒有門市。本頁為「小門牌」範例網站，店名與價格皆為虛構。">
 <meta property="og:title" content="舊標櫃 OLD TAG（虛構示範站）">
-<meta property="og:description" content="二手潮牌選品、成色分級、寄賣與收購說明。範例網站，資訊皆為虛構。">
+<meta property="og:description" content="線上二手潮牌選品、成色分級、下單與寄賣說明。沒有門市。範例網站，資訊皆為虛構。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
@@ -16,24 +16,17 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ClothingStore",
+  "@type": "OnlineStore",
   "name": "舊標櫃 OLD TAG",
   "url": "https://waynejman.github.io/xiaomenpai-demo/resale/",
-  "description": "【虛構示範】二手潮牌選品店。店名、地址、電話、價格與寄賣規則皆為虛構，僅供「小門牌」作品集展示。",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "示範路 18 號（虛構地址）",
-    "addressLocality": "中山區",
-    "addressRegion": "台北市",
-    "addressCountry": "TW"
-  },
+  "description": "【虛構示範】只在 Threads 販售的二手潮牌選品，沒有實體門市。店名、價格與寄賣規則皆為虛構，僅供「小門牌」作品集展示。",
   "priceRange": "NT$580–6,200"
 }
 </script>
 </head>
 <body>
 <a class="skip" href="#rack">跳到商品</a>
-<div class="demo-bar">小門牌範例網站｜店家為虛構｜店名、地址、價格與聯絡方式皆非真實</div>
+<div class="demo-bar">小門牌範例網站｜店家為虛構｜沒有門市｜店名、價格與下單方式皆為示範</div>
 
 <header class="nav">
   <div class="nav-in">
@@ -46,11 +39,11 @@
     <nav id="site-nav">
       <ul>
         <li><a href="#/" data-nav="home">商品</a></li>
+        <li><a href="#/order" data-nav="order">下單</a></li>
         <li><a href="#/auth" data-nav="auth">正品保證</a></li>
         <li><a href="#/consign" data-nav="consign">寄賣收購</a></li>
-        <li><a href="#/visit" data-nav="visit">門市</a></li>
       </ul>
-      <a class="btn btn-line btn-sm" href="#" data-line onclick="event.preventDefault()">LINE 詢問</a>
+      <a class="btn btn-line btn-sm" href="#" data-demo="line" onclick="event.preventDefault()">LINE 私訊</a>
     </nav>
   </div>
 </header>
@@ -60,18 +53,19 @@
     <div class="wrap hero">
       <div class="hero-grid">
         <div>
-          <p class="eyebrow">示範 · 二手潮牌</p>
+          <p class="eyebrow">示範 · 只在 Threads</p>
           <h1>舊標櫃</h1>
           <p class="en">OLD TAG</p>
-          <p class="lead">中山巷子裡的二手潮牌櫃。看得到品牌標才寫品牌；對不上的就標成未標示。成色從 N 到 C，瑕疵寫在說明裡。價格、地址、電話都是虛構的。</p>
+          <p class="lead">沒有門市，只在 Threads 賣的二手潮牌。看得到品牌標才寫品牌；對不上的就標成未標示。成色從 N 到 C。想買先看貼文或傳 LINE，確認後寄送或面交。價格是虛構的。</p>
           <div class="cta">
             <a class="btn btn-dark" href="#rack" data-rack>看在架商品</a>
-            <a class="btn btn-ghost" href="#/consign">寄賣／收購</a>
+            <a class="btn btn-threads" href="#" data-demo="threads" onclick="event.preventDefault()">看 Threads 貼文</a>
+            <a class="btn btn-line" href="#" data-demo="line" onclick="event.preventDefault()">傳 LINE 私訊</a>
           </div>
           <ul class="facts">
             <li><b>30</b> 件在架（含 5 件已售出）</li>
-            <li><b>週三至週日</b> 開門</li>
-            <li>寄賣抽成 <b>示範 30%</b> 起</li>
+            <li><b>沒有門市</b></li>
+            <li>客服 <b>週三至週日</b> 回覆</li>
           </ul>
         </div>
         <figure class="hero-art">
@@ -110,7 +104,7 @@
               <text x="184" y="186" font-size="12" fill="#1c1b19" font-family="sans-serif">TAG</text>
             </g>
           </svg>
-          <figcaption class="art-cap">衣架示意 · 沒有使用實店照片</figcaption>
+          <figcaption class="art-cap">衣架示意 · 沒有門市</figcaption>
         </figure>
       </div>
 
@@ -204,7 +198,7 @@
       </ol>
 
       <h2>這頁做不到的事</h2>
-      <p>示範站沒有第三方鑑定證書，也沒有實驗室報告。正式店若無法確認，應該直接講，而不是補一個比較有名的牌子。買到和描述不符時，示範規則是七日內拿回門市對洗標與瑕疵；運費與退換以正式店規為準，這裡的天數是虛構的。</p>
+      <p>示範站沒有第三方鑑定證書，也沒有實驗室報告。對不上的品牌就直接講，不猜牌子。買到和描述不符時，示範規則是七日內用 LINE 約退換，寄回或面交。沒有門市可退。天數與運費都是虛構的。</p>
 
       <h2>成色再看一次</h2>
       <ul class="grades">
@@ -222,14 +216,14 @@
     <div class="wrap prose">
       <p class="eyebrow">示範流程</p>
       <h1>寄賣／收購</h1>
-      <p class="deck">兩種都收。寄賣是先上架、賣出再結帳；收購是看完貨當場給一個現金價。下面的比例、天數與表單都是示範。</p>
+      <p class="deck">兩種都收，沒有門市。寄賣是先上架、賣出再結帳；收購是看過貨再給一個現金價。看貨用面交或把貨寄來。下面的比例、天數與表單都是示範。</p>
 
       <h2>怎麼進行</h2>
       <ol class="steps">
         <li><div><b>先描述貨</b><span>品牌、品項、尺寸、瑕疵。用表單或 LINE 按鈕都可以，這個示範站不會真的把訊息送出去。</span></div></li>
-        <li><div><b>約看或先估</b><span>週三到週日下午可以來門市。只傳照片的話，先給一個價格區間，不當作成交。</span></div></li>
-        <li><div><b>選一種方式</b><span>同意寄賣就留下衣服；選收購就當場結清。兩邊的價格會先講清楚。</span></div></li>
-        <li><div><b>售出後結算</b><span>寄賣售出後依抽成轉帳。沒賣出可以取回。</span></div></li>
+        <li><div><b>先估，再約看</b><span>只傳照片會先給一個價格區間，不當作成交。要看實物就約面交，或把貨寄來。這頁沒有公開地址，地點確認後才用訊息講。</span></div></li>
+        <li><div><b>選一種方式</b><span>寄賣的衣服面交留下，或宅配寄達後上架。收購的在面交時發現金。兩邊的價格會先講清楚。</span></div></li>
+        <li><div><b>售出後結算</b><span>寄賣售出後依抽成轉帳。沒賣出可約面交取回，或寄回（運費示範另計）。</span></div></li>
       </ol>
 
       <h2>抽成與付款（示範數字）</h2>
@@ -239,7 +233,7 @@
           <tr><th>售價 NT$2,001 以上</th><td>抽成 30%</td></tr>
           <tr><th>寄賣期間</th><td>60 天，期間可降價一次</td></tr>
           <tr><th>未售出</th><td>可免費取回</td></tr>
-          <tr><th>收購</th><td>約為預估售價的五到六成，現場現金</td></tr>
+          <tr><th>收購</th><td>約為預估售價的五到六成，面交時現金</td></tr>
           <tr><th>結算</th><td>售出後 7 日內轉帳</td></tr>
         </tbody>
       </table>
@@ -271,7 +265,7 @@
           </label>
           <div class="cta">
             <button class="btn btn-dark" type="submit">送出詢問</button>
-            <a class="btn btn-line" href="#" data-line onclick="event.preventDefault()">改用 LINE 詢問</a>
+            <a class="btn btn-line" href="#" data-demo="line" onclick="event.preventDefault()">改用 LINE 私訊</a>
           </div>
           <p class="fine" style="margin:0">示範表單。送出後應顯示「示範：不會送出」。</p>
         </div>
@@ -280,59 +274,45 @@
     </div>
   </section>
 
-  <section id="view-visit" hidden>
+  <section id="view-order" hidden>
     <div class="wrap prose">
-      <p class="eyebrow">怎麼來</p>
-      <h1>門市資訊</h1>
-      <p class="deck">沒有實店照片。下面的店面是畫的，地圖也沒有嵌入真實地圖。地址與電話都是虛構的。</p>
-      <div class="visit-grid">
-        <div>
-          <figure class="storefront">
-            <svg viewBox="0 0 640 420" role="img" aria-label="舊標櫃店面示意圖">
-              <rect width="640" height="420" fill="#efe6d8"/>
-              <rect y="330" width="640" height="90" fill="#ddd4c6"/>
-              <rect x="78" y="36" width="484" height="300" fill="#fbf7f0" stroke="#1c1b19" stroke-width="3"/>
-              <path d="M58 148 h524 l-18 42 H76 Z" fill="#c4452d"/>
-              <text x="320" y="176" text-anchor="middle" fill="#fff" font-size="22" font-family="serif" letter-spacing="8">舊標櫃</text>
-              <rect x="110" y="206" width="250" height="124" fill="#d7e4dc" stroke="#1c1b19" stroke-width="3"/>
-              <line x1="128" y1="224" x2="342" y2="224" stroke="#1c1b19" stroke-width="3"/>
-              <rect x="150" y="230" width="26" height="42" fill="#fffdf8" stroke="#1c1b19" stroke-width="2"/>
-              <rect x="196" y="230" width="26" height="48" fill="#2a2926" stroke="#1c1b19" stroke-width="2"/>
-              <rect x="242" y="230" width="26" height="42" fill="#f3e7c8" stroke="#1c1b19" stroke-width="2"/>
-              <rect x="288" y="230" width="22" height="36" fill="#c4452d" stroke="#1c1b19" stroke-width="2"/>
-              <rect x="400" y="206" width="120" height="130" fill="#1c1b19"/>
-              <circle cx="502" cy="274" r="4" fill="#f3e7c8"/>
-              <rect x="248" y="46" width="150" height="36" fill="#1c1b19"/>
-              <text x="323" y="70" text-anchor="middle" fill="#f6f0e2" font-size="16" font-family="sans-serif" letter-spacing="3">OLD TAG</text>
-            </svg>
-            <figcaption class="art-cap">店面示意 · 繪製，不是照片</figcaption>
-          </figure>
-          <div class="map" role="img" aria-label="地圖示意，不是真實地圖，也沒有嵌入地圖服務">
-            <span class="pin" aria-hidden="true"></span>
-            <span class="map-label">地圖示意 · 非真實嵌入</span>
-          </div>
-        </div>
-        <div class="panel">
-          <h2>營業時間</h2>
-          <table class="hours">
-            <tbody>
-              <tr><td>週三至週五</td><td>14:00–21:00</td></tr>
-              <tr><td>週六、週日</td><td>13:00–21:00</td></tr>
-              <tr><td>週一、週二</td><td>公休</td></tr>
-            </tbody>
-          </table>
-          <dl class="info-list">
-            <dt>地址</dt><dd>台北市中山區示範路 18 號（虛構地址，沒有這扇門）</dd>
-            <dt>電話</dt><dd>(02) 0000-1880（虛構號碼）</dd>
-            <dt>交通</dt><dd>示範文字：捷運站步行約 8 分鐘。</dd>
-            <dt>付款</dt><dd>現金、轉帳（示範）</dd>
-          </dl>
-          <div class="cta">
-            <a class="btn btn-line" href="#" data-line onclick="event.preventDefault()">LINE 詢問</a>
-            <a class="btn btn-ghost" href="#/consign">寄賣表單</a>
-          </div>
-        </div>
+      <p class="eyebrow">沒有門市</p>
+      <h1>下單流程</h1>
+      <p class="deck">只在 Threads 賣。看貼文，或傳 LINE 私訊，確認還在之後再選寄送或面交。下面的按鈕不會連到任何帳號。</p>
+      <div class="cta">
+        <a class="btn btn-threads" href="#" data-demo="threads" onclick="event.preventDefault()">看 Threads 貼文</a>
+        <a class="btn btn-line" href="#" data-demo="line" onclick="event.preventDefault()">傳 LINE 私訊</a>
       </div>
+
+      <h2>三步驟</h2>
+      <ol class="steps">
+        <li><div><b>看貼文或傳訊</b><span>在 Threads 貼文留言，或用 LINE 告訴我們商品編號、名稱。兩個按鈕都是示範，不會真的打開。</span></div></li>
+        <li><div><b>確認商品</b><span>我們回你這件還在不在、成色和尺寸，並核對運費或面交時間。已售出的不會再賣。</span></div></li>
+        <li><div><b>寄送或面交</b><span>匯款後出貨，或約好面交。沒有門市可以逛，也沒有公開地址。</span></div></li>
+      </ol>
+
+      <h2>寄送（示範）</h2>
+      <table class="sheet">
+        <tbody>
+          <tr><th>方式</th><td>宅配。不提供超商取貨。</td></tr>
+          <tr><th>運費</th><td>本島約 NT$100，外島另計。數字是虛構的。</td></tr>
+          <tr><th>出貨</th><td>確認匯款後 1–2 個工作天寄出，再補單號。</td></tr>
+          <tr><th>付款</th><td>先匯款再出貨。這頁沒有帳號。</td></tr>
+        </tbody>
+      </table>
+
+      <h2>面交（示範）</h2>
+      <p>沒有店可以進去。面交約在捷運站出口，時間先用 LINE 講好，不在這頁寫地點。週三到週日下午比較容易約。當面看過再付款，現金或轉帳都可以。</p>
+
+      <h2>客服回覆時間</h2>
+      <p class="fine" style="margin-top:0">這是回 Threads 和 LINE 的時間，不是營業或開門時間。</p>
+      <table class="hours">
+        <tbody>
+          <tr><td>週三至週五</td><td>14:00–21:00</td></tr>
+          <tr><td>週六、週日</td><td>13:00–21:00</td></tr>
+          <tr><td>週一、週二</td><td>較慢，隔天回</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 </main>
@@ -343,14 +323,14 @@
       <div>舊標櫃 OLD TAG（虛構示範）<br>© 2026 示範內容，無任何真實營業資訊</div>
       <div>網站製作：<b>小門牌</b> <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">@xiaomenpai</a></div>
     </div>
-    <p class="demo-note">本頁為「小門牌」範例網站。店名、商品價格、地址、電話、寄賣抽成皆為虛構，僅供展示。</p>
+    <p class="demo-note">本頁為「小門牌」範例網站。沒有門市。店名、商品價格、運費與寄賣抽成皆為虛構，僅供展示。</p>
   </div>
 </footer>
 
 <div class="sticky">
   <a href="#/">商品</a>
-  <a href="#/consign">寄賣</a>
-  <a class="go" href="#" data-line onclick="event.preventDefault()">LINE 詢問</a>
+  <a href="#/order">下單</a>
+  <a class="go" href="#" data-demo="line" onclick="event.preventDefault()">LINE 私訊</a>
 </div>
 <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 <noscript><p class="noscript">請開啟 JavaScript 才能篩選與看商品。這是靜態示範頁，表單不會連到任何伺服器。</p></noscript>
