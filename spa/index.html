@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>沐禾芳療室 Mùhé Aroma｜一人預約制芳療按摩（虛構示範站）</title>
+<meta name="description" content="虛構示範：沐禾芳療室，一人預約制的芳療按摩小工作室。本頁為「小門牌」範例網站，店名與所有資訊皆為虛構。">
+<meta property="og:title" content="沐禾芳療室（虛構示範站）">
+<meta property="og:description" content="療程價目、預約方式、預約須知、營業時間與地圖。範例網站，資訊皆為虛構。">
+<style>
+:root{--sand:#EDE4D6;--linen:#F7F2EA;--paper:#FBF8F2;--clay:#A8664A;--clay-d:#8A4F37;--stone:#C9BBA6;--moss:#6F7A62;--moss-l:#DCE0D2;--ink:#3A322B;--soft:#7A6E62;--line:#DCCFBD;
+--grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .2 0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans TC","Noto Sans CJK TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--sand) var(--grain);color:var(--ink);line-height:1.8;font-size:16px;-webkit-text-size-adjust:100%;padding-bottom:74px}
+a{color:inherit}
+.serif,h1,h2,h3,.brand b,footer .fn{font-family:"Noto Serif TC","Noto Serif CJK TC","Songti TC","PMingLiU",serif}
+.demo-bar{display:flex;align-items:center;justify-content:center;gap:10px;background:#3A322B;color:#EFE6D8;font-size:12.5px;line-height:1.5;padding:8px 14px}
+.lg{display:inline-block;flex:none;overflow:hidden;border-radius:7px;width:28px;height:28px;position:relative;vertical-align:middle}
+.lg img{position:absolute;width:282%;height:282%;max-width:none;left:-90%;top:-75%}
+.demo-bar a{color:#fff;font-weight:700}
+header.nav{position:sticky;top:0;z-index:20;background:rgba(247,242,234,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1040px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;gap:12px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:10px}
+.leaf{width:30px;height:30px;border-radius:0 60% 0 60%;background:linear-gradient(135deg,#8C977D,var(--moss));position:relative;transform:rotate(-8deg)}
+.leaf:after{content:"";position:absolute;left:4px;top:13px;width:22px;height:1.5px;background:rgba(255,255,255,.7);transform:rotate(-45deg)}
+.brand b{display:block;font-weight:600;font-size:19px;letter-spacing:.2em;line-height:1.25}
+.brand small{display:block;font-size:11px;color:var(--soft);letter-spacing:.22em;line-height:1.3;text-transform:uppercase}
+nav ul{display:none;gap:24px;list-style:none;font-size:14px}
+nav a{text-decoration:none;color:var(--soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:13px 24px;font-weight:500;text-decoration:none;font-size:15px;letter-spacing:.14em;border-radius:4px;border:1px solid var(--clay-d)}
+.btn-main{background:var(--clay);color:#fff}
+.btn-ghost{background:transparent;color:var(--clay-d)}
+.btn-sm{padding:6px 14px;font-size:13px}
+.wrap{max-width:1040px;margin:auto;padding:0 20px}
+section{padding:60px 0}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--moss);font-size:12px;letter-spacing:.3em;text-transform:uppercase}
+.eyebrow:before{content:"";width:26px;height:1px;background:var(--moss)}
+h2{font-weight:600;font-size:28px;letter-spacing:.16em;margin:6px 0 10px}
+.lead{color:var(--soft);font-size:15px;max-width:560px}
+/* hero */
+.hero{padding:36px 0 54px}
+.hero-in{display:grid;gap:30px;align-items:center}
+.arch{position:relative;width:100%;max-width:340px;margin:0 auto;aspect-ratio:4/5;border-radius:999px 999px 6px 6px;overflow:hidden;background:radial-gradient(70% 45% at 50% 30%,#F4E3CF 0%,transparent 70%),linear-gradient(180deg,#D8C3A6 0%,#B99877 55%,#8E6E52 100%);box-shadow:0 20px 40px rgba(90,64,44,.18)}
+.arch .sun{position:absolute;left:50%;top:24%;width:38%;aspect-ratio:1;border-radius:50%;transform:translateX(-50%);background:radial-gradient(circle,#FBEBD6 0%,#F1D3B2 60%,rgba(241,211,178,0) 72%)}
+.arch .hill{position:absolute;left:-10%;right:-10%;bottom:-8%;height:46%;border-radius:50% 50% 0 0;background:linear-gradient(180deg,#7E886F,#5E674F)}
+.arch .hill2{position:absolute;left:30%;right:-30%;bottom:-16%;height:44%;border-radius:50% 50% 0 0;background:linear-gradient(180deg,#9AA48A,#737D63);opacity:.9}
+.arch .stones{position:absolute;left:50%;bottom:14%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:3px}
+.arch .stones i{display:block;border-radius:50%;background:linear-gradient(180deg,#EDE4D6,#C9BBA6);box-shadow:0 3px 6px rgba(0,0,0,.18)}
+.arch .stones i:nth-child(1){width:40px;height:20px}.arch .stones i:nth-child(2){width:62px;height:26px}.arch .stones i:nth-child(3){width:86px;height:32px}
+.arch .vt{position:absolute;right:16px;top:28%;writing-mode:vertical-rl;color:#FBF3E6;font-size:14px;letter-spacing:.5em;font-family:"Noto Serif TC","Noto Serif CJK TC",serif;opacity:.9}
+.hero .tagline{display:inline-block;font-size:13px;color:var(--moss);border:1px solid var(--moss);border-radius:999px;padding:3px 14px;letter-spacing:.12em}
+.hero h1{font-weight:600;font-size:33px;line-height:1.5;letter-spacing:.12em;margin:16px 0 12px}
+.hero p{color:var(--soft);font-size:15px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:26px;text-align:center}
+.feat div{background:var(--linen);border:1px solid var(--line);border-radius:6px;padding:10px 4px;font-size:12.5px;color:var(--soft);line-height:1.5}
+.feat b{display:block;font-family:"Noto Serif TC","Noto Serif CJK TC",serif;font-size:17px;color:var(--ink);font-weight:600}
+/* courses */
+.courses{background:var(--linen) var(--grain)}
+.course-list{margin-top:26px;display:grid;gap:14px}
+.course{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:18px 18px 16px;position:relative}
+.course:before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:3px;background:var(--clay);border-radius:0 3px 3px 0}
+.course h3{font-size:19px;font-weight:600;letter-spacing:.1em;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.badge{font-family:"Noto Sans TC","Noto Sans CJK TC",sans-serif;font-size:11px;font-weight:500;letter-spacing:.06em;background:var(--moss);color:#fff;border-radius:3px;padding:1px 7px}
+.badge.c{background:var(--clay)}
+.course .d{font-size:13.5px;color:var(--soft);margin:4px 0 10px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{display:flex;align-items:baseline;gap:8px;border:1px solid var(--line);border-radius:4px;padding:6px 12px;background:var(--linen)}
+.opt span{font-size:13px;color:var(--soft)}
+.opt b{font-weight:700;color:var(--clay-d);font-size:16px;white-space:nowrap}
+.addon{margin-top:18px;display:grid;gap:8px;font-size:14px}
+.addon div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--stone);padding:6px 2px}
+.addon b{color:var(--clay-d);white-space:nowrap}
+.oil{margin-top:20px;background:var(--moss-l);border-radius:6px;padding:14px 16px;font-size:14px;color:#4C5544}
+/* booking */
+.timeline{list-style:none;margin-top:26px;position:relative;padding-left:34px}
+.timeline:before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:1px;background:var(--stone)}
+.timeline li{position:relative;padding-bottom:22px}
+.timeline li:last-child{padding-bottom:0}
+.timeline .n{position:absolute;left:-34px;top:2px;width:23px;height:23px;border-radius:50%;background:var(--paper);border:1px solid var(--clay);color:var(--clay-d);font-size:12px;display:grid;place-items:center;font-weight:700}
+.timeline b{display:block;font-family:"Noto Serif TC","Noto Serif CJK TC",serif;font-size:17px;letter-spacing:.08em}
+.timeline span{font-size:14px;color:var(--soft)}
+.notes{margin-top:28px;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:6px 18px}
+.notes h3{font-size:17px;letter-spacing:.12em;padding:12px 0 4px;font-weight:600}
+.notes li{list-style:none;font-size:14px;color:var(--soft);padding:10px 0;border-top:1px solid #EEE5D8;display:grid;grid-template-columns:22px 1fr;gap:6px}
+.notes li:first-of-type{border-top:0}
+.notes li i{font-style:normal;color:var(--moss)}
+.notes li strong{color:var(--ink);font-weight:500}
+/* hours */
+.visit{background:var(--linen) var(--grain)}
+.hours-grid{display:grid;gap:18px;margin-top:24px}
+.box{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:18px}
+.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl td{padding:10px 0;border-bottom:1px solid #EEE5D8}
+.tbl td:last-child{text-align:right;font-weight:500;letter-spacing:.04em}
+.tbl tr.off td:last-child{color:var(--clay)}
+.info{font-size:14px;color:var(--soft);margin-top:14px;display:grid;gap:6px}
+.info b{color:var(--ink);font-weight:700;margin-right:8px}
+.map{border-radius:6px;overflow:hidden;border:1px solid var(--line);background:var(--moss-l)}
+.map iframe{display:block;width:100%;height:280px;border:0}
+.map p{font-size:12.5px;color:var(--soft);padding:10px 14px;background:var(--paper)}
+/* faq */
+details{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px 18px;margin-top:10px}
+summary{font-weight:500;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--clay);font-size:20px;line-height:1.3}
+details[open] summary:after{content:"−"}
+details p{font-size:14px;color:var(--soft);margin-top:8px}
+footer{background:#3A322B;color:#DCD0BF;padding:38px 0 30px;font-size:13px}
+footer .fn{font-size:21px;letter-spacing:.2em;color:#fff;font-weight:600}
+footer .demo{margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.18);display:flex;gap:10px;align-items:flex-start;line-height:1.7}
+footer a{color:#fff;font-weight:700}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(247,242,234,.95);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+.sticky .btn{flex:1;padding:12px 10px}
+@media(min-width:820px){
+ nav ul{display:flex}
+ .hero{padding:70px 0 80px}
+ .hero-in{grid-template-columns:1.1fr .9fr}
+ .hero h1{font-size:44px}
+ .course-list{grid-template-columns:1fr 1fr}
+ .hours-grid{grid-template-columns:1fr 1.2fr}
+ .map iframe{height:100%;min-height:340px}
+ .sticky{display:none}
+ body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+<div class="demo-bar"><span class="lg"><img src="logo.jpg" alt="小門牌 logo"></span><div>此為小門牌範例網站，店家為虛構，僅供展示 · <span style="white-space:nowrap">IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">@xiaomenpai</a></span></div></div>
+
+<header class="nav"><div class="nav-in">
+ <a class="brand" href="#top"><span class="leaf"></span><span><b>沐禾芳療室</b><small>Mùhé Aroma</small></span></a>
+ <nav><ul><li><a href="#price">療程價目</a></li><li><a href="#booking">預約方式</a></li><li><a href="#visit">營業時間</a></li><li><a href="#faq">常見問題</a></li></ul></nav>
+ <a class="btn btn-main btn-sm" href="#booking">預約</a>
+</div></header>
+
+<section class="hero" id="top"><div class="wrap hero-in">
+ <div>
+  <span class="tagline">一人芳療工作室・全預約制</span>
+  <h1>把肩上的重量，<br>先放下一小時。</h1>
+  <p>精油舒壓、肩頸放鬆、熱石療程。<br>一次只接待一位客人，<br>房間安靜，不推銷、不辦卡。</p>
+  <div class="cta"><a class="btn btn-main" href="#price">看療程價目</a><a class="btn btn-ghost" href="#booking">怎麼預約</a></div>
+  <div class="feat"><div><b>1 對 1</b>獨立包廂</div><div><b>不推銷</b>單次付費</div><div><b>私訊約</b>不用打電話</div></div>
+ </div>
+ <div class="arch" aria-hidden="true"><i class="sun"></i><i class="hill"></i><i class="hill2"></i><div class="stones"><i></i><i></i><i></i></div><span class="vt">慢慢呼吸</span></div>
+</div></section>
+
+<section class="courses" id="price"><div class="wrap">
+ <div class="eyebrow">Treatments</div>
+ <h2>療程價目</h2>
+ <p class="lead">以下皆為含稅價，時間為實際按摩時間，不含前後的諮詢與更衣。第一次來可以先選 60 分鐘試試看。</p>
+ <div class="course-list">
+  <div class="course">
+   <h3>全身精油舒壓<span class="badge c">人氣</span></h3>
+   <p class="d">從背、肩頸到腿部，力道偏輕柔，適合想好好休息的人。</p>
+   <div class="opts"><div class="opt"><span>60 分鐘</span><b>NT$1,500</b></div><div class="opt"><span>90 分鐘</span><b>NT$2,100</b></div><div class="opt"><span>120 分鐘</span><b>NT$2,700</b></div></div>
+  </div>
+  <div class="course">
+   <h3>肩頸背部放鬆<span class="badge">久坐族</span></h3>
+   <p class="d">集中處理肩頸和上背，常盯螢幕、低頭滑手機的人很適合。</p>
+   <div class="opts"><div class="opt"><span>40 分鐘</span><b>NT$900</b></div><div class="opt"><span>60 分鐘</span><b>NT$1,300</b></div></div>
+  </div>
+  <div class="course">
+   <h3>熱石精油療程</h3>
+   <p class="d">用溫熱的石頭搭配精油按摩，天冷或手腳容易冰冷時特別舒服。</p>
+   <div class="opts"><div class="opt"><span>90 分鐘</span><b>NT$2,400</b></div><div class="opt"><span>120 分鐘</span><b>NT$3,000</b></div></div>
+  </div>
+  <div class="course">
+   <h3>頭部舒壓 ＋ 肩頸</h3>
+   <p class="d">頭皮、太陽穴到肩頸，結束後會覺得眼睛比較輕鬆。</p>
+   <div class="opts"><div class="opt"><span>50 分鐘</span><b>NT$1,200</b></div></div>
+  </div>
+ </div>
+ <div class="addon">
+  <div><span>加購：足部舒緩 20 分鐘</span><b>NT$400</b></div>
+  <div><span>加購：熱敷眼罩</span><b>NT$100</b></div>
+  <div><span>延長按摩（每 30 分鐘）</span><b>NT$700</b></div>
+ </div>
+ <div class="oil">🌿 精油可以現場聞過再挑：薰衣草、甜橙、雪松、尤加利。懷孕中或有特殊體質，預約時請先告訴我們。</div>
+</div></section>
+
+<section id="booking"><div class="wrap">
+ <div class="eyebrow">How to book</div>
+ <h2>預約方式</h2>
+ <p class="lead">全預約制，不接現場客。用 LINE 或 IG 私訊就可以約，不用打電話。</p>
+ <ol class="timeline">
+  <li><span class="n">1</span><b>私訊想約的時間</b><span>寫下日期、時段和想做的療程，第一次來也可以說說最近哪裡比較緊。</span></li>
+  <li><span class="n">2</span><b>確認時段、付訂金</b><span>確認時段後轉帳訂金 NT$300，收到後才算預約成功，當天消費可折抵。</span></li>
+  <li><span class="n">3</span><b>提早 10 分鐘到</b><span>先喝杯溫茶、填簡單的身體狀況表，再開始療程。</span></li>
+ </ol>
+ <div class="cta"><a class="btn btn-main" href="#" onclick="alert('這是範例網站，不會真的送出喔！');return false">LINE 預約（範例）</a><a class="btn btn-ghost" href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">IG 私訊</a></div>
+ <div class="notes">
+  <h3>預約須知</h3>
+  <ul>
+   <li><i>◦</i><span><strong>改期請提前 24 小時</strong>，訂金可以保留到下次；當天臨時取消，訂金不退。</span></li>
+   <li><i>◦</i><span><strong>遲到會縮短療程時間</strong>，因為下一位客人已經約好，還請見諒。</span></li>
+   <li><i>◦</i><span><strong>飯後 1 小時內不建議按摩</strong>，空腹太久也容易頭暈。</span></li>
+   <li><i>◦</i><span><strong>付款方式</strong>：現金、轉帳、LINE Pay，暫不收信用卡。</span></li>
+   <li><i>◦</i><span>本店為一般舒壓放鬆，不是醫療行為；身體有不舒服請先就醫。</span></li>
+  </ul>
+ </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+ <div class="eyebrow">Hours &amp; Map</div>
+ <h2>營業時間與地圖</h2>
+ <div class="hours-grid">
+  <div class="box">
+   <table class="tbl">
+    <tr><td>週二 – 週五</td><td>12:00 – 21:00</td></tr>
+    <tr><td>週六 – 週日</td><td>10:00 – 18:00</td></tr>
+    <tr class="off"><td>週一</td><td>公休</td></tr>
+   </table>
+   <div class="info">
+    <div><b>最晚預約</b>平日 19:00、假日 16:00 前開始療程</div>
+    <div><b>地址</b>台北市北投區清禾路 12 號 2 樓（虛構地址）</div>
+    <div><b>交通</b>捷運站步行約 8 分鐘（示意），預約成功後會再私訊怎麼走</div>
+    <div><b>公告</b>臨時休假會在 IG 限時動態公告</div>
+   </div>
+  </div>
+  <div class="map">
+   <iframe title="台北市北投區地圖（示意）" src="https://www.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8C%97%E6%8A%95%E5%8D%80&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <p>📍 地圖僅為區域示意，此店家與地址皆為虛構，並無實際門市。</p>
+  </div>
+ </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+ <div class="eyebrow">FAQ</div>
+ <h2>常見問題</h2>
+ <details><summary>這週還有空的時段嗎？</summary><p>平日晚上和週末比較快滿，建議提早 3–5 天約。最新空檔會放在 IG 限時動態，也可以直接私訊問。</p></details>
+ <details><summary>力道可以調整嗎？</summary><p>可以，按摩中隨時說「輕一點」或「重一點」就好。本店整體偏舒壓放鬆，不是很用力的推拿。</p></details>
+ <details><summary>需要換衣服嗎？要帶什麼？</summary><p>現場有提供拋棄式衣物和毛巾，什麼都不用帶。建議不要化太濃的妝，做完頭部舒壓可能會亂掉。</p></details>
+ <details><summary>男生可以預約嗎？</summary><p>可以，療程內容都一樣，預約時一樣用私訊就好。</p></details>
+</div></section>
+
+<footer><div class="wrap">
+ <div class="fn">沐禾芳療室</div>
+ <div style="margin-top:2px;letter-spacing:.2em">MÙHÉ AROMA・一人預約制芳療按摩</div>
+ <div class="demo"><span class="lg"><img src="logo.jpg" alt=""></span><div>本頁為「小門牌」製作的範例網站，店家、地址、療程與價格皆為虛構，僅供展示。<br>想要一個像這樣的網站？IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">@xiaomenpai</a></div></div>
+</div></footer>
+
+<div class="sticky"><a class="btn btn-ghost" href="#price">療程價目</a><a class="btn btn-main" href="#booking">立即預約</a></div>
+</body>
+</html>
