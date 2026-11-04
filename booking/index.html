@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <title>線上預約｜巷口剪髮室 Alley Cut（虛構示範站・表單自動化 Demo）</title>
-<meta name="description" content="虛構示範：巷口剪髮室線上預約表單。送出後自動寫入 Google 試算表並寄出確認信。小門牌作品集示範。">
+<meta name="description" content="虛構示範：巷口剪髮室線上預約表單。只展示欄位，送出不會寄信，也不會寫入資料。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;display=swap" rel="stylesheet">
@@ -110,7 +110,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
   <div class="head">
     <div class="eyebrow">ONLINE BOOKING</div>
     <h1>線上預約申請</h1>
-    <p class="lead">填寫下方表單送出預約申請（有填 Email 會收到確認信）。設計師回覆確認時段後，預約才算完成。</p>
+    <p class="lead">看預約表單的欄位。送出不會寄信，也不會把資料送出去。</p>
   </div>
 
   <form id="booking-form" novalidate autocomplete="on" aria-describedby="form-help">
@@ -130,7 +130,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
           <span class="err" id="err-phone" role="alert"></span>
         </div>
         <div class="field full">
-          <label for="email">Email（選填，填了會收到確認信）</label>
+          <label for="email">Email（選填）</label>
           <input type="email" id="email" name="email" maxlength="100" autocomplete="email" placeholder="you@example.com">
           <span class="err" id="err-email" role="alert"></span>
         </div>
@@ -206,7 +206,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
 
   <div class="notes">
     <div class="note"><b>改期與取消</b><p>請於 24 小時前告知。當天臨時取消，下次預約需先付 50% 訂金。</p></div>
-    <div class="note"><b>沒收到確認信？</b><p>有填 Email 的話請先檢查垃圾郵件匣；仍找不到，請用 LINE 聯絡我們（示範站未開放）。</p></div>
+    <div class="note"><b>這個示範不會寄信</b><p>送出只會顯示「示範：不會送出」，不會寫入資料，也不會寄確認信。</p></div>
   </div>
 </div>
 </main>
@@ -222,19 +222,12 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
 (function () {
   'use strict';
 
-  // ===== 設定（部署時只需要改這裡） =====
-  // 把 Apps Script 部署後的「網頁應用程式網址」貼在下面（結尾為 /exec）。
-  // 保持原樣＝示範模式：不會真的送出，只會模擬成功畫面。
-  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxAPGdwpaplv1O5e9tLSRbKCx6l47HLwleC962CWpPHB1NnOyQuQ2wuteE35Zzao13S/exec';
-  var TIMEOUT_MS = 20000;
   // 營業時段：每 30 分鐘一格，18:30 為最後進場
   var SLOT_START = 11 * 60, SLOT_LAST = 18 * 60 + 30;
   var MAX_DAYS_AHEAD = 60;
 
   var form = document.getElementById('booking-form');
   var statusEl = document.getElementById('status');
-  var btn = document.getElementById('submit-btn');
-  var loadedAt = Date.now();
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
   function fmtDate(d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
@@ -246,7 +239,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
     var o = document.createElement('option'); o.value = v; o.textContent = v; timeSel.appendChild(o);
   }
 
-  // 日期範圍：明天起 60 天（以使用者裝置日期為準，伺服端會再驗證一次）
+  // 日期範圍：明天起 60 天（以使用者裝置日期為準）
   var dateEl = document.getElementById('date');
   var t0 = new Date(); t0.setHours(0, 0, 0, 0);
   var tMin = new Date(t0); tMin.setDate(tMin.getDate() + 1);
@@ -259,7 +252,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
     document.getElementById('notes-count').textContent = notesEl.value.length;
   });
 
-  // ===== 驗證（與 Code.gs 規則一致；伺服端才是最終把關） =====
+  // ===== 驗證（只在這頁檢查，不會把資料送出） =====
   var PHONE_RE = /^(09\d{8}|0[2-8]\d{7,8})$/;
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -309,62 +302,13 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
     };
   }
 
-  // ===== 送出 =====
-  // 重點：用 application/x-www-form-urlencoded（「簡單請求」），不會觸發 CORS preflight，
-  // Apps Script 網頁應用程式才收得到；不要改成 application/json。
-  function submitBooking(data) {
-    if (ENDPOINT.indexOf('PASTE_YOUR') === 0) {
-      return new Promise(function (resolve) {
-        setTimeout(function () { resolve({ ok: true, demo: true }); }, 600);
-      });
-    }
-    var body = new URLSearchParams();
-    Object.keys(data).forEach(function (k) { body.append(k, String(data[k])); });
-    body.append('elapsed', String(Date.now() - loadedAt)); // 填表花費毫秒數，供伺服端判斷機器人
-    body.append('page', location.href.slice(0, 200));
-    var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
-    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, TIMEOUT_MS) : null;
-    return fetch(ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
-      body: body.toString(),
-      redirect: 'follow',
-      signal: ctrl ? ctrl.signal : undefined
-    }).then(function (res) {
-      if (timer) clearTimeout(timer);
-      return res.json();
-    }, function (e) { if (timer) clearTimeout(timer); throw e; });
-  }
-
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
     var data = collect();
     var errors = validate(data);
     showErrors(errors);
     if (Object.keys(errors).length) { setStatus('請先修正標示紅色的欄位。', 'bad'); return; }
-
-    btn.disabled = true; btn.textContent = '送出中…';
-    setStatus('送出中，請稍候…');
-    submitBooking(data).then(function (res) {
-      if (res && res.ok) {
-        form.reset();
-        document.getElementById('notes-count').textContent = '0';
-        setStatus(res.demo
-          ? '【示範模式】表單檢查通過，但尚未設定 Apps Script 網址，所以沒有真的送出。'
-          : (res.mail === 'skipped'
-            ? '已收到你的預約申請！設計師會用你留的手機聯絡確認，確認後預約才算完成。'
-            : '已收到你的預約申請！確認信已寄到你的信箱（若沒看到請檢查垃圾郵件匣）。設計師回覆確認後，預約才算完成。'), 'ok');
-      } else {
-        var serverErrors = (res && res.errors) || {};
-        if (Object.keys(serverErrors).length) showErrors(serverErrors);
-        setStatus((res && res.message) || '送出失敗，請稍後再試。', 'bad');
-      }
-    }).catch(function () {
-      // 網路錯誤或逾時：無法確認是否已寫入，提醒使用者不要重複送出
-      setStatus('連線異常，無法確認是否送出。請稍候 5 分鐘，若沒收到確認信再重新送出，或改用 LINE 聯絡我們。', 'bad');
-    }).then(function () {
-      btn.disabled = false; btn.textContent = '送出預約申請';
-    });
+    setStatus('示範：不會送出');
   });
 
   // 供自動測試使用
