@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>青坡皮拉提斯 Green Slope Pilates｜器械皮拉提斯小教室（虛構示範站）</title>
+<meta name="description" content="虛構示範：青坡皮拉提斯，最多 4 人的器械皮拉提斯小教室。本頁為「小門牌」範例網站，店名與所有資訊皆為虛構。">
+<meta property="og:title" content="青坡皮拉提斯（虛構示範站）">
+<meta property="og:description" content="課表、課程價目、體驗課、預約方式、營業時間與地圖。範例網站，資訊皆為虛構。">
+<style>
+:root{--bg:#F3F1EA;--card:#FFFFFF;--sand:#E7DCC6;--sand-d:#CDBB98;--sage:#8DA68C;--sage-l:#DCE6D8;--forest:#1E3A2F;--sun:#E59A3A;--ink:#1B2620;--soft:#5E6B63;--line:#D9D6CB}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Montserrat","Avenir Next","Futura","Noto Sans TC","Noto Sans CJK TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:16px;-webkit-text-size-adjust:100%;padding-bottom:74px}
+a{color:inherit}
+.demo-bar{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--forest);color:#E8F0E4;font-size:12.5px;line-height:1.5;padding:8px 14px}
+.lg{display:inline-block;flex:none;overflow:hidden;border-radius:7px;width:28px;height:28px;position:relative;vertical-align:middle}
+.lg img{position:absolute;width:282%;height:282%;max-width:none;left:-90%;top:-75%}
+.demo-bar a{color:#fff;font-weight:700}
+header.nav{position:sticky;top:0;z-index:20;background:rgba(243,241,234,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:2px solid var(--forest)}
+.nav-in{max-width:1080px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;gap:12px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:10px}
+.mark{width:34px;height:34px;border-radius:50%;background:var(--sage);position:relative;overflow:hidden;flex:none}
+.mark:before{content:"";position:absolute;left:-4px;right:-4px;bottom:7px;height:5px;background:var(--forest);transform:rotate(-18deg)}
+.mark:after{content:"";position:absolute;right:6px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--sun)}
+.brand b{display:block;font-weight:900;font-size:18px;letter-spacing:.12em;line-height:1.2}
+.brand small{display:block;font-size:10.5px;font-weight:700;color:var(--soft);letter-spacing:.2em;line-height:1.3;text-transform:uppercase}
+nav ul{display:none;gap:22px;list-style:none;font-size:14px;font-weight:700}
+nav a{text-decoration:none;color:var(--soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:13px 24px;font-weight:800;text-decoration:none;font-size:15px;letter-spacing:.08em;border-radius:999px;border:2px solid var(--forest)}
+.btn-main{background:var(--forest);color:#fff}
+.btn-ghost{background:transparent;color:var(--forest)}
+.btn-sun{background:var(--sun);border-color:var(--sun);color:#1B2620}
+.btn-sm{padding:6px 16px;font-size:13px}
+.wrap{max-width:1080px;margin:auto;padding:0 20px}
+section{padding:58px 0}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--forest)}
+.kicker:before{content:"";width:12px;height:12px;border-radius:50%;background:var(--sun)}
+h2{font-weight:900;font-size:30px;letter-spacing:.06em;line-height:1.35;margin:8px 0 10px}
+.lead{color:var(--soft);font-size:15px;max-width:580px}
+/* hero */
+.hero{padding:30px 0 50px;overflow:hidden}
+.hero-in{display:grid;gap:28px;align-items:center}
+.chip{display:inline-block;background:var(--sage-l);color:var(--forest);font-size:13px;font-weight:800;border-radius:999px;padding:4px 14px;letter-spacing:.08em}
+.hero h1{font-weight:900;font-size:38px;line-height:1.3;letter-spacing:.04em;margin:14px 0 12px}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sand) 62%)}
+.hero p{color:var(--soft);font-size:15px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.art{position:relative;width:100%;max-width:360px;margin:0 auto;aspect-ratio:1/1;border-radius:28px;background:var(--sand);overflow:hidden}
+.art .c1{position:absolute;width:62%;aspect-ratio:1;border-radius:50%;background:var(--sage);left:-8%;top:-10%}
+.art .c2{position:absolute;width:22%;aspect-ratio:1;border-radius:50%;background:var(--sun);right:12%;top:14%}
+.art .rail{position:absolute;left:10%;right:10%;bottom:26%;height:14px;border-radius:8px;background:var(--forest)}
+.art .carriage{position:absolute;left:30%;width:30%;bottom:calc(26% + 14px);height:22px;border-radius:8px 8px 2px 2px;background:#fff;border:3px solid var(--forest)}
+.art .bar{position:absolute;right:12%;bottom:calc(26% + 14px);width:8px;height:70px;border-radius:4px;background:var(--forest)}
+.art .leg1,.art .leg2{position:absolute;bottom:14%;width:10px;height:12%;background:var(--forest);border-radius:3px}
+.art .leg1{left:16%}.art .leg2{right:16%}
+.art .word{position:absolute;left:8%;bottom:4%;font-weight:900;font-size:13px;letter-spacing:.42em;color:var(--forest)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:24px}
+.stats div{background:var(--card);border:2px solid var(--forest);border-radius:16px;padding:10px 6px;text-align:center;font-size:12.5px;color:var(--soft);line-height:1.45;font-weight:600}
+.stats b{display:block;font-size:20px;font-weight:900;color:var(--forest)}
+/* schedule */
+.schedule{background:var(--forest);color:#EEF3EA}
+.schedule .kicker,.schedule h2{color:#fff}
+.schedule .lead{color:#C4D2C3}
+.week{margin-top:24px;display:grid;gap:10px}
+.day{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:12px 14px;display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:start}
+.day h3{font-size:15px;font-weight:900;letter-spacing:.08em;color:#fff;padding-top:3px}
+.slots{display:flex;flex-wrap:wrap;gap:6px}
+.slot{font-size:12.5px;font-weight:700;border-radius:999px;padding:3px 10px;background:#EEF3EA;color:var(--forest);white-space:nowrap}
+.slot.b{background:var(--sun);color:#1B2620}
+.slot.m{background:var(--sage);color:#fff}
+.day.off .slot{background:transparent;border:1px dashed rgba(255,255,255,.4);color:#C4D2C3}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;font-size:12.5px;color:#C4D2C3}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+/* price */
+.classes{display:grid;gap:12px;margin-top:24px}
+.cls{background:var(--card);border-radius:18px;padding:16px 18px;border:2px solid var(--line);display:grid;grid-template-columns:44px 1fr;gap:12px}
+.cls .ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-weight:900;font-size:15px;color:#fff;background:var(--forest)}
+.cls h3{font-size:17px;font-weight:900;letter-spacing:.04em}
+.cls p{font-size:13.5px;color:var(--soft)}
+.trial{margin-top:24px;background:var(--sun);border-radius:22px;padding:20px;position:relative;overflow:hidden}
+.trial:after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.22)}
+.trial small{font-weight:800;letter-spacing:.2em;font-size:12px}
+.trial h3{font-size:21px;font-weight:900;margin:2px 0}
+.trial .p{font-size:34px;font-weight:900;line-height:1.2}
+.trial .p s{font-size:15px;font-weight:600;opacity:.7;margin-left:8px}
+.trial p{font-size:13.5px}
+.ptable{margin-top:18px;background:var(--card);border-radius:20px;border:2px solid var(--forest);overflow:hidden}
+.ptable h3{background:var(--forest);color:#fff;font-size:15px;font-weight:800;letter-spacing:.1em;padding:10px 18px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.row span{font-size:14.5px;font-weight:600}
+.row span small{display:block;font-size:12px;color:var(--soft);font-weight:500}
+.row b{font-size:17px;font-weight:900;color:var(--forest);white-space:nowrap}
+.pnote{font-size:13px;color:var(--soft);margin-top:14px}
+/* booking */
+.booking{background:var(--sand)}
+.steps{display:grid;gap:12px;margin-top:24px}
+.step{background:var(--card);border-radius:18px;padding:16px 18px;display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start}
+.step .n{width:48px;height:48px;border-radius:50%;background:var(--sage);color:#fff;font-weight:900;font-size:22px;display:grid;place-items:center}
+.step b{display:block;font-size:17px;font-weight:900}
+.step span{font-size:14px;color:var(--soft)}
+.msg{margin-top:18px;background:var(--card);border-radius:18px;padding:14px 16px;border:2px dashed var(--sand-d);font-size:14px}
+.msg b{display:block;font-size:12px;letter-spacing:.16em;color:var(--soft);margin-bottom:4px}
+.rules{margin-top:22px;display:grid;gap:8px}
+.rules li{list-style:none;font-size:14px;color:var(--soft);background:rgba(255,255,255,.55);border-radius:12px;padding:10px 14px}
+.rules li strong{color:var(--ink);font-weight:800}
+/* visit */
+.hours-grid{display:grid;gap:16px;margin-top:24px}
+.box{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:18px}
+.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl td{padding:10px 0;border-bottom:1px solid var(--line)}
+.tbl td:last-child{text-align:right;font-weight:800}
+.tbl tr.off td:last-child{color:#B5652A}
+.info{font-size:14px;color:var(--soft);margin-top:14px;display:grid;gap:6px}
+.info b{color:var(--ink);font-weight:800;margin-right:8px}
+.map{border-radius:20px;overflow:hidden;border:2px solid var(--line);background:var(--sage-l)}
+.map iframe{display:block;width:100%;height:280px;border:0}
+.map p{font-size:12.5px;color:var(--soft);padding:10px 14px;background:var(--card)}
+/* faq */
+.faq{background:var(--sage-l)}
+details{background:var(--card);border-radius:16px;padding:14px 18px;margin-top:10px}
+summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";flex:none;width:26px;height:26px;border-radius:50%;background:var(--forest);color:#fff;display:grid;place-items:center;font-size:18px;line-height:1}
+details[open] summary:after{content:"−"}
+details p{font-size:14px;color:var(--soft);margin-top:8px}
+footer{background:var(--ink);color:#C9D3CB;padding:38px 0 30px;font-size:13px}
+footer .fn{font-size:21px;font-weight:900;letter-spacing:.14em;color:#fff}
+footer .demo{margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.18);display:flex;gap:10px;align-items:flex-start;line-height:1.7}
+footer a{color:#fff;font-weight:700}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(243,241,234,.95);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-top:2px solid var(--forest)}
+.sticky .btn{flex:1;padding:12px 10px}
+@media(min-width:820px){
+ nav ul{display:flex}
+ .hero{padding:64px 0 76px}
+ .hero-in{grid-template-columns:1.1fr .9fr}
+ .hero h1{font-size:50px}
+ .week{grid-template-columns:1fr 1fr}
+ .classes,.steps{grid-template-columns:repeat(3,1fr)}
+ .classes{grid-template-columns:1fr 1fr}
+ .hours-grid{grid-template-columns:1fr 1.2fr}
+ .map iframe{height:100%;min-height:340px}
+ .sticky{display:none}
+ body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+<div class="demo-bar"><span class="lg"><img src="logo.jpg" alt="小門牌 logo"></span><div>此為小門牌範例網站，店家為虛構，僅供展示 · <span style="white-space:nowrap">IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">@xiaomenpai</a></span></div></div>
+
+<header class="nav"><div class="nav-in">
+ <a class="brand" href="#top"><span class="mark"></span><span><b>青坡皮拉提斯</b><small>Green Slope Pilates</small></span></a>
+ <nav><ul><li><a href="#schedule">本週課表</a></li><li><a href="#price">課程價目</a></li><li><a href="#booking">預約方式</a></li><li><a href="#visit">交通時間</a></li><li><a href="#faq">常見問題</a></li></ul></nav>
+ <a class="btn btn-main btn-sm" href="#booking">預約</a>
+</div></header>
+
+<section class="hero" id="top"><div class="wrap hero-in">
+ <div>
+  <span class="chip">器械皮拉提斯・小班制教室</span>
+  <h1>一班最多 4 人，<br><em>慢慢練出核心。</em></h1>
+  <p>Reformer 器械小班、一對一私人課、墊上課。<br>完全沒運動過也可以，先上一堂體驗課再決定。</p>
+  <div class="cta"><a class="btn btn-main" href="#schedule">看本週課表</a><a class="btn btn-ghost" href="#price">課程價目</a></div>
+  <div class="stats"><div><b>4 人</b>小班上限</div><div><b>50 分</b>每堂時間</div><div><b>NT$600</b>首次體驗</div></div>
+ </div>
+ <div class="art" aria-hidden="true"><i class="c1"></i><i class="c2"></i><i class="bar"></i><i class="carriage"></i><i class="rail"></i><i class="leg1"></i><i class="leg2"></i><span class="word">REFORMER</span></div>
+</div></section>
+
+<section class="schedule" id="schedule"><div class="wrap">
+ <div class="kicker">Weekly schedule</div>
+ <h2>本週課表</h2>
+ <p class="lead">固定課表每週相同，每堂 50 分鐘。名額剩多少會在 IG 限時動態更新，想上的課直接私訊就可以約。</p>
+ <div class="week">
+  <div class="day"><h3>週一</h3><div class="slots"><span class="slot">10:00 器械</span><span class="slot">19:00 器械</span><span class="slot m">20:10 墊上</span></div></div>
+  <div class="day"><h3>週二</h3><div class="slots"><span class="slot b">12:10 新手器械</span><span class="slot">19:00 器械</span><span class="slot">20:10 器械</span></div></div>
+  <div class="day"><h3>週三</h3><div class="slots"><span class="slot">10:00 器械</span><span class="slot m">19:00 墊上</span><span class="slot">20:10 器械</span></div></div>
+  <div class="day"><h3>週四</h3><div class="slots"><span class="slot b">19:00 新手器械</span><span class="slot">20:10 器械</span></div></div>
+  <div class="day"><h3>週五</h3><div class="slots"><span class="slot">12:10 器械</span><span class="slot">19:00 器械</span></div></div>
+  <div class="day"><h3>週六</h3><div class="slots"><span class="slot b">09:00 新手器械</span><span class="slot">10:10 器械</span><span class="slot m">11:20 墊上</span></div></div>
+  <div class="day off"><h3>週日</h3><div class="slots"><span class="slot">只開私人課（需預約）</span></div></div>
+ </div>
+ <div class="legend"><span><i style="background:#EEF3EA"></i>器械小班</span><span><i style="background:var(--sun)"></i>新手器械（第一次來選這堂）</span><span><i style="background:var(--sage)"></i>墊上課</span></div>
+</div></section>
+
+<section id="price"><div class="wrap">
+ <div class="kicker">Classes &amp; Price</div>
+ <h2>課程與價目</h2>
+ <p class="lead">以下皆為含稅價。課程堂數可以在器械小班、墊上課之間混著用。</p>
+ <div class="classes">
+  <div class="cls"><span class="ic">R</span><div><h3>器械小班（Reformer）</h3><p>最多 4 人，老師會一個一個調整姿勢。適合想練核心、改善久坐腰痠的人。</p></div></div>
+  <div class="cls"><span class="ic" style="background:var(--sage)">M</span><div><h3>墊上課（Mat）</h3><p>最多 6 人，用小球、彈力帶輔助，強度比較溫和。</p></div></div>
+  <div class="cls"><span class="ic" style="background:var(--sun);color:#1B2620">1</span><div><h3>一對一私人課</h3><p>依你的身體狀況排課，時間可以另外約，產後或剛開始運動的人很適合。</p></div></div>
+ </div>
+ <div class="trial" id="plans"><small>FIRST TIME</small><h3>首次體驗課（器械小班）</h3><div class="p">NT$600<s>原價 NT$900</s></div><p>每人限一次，上完不推銷、不用當場買堂數。</p></div>
+ <div class="ptable"><h3>器械小班・墊上課</h3>
+  <div class="row"><span>單堂</span><b>NT$900</b></div>
+  <div class="row"><span>10 堂<small>效期 4 個月，每堂 NT$800</small></span><b>NT$8,000</b></div>
+  <div class="row"><span>20 堂<small>效期 7 個月，每堂 NT$750</small></span><b>NT$15,000</b></div>
+ </div>
+ <div class="ptable"><h3>私人課（50 分鐘）</h3>
+  <div class="row"><span>一對一・單堂</span><b>NT$2,000</b></div>
+  <div class="row"><span>一對一・10 堂<small>效期 5 個月</small></span><b>NT$18,500</b></div>
+  <div class="row"><span>雙人課・單堂<small>兩人合計</small></span><b>NT$2,800</b></div>
+ </div>
+ <p class="pnote">※ 堂數方案可以轉帳或現場付款；效期內有特殊狀況（受傷、出國）可以私訊討論延期。</p>
+</div></section>
+
+<section class="booking" id="booking"><div class="wrap">
+ <div class="kicker">How to book</div>
+ <h2>預約方式</h2>
+ <p class="lead">全預約制，用 LINE 或 IG 私訊就可以約，不用打電話。</p>
+ <div class="steps">
+  <div class="step"><span class="n">1</span><div><b>私訊想上的課</b><span>寫下日期、時段和課程，第一次來請說「想約體驗課」。</span></div></div>
+  <div class="step"><span class="n">2</span><div><b>確認名額、付款</b><span>確認還有位子後轉帳，收到款項才算預約成功。</span></div></div>
+  <div class="step"><span class="n">3</span><div><b>提早 10 分鐘到</b><span>換好衣服、填簡單的身體狀況表，老師會先跟你聊一下。</span></div></div>
+ </div>
+ <div class="msg"><b>私訊可以這樣寫</b>「你好，我想約 11/12（四）19:00 新手器械體驗課，1 位，之前沒上過皮拉提斯。」</div>
+ <div class="cta"><a class="btn btn-main" href="#" onclick="alert('這是範例網站，不會真的送出喔！');return false">LINE 預約（範例）</a><a class="btn btn-ghost" href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">IG 私訊</a></div>
+ <ul class="rules">
+  <li><strong>取消或改期請在上課前 12 小時</strong>私訊，堂數會保留；當天臨時取消會扣 1 堂。</li>
+  <li><strong>遲到超過 10 分鐘</strong>為了安全不能進場，還請見諒。</li>
+  <li><strong>請穿止滑襪</strong>和方便活動的衣服，沒有止滑襪現場可以買（NT$150）。</li>
+  <li><strong>懷孕、開刀後或有舊傷</strong>，預約時請先告訴我們，會建議你先上私人課。</li>
+  <li>本教室為一般運動課程，不是醫療或復健；身體有不舒服請先就醫。</li>
+ </ul>
+</div></section>
+
+<section id="visit"><div class="wrap">
+ <div class="kicker">Hours &amp; Map</div>
+ <h2>營業時間與地圖</h2>
+ <div class="hours-grid">
+  <div class="box">
+   <table class="tbl">
+    <tr><td>週一 – 週五</td><td>09:30 – 21:30</td></tr>
+    <tr><td>週六</td><td>08:30 – 13:00</td></tr>
+    <tr><td>週日</td><td>僅私人課（需預約）</td></tr>
+   </table>
+   <div class="info">
+    <div><b>地址</b>台北市士林區芝岩路 8 號 1 樓（虛構地址）</div>
+    <div><b>交通</b>捷運站步行約 6 分鐘（示意），預約成功後會再私訊怎麼走</div>
+    <div><b>設備</b>置物櫃、更衣間、飲水機，沒有淋浴間</div>
+    <div><b>公告</b>國定假日課表會在 IG 限時動態公告</div>
+   </div>
+  </div>
+  <div class="map">
+   <iframe title="台北市士林區地圖（示意）" src="https://www.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A3%AB%E6%9E%97%E5%8D%80&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <p>📍 地圖僅為區域示意，此店家與地址皆為虛構，並無實際教室。</p>
+  </div>
+ </div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap">
+ <div class="kicker">FAQ</div>
+ <h2>常見問題</h2>
+ <details><summary>完全沒運動習慣，跟得上嗎？</summary><p>可以。第一次建議選「新手器械」或體驗課，老師會從呼吸和基本動作開始，不會一來就很操。</p></details>
+ <details><summary>皮拉提斯跟瑜珈差在哪？</summary><p>兩個都很好！皮拉提斯比較著重核心和身體控制，器械課會用彈簧阻力輔助，動作會比較好找到感覺。</p></details>
+ <details><summary>要穿什麼？要帶什麼？</summary><p>穿貼身、好活動的運動服和止滑襪就好。現場有飲水機，可以帶自己的水壺。</p></details>
+ <details><summary>男生可以上課嗎？</summary><p>可以，課程內容都一樣，預約時一樣用私訊就好。</p></details>
+ <details><summary>堂數可以給朋友用嗎？</summary><p>10 堂、20 堂方案可以和家人朋友共用，預約時說一下是誰要來上課就可以。</p></details>
+</div></section>
+
+<footer><div class="wrap">
+ <div class="fn">青坡皮拉提斯</div>
+ <div style="margin-top:2px;letter-spacing:.2em;font-weight:700">GREEN SLOPE PILATES・器械皮拉提斯小教室</div>
+ <div class="demo"><span class="lg"><img src="logo.jpg" alt=""></span><div>本頁為「小門牌」製作的範例網站，店家、地址、課表與價格皆為虛構，僅供展示。<br>想要一個像這樣的網站？IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">@xiaomenpai</a></div></div>
+</div></footer>
+
+<div class="sticky"><a class="btn btn-ghost" href="#schedule">看課表</a><a class="btn btn-main" href="#booking">立即預約</a></div>
+</body>
+</html>
