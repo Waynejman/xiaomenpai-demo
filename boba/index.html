@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>霧島手搖 Mist Island Tea｜北投石牌手搖飲（虛構示範站）</title>
+<meta name="description" content="虛構示範：霧島手搖，北投石牌的獨立手搖飲小店。本頁為「小門牌」範例網站，店名與所有資訊皆為虛構。">
+<meta property="og:title" content="霧島手搖（虛構示範站）">
+<meta property="og:description" content="飲品價目、加料選項、線上預訂、營業時間與地圖。範例網站，資訊皆為虛構。">
+<style>
+:root{--cream:#F4F1EA;--paper:#FBFAF6;--mist:#A8D0C8;--mist-l:#D8EBE6;--teal:#2F6F6A;--teal-d:#1E4A47;--char:#2A2E2D;--soft:#5F6B68;--line:#D8D4CA;--pearl:#E8F2EF;--amber:#D4A05A}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans TC","Noto Sans CJK TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;background:var(--cream);color:var(--char);line-height:1.75;font-size:16px;-webkit-text-size-adjust:100%;padding-bottom:74px}
+a{color:inherit}
+.demo-bar{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--char);color:#E8F2EF;font-size:12.5px;line-height:1.5;padding:8px 14px}
+.lg{display:inline-block;flex:none;overflow:hidden;border-radius:7px;width:28px;height:28px;position:relative;vertical-align:middle}
+.lg img{position:absolute;width:282%;height:282%;max-width:none;left:-90%;top:-75%}
+.demo-bar a{color:#fff;font-weight:700}
+header.nav{position:sticky;top:0;z-index:20;background:rgba(244,241,234,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:2px solid var(--teal)}
+.nav-in{max-width:1080px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;gap:12px}
+.brand{text-decoration:none;display:flex;align-items:center;gap:10px}
+.cup{width:32px;height:32px;border-radius:8px 8px 10px 10px;background:linear-gradient(180deg,var(--mist) 0%,var(--teal) 100%);position:relative;flex:none;overflow:hidden}
+.cup:before{content:"";position:absolute;left:4px;right:4px;top:3px;height:6px;border-radius:4px;background:rgba(255,255,255,.45)}
+.cup:after{content:"";position:absolute;left:50%;bottom:5px;width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.35);transform:translateX(-50%);box-shadow:-7px -4px 0 -2px rgba(255,255,255,.28),7px -3px 0 -3px rgba(255,255,255,.25)}
+.brand b{display:block;font-weight:900;font-size:18px;letter-spacing:.14em;line-height:1.2}
+.brand small{display:block;font-size:10.5px;font-weight:700;color:var(--soft);letter-spacing:.18em;line-height:1.3;text-transform:uppercase}
+nav ul{display:none;gap:22px;list-style:none;font-size:14px;font-weight:700}
+nav a{text-decoration:none;color:var(--soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:13px 24px;font-weight:800;text-decoration:none;font-size:15px;letter-spacing:.08em;border-radius:999px;border:2px solid var(--teal-d)}
+.btn-main{background:var(--teal);color:#fff;border-color:var(--teal)}
+.btn-ghost{background:transparent;color:var(--teal-d)}
+.btn-sm{padding:6px 16px;font-size:13px}
+.wrap{max-width:1080px;margin:auto;padding:0 20px}
+section{padding:58px 0}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--teal)}
+.kicker:before{content:"";width:12px;height:12px;border-radius:50%;background:var(--mist)}
+h2{font-weight:900;font-size:30px;letter-spacing:.06em;line-height:1.35;margin:8px 0 10px}
+.lead{color:var(--soft);font-size:15px;max-width:580px}
+/* hero */
+.hero{padding:30px 0 50px;overflow:hidden;background:linear-gradient(180deg,var(--pearl) 0%,var(--cream) 70%)}
+.hero-in{display:grid;gap:28px;align-items:center}
+.chip{display:inline-block;background:var(--mist-l);color:var(--teal-d);font-size:13px;font-weight:800;border-radius:999px;padding:4px 14px;letter-spacing:.08em}
+.hero h1{font-weight:900;font-size:36px;line-height:1.35;letter-spacing:.04em;margin:14px 0 12px}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--mist) 62%)}
+.hero p{color:var(--soft);font-size:15px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.art{position:relative;width:100%;max-width:340px;margin:0 auto;aspect-ratio:1/1;border-radius:28px;background:linear-gradient(160deg,var(--mist-l),#BFD9D4 45%,var(--teal) 100%);overflow:hidden}
+.art .fog{position:absolute;left:-10%;right:-10%;top:8%;height:42%;border-radius:50%;background:radial-gradient(ellipse,rgba(255,255,255,.55),transparent 70%);filter:blur(2px)}
+.art .fog2{position:absolute;left:10%;right:0;top:28%;height:30%;border-radius:50%;background:radial-gradient(ellipse,rgba(255,255,255,.35),transparent 70%)}
+.art .cupb{position:absolute;left:50%;bottom:14%;transform:translateX(-50%);width:42%;height:48%;border-radius:10px 10px 18px 18px;background:linear-gradient(180deg,#F7F4EC 0%,#E8E2D4 100%);border:3px solid var(--char);box-shadow:0 10px 24px rgba(30,74,71,.25)}
+.art .lid{position:absolute;left:50%;bottom:calc(14% + 48%);transform:translateX(-50%);width:46%;height:8%;border-radius:8px 8px 2px 2px;background:var(--char)}
+.art .straw{position:absolute;left:58%;bottom:calc(14% + 48%);width:7px;height:28%;border-radius:4px;background:var(--mist);transform:rotate(8deg);border:2px solid var(--teal-d)}
+.art .b1,.art .b2,.art .b3{position:absolute;border-radius:50%;background:var(--amber)}
+.art .b1{width:14px;height:14px;left:42%;bottom:22%}
+.art .b2{width:11px;height:11px;left:52%;bottom:18%;opacity:.85}
+.art .b3{width:9px;height:9px;left:48%;bottom:28%;opacity:.7}
+.art .word{position:absolute;left:8%;bottom:4%;font-weight:900;font-size:12px;letter-spacing:.36em;color:rgba(30,74,71,.85)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:24px}
+.stats div{background:var(--paper);border:2px solid var(--teal);border-radius:16px;padding:10px 6px;text-align:center;font-size:12.5px;color:var(--soft);line-height:1.45;font-weight:600}
+.stats b{display:block;font-size:18px;font-weight:900;color:var(--teal-d)}
+/* menu */
+.menu{background:var(--paper)}
+.cats{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.cat{font-size:12.5px;font-weight:800;border-radius:999px;padding:5px 12px;background:var(--mist-l);color:var(--teal-d);letter-spacing:.06em}
+.drinks{display:grid;gap:12px;margin-top:22px}
+.drink{background:var(--cream);border-radius:18px;padding:16px 18px;border:2px solid var(--line);display:grid;gap:8px}
+.drink .hd{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.drink h3{font-size:17px;font-weight:900;letter-spacing:.04em}
+.drink .tag{font-size:11px;font-weight:800;background:var(--teal);color:#fff;border-radius:999px;padding:2px 8px;white-space:nowrap}
+.drink .tag.soft{background:var(--mist);color:var(--teal-d)}
+.drink p{font-size:13.5px;color:var(--soft)}
+.sizes{display:flex;flex-wrap:wrap;gap:8px}
+.sz{display:flex;align-items:baseline;gap:8px;border:1px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--paper);font-size:13px;color:var(--soft);font-weight:600}
+.sz b{color:var(--teal-d);font-weight:900;font-size:15px;white-space:nowrap}
+.ptable{margin-top:22px;background:var(--cream);border-radius:20px;border:2px solid var(--teal);overflow:hidden}
+.ptable h3{background:var(--teal);color:#fff;font-size:15px;font-weight:800;letter-spacing:.1em;padding:10px 18px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.row span{font-size:14.5px;font-weight:600}
+.row span small{display:block;font-size:12px;color:var(--soft);font-weight:500}
+.row b{font-size:17px;font-weight:900;color:var(--teal-d);white-space:nowrap}
+.pnote{font-size:13px;color:var(--soft);margin-top:14px}
+/* toppings / order */
+.toppings{background:var(--mist-l)}
+.top-grid{display:grid;gap:10px;margin-top:22px}
+.top{background:var(--paper);border-radius:16px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;border:1px solid rgba(47,111,106,.15)}
+.top span{font-size:14.5px;font-weight:700}
+.top small{display:block;font-size:12px;color:var(--soft);font-weight:500;margin-top:2px}
+.top b{font-size:16px;font-weight:900;color:var(--teal-d);white-space:nowrap}
+.sweet{margin-top:20px;background:var(--paper);border-radius:18px;padding:16px 18px;border:2px dashed var(--mist)}
+.sweet b{display:block;font-size:15px;font-weight:900;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips i{font-style:normal;font-size:12.5px;font-weight:700;border-radius:999px;padding:4px 10px;background:var(--cream);border:1px solid var(--line);color:var(--soft)}
+/* booking */
+.booking{background:var(--cream)}
+.steps{display:grid;gap:12px;margin-top:24px}
+.step{background:var(--paper);border-radius:18px;padding:16px 18px;display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start;border:2px solid var(--line)}
+.step .n{width:48px;height:48px;border-radius:50%;background:var(--teal);color:#fff;font-weight:900;font-size:22px;display:grid;place-items:center}
+.step b{display:block;font-size:17px;font-weight:900}
+.step span{font-size:14px;color:var(--soft)}
+.msg{margin-top:18px;background:var(--paper);border-radius:18px;padding:14px 16px;border:2px dashed var(--mist);font-size:14px}
+.msg b{display:block;font-size:12px;letter-spacing:.16em;color:var(--soft);margin-bottom:4px}
+.rules{margin-top:22px;display:grid;gap:8px}
+.rules li{list-style:none;font-size:14px;color:var(--soft);background:var(--paper);border-radius:12px;padding:10px 14px;border:1px solid var(--line)}
+.rules li strong{color:var(--char);font-weight:800}
+/* visit */
+.visit{background:var(--pearl)}
+.hours-grid{display:grid;gap:16px;margin-top:24px}
+.box{background:var(--paper);border:2px solid var(--line);border-radius:20px;padding:18px}
+.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl td{padding:10px 0;border-bottom:1px solid var(--line)}
+.tbl td:last-child{text-align:right;font-weight:800}
+.tbl tr.off td:last-child{color:#B5652A}
+.info{font-size:14px;color:var(--soft);margin-top:14px;display:grid;gap:6px}
+.info b{color:var(--char);font-weight:800;margin-right:8px}
+.map{border-radius:20px;overflow:hidden;border:2px solid var(--line);background:var(--mist-l)}
+.map iframe{display:block;width:100%;height:280px;border:0}
+.map p{font-size:12.5px;color:var(--soft);padding:10px 14px;background:var(--paper)}
+/* faq */
+.faq{background:var(--cream)}
+details{background:var(--paper);border-radius:16px;padding:14px 18px;margin-top:10px;border:1px solid var(--line)}
+summary{font-weight:800;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";flex:none;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:18px;line-height:1}
+details[open] summary:after{content:"−"}
+details p{font-size:14px;color:var(--soft);margin-top:8px}
+footer{background:var(--char);color:#C5D4D1;padding:38px 0 30px;font-size:13px}
+footer .fn{font-size:21px;font-weight:900;letter-spacing:.14em;color:#fff}
+footer .demo{margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.18);display:flex;gap:10px;align-items:flex-start;line-height:1.7}
+footer a{color:#fff;font-weight:700}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(244,241,234,.95);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-top:2px solid var(--teal)}
+.sticky .btn{flex:1;padding:12px 10px}
+@media(min-width:820px){
+ nav ul{display:flex}
+ .hero{padding:64px 0 76px}
+ .hero-in{grid-template-columns:1.1fr .9fr}
+ .hero h1{font-size:48px}
+ .drinks{grid-template-columns:1fr 1fr}
+ .top-grid{grid-template-columns:1fr 1fr}
+ .steps{grid-template-columns:repeat(3,1fr)}
+ .hours-grid{grid-template-columns:1fr 1.2fr}
+ .map iframe{height:100%;min-height:340px}
+ .sticky{display:none}
+ body{padding-bottom:0}
+}
+</style>
+</head>
+<body>
+<div class="demo-bar"><span class="lg"><img src="logo.jpg" alt="小門牌 logo"></span><div>此為小門牌範例網站，店家為虛構，僅供展示 · <span style="white-space:nowrap">IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">@xiaomenpai</a></span></div></div>
+
+<header class="nav"><div class="nav-in">
+ <a class="brand" href="#top"><span class="cup"></span><span><b>霧島手搖</b><small>Mist Island Tea</small></span></a>
+ <nav><ul><li><a href="#menu">今日菜單</a></li><li><a href="#toppings">加料 sweeten</a></li><li><a href="#order">預訂取餐</a></li><li><a href="#visit">營業時間</a></li><li><a href="#faq">常見問題</a></li></ul></nav>
+ <a class="btn btn-main btn-sm" href="#order">預訂</a>
+</div></header>
+
+<section class="hero" id="top"><div class="wrap hero-in">
+ <div>
+  <span class="chip">北投・石牌｜獨立手搖小店</span>
+  <h1>一杯霧氣裡的<br><em>清爽手搖。</em></h1>
+  <p>茶底現泡、珍珠當天煮。<br>想先預訂再過來拿，私訊就能約取餐時間。</p>
+  <div class="cta"><a class="btn btn-main" href="#menu">看今日菜單</a><a class="btn btn-ghost" href="#order">怎麼預訂</a></div>
+  <div class="stats"><div><b>現泡茶</b>每日新鮮</div><div><b>可預訂</b>IG／LINE</div><div><b>石牌</b>捷運步行約 5 分</div></div>
+ </div>
+ <div class="art" aria-hidden="true"><i class="fog"></i><i class="fog2"></i><i class="straw"></i><i class="lid"></i><i class="cupb"></i><i class="b1"></i><i class="b2"></i><i class="b3"></i><span class="word">MIST TEA</span></div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+ <div class="kicker">Menu</div>
+ <h2>今日菜單</h2>
+ <p class="lead">以下皆為含稅價。M／L 可選甜度、冰量；茶底以當日現泡為主，售完會在 IG 限時動態更新。</p>
+ <div class="cats"><span class="cat">鮮奶茶</span><span class="cat">純茶</span><span class="cat">果茶</span><span class="cat">季節限定</span></div>
+ <div class="drinks">
+  <div class="drink">
+   <div class="hd"><h3>霧島鮮奶茶</h3><span class="tag">招牌</span></div>
+   <p>阿薩姆紅茶＋鮮奶，口感偏順、不搶茶香。第一次來很多人都點這個。</p>
+   <div class="sizes"><span class="sz">M <b>NT$65</b></span><span class="sz">L <b>NT$75</b></span></div>
+  </div>
+  <div class="drink">
+   <div class="hd"><h3>焙香烏龍鮮奶</h3><span class="tag soft">人氣</span></div>
+   <p>焙火烏龍帶一點焦糖香，加鮮奶後不會太膩，適合下午慢慢喝。</p>
+   <div class="sizes"><span class="sz">M <b>NT$70</b></span><span class="sz">L <b>NT$80</b></span></div>
+  </div>
+  <div class="drink">
+   <div class="hd"><h3>清爽翡翠綠</h3></div>
+   <p>高山綠茶現泡，微酸微甜的果香。夏天可以選少冰，冬天可改熱飲（+NT$5）。</p>
+   <div class="sizes"><span class="sz">M <b>NT$45</b></span><span class="sz">L <b>NT$55</b></span></div>
+  </div>
+  <div class="drink">
+   <div class="hd"><h3>石牌檸檬青</h3></div>
+   <p>青茶＋當日現切檸檬片，酸度適中。想更清爽可以跟我們說「去糖」。</p>
+   <div class="sizes"><span class="sz">M <b>NT$55</b></span><span class="sz">L <b>NT$65</b></span></div>
+  </div>
+  <div class="drink">
+   <div class="hd"><h3>柚香白玉</h3><span class="tag soft">季節</span></div>
+   <p>白柚汁＋四季春，尾韻帶一點花香。柚子季節才有，售完就下次見。</p>
+   <div class="sizes"><span class="sz">M <b>NT$70</b></span><span class="sz">L <b>NT$80</b></span></div>
+  </div>
+  <div class="drink">
+   <div class="hd"><h3>黑糖珍珠鮮奶</h3></div>
+   <p>黑糖慢熬、珍珠當天煮，甜度偏明顯，建議半糖會比較平衡。</p>
+   <div class="sizes"><span class="sz">M <b>NT$75</b></span><span class="sz">L <b>NT$85</b></span></div>
+  </div>
+ </div>
+ <p class="pnote">※ 本頁為虛構範例價目，僅供小門牌展示；實際店家請以現場為準。</p>
+</div></section>
+
+<section class="toppings" id="toppings"><div class="wrap">
+ <div class="kicker">Toppings</div>
+ <h2>加料與甜度</h2>
+ <p class="lead">珍珠、椰果等配料每日定量煮，想加料建議早一點預訂。</p>
+ <div class="top-grid">
+  <div class="top"><span>黑糖珍珠<small>當天現煮，口感偏 Q</small></span><b>+NT$10</b></div>
+  <div class="top"><span>椰果<small>清爽脆口</small></span><b>+NT$10</b></div>
+  <div class="top"><span>仙草凍<small>微微草香</small></span><b>+NT$15</b></div>
+  <div class="top"><span>布丁<small>蛋香偏濃</small></span><b>+NT$15</b></div>
+  <div class="top"><span>燕麥奶替換<small>鮮奶茶系列可換</small></span><b>+NT$10</b></div>
+  <div class="top"><span>少冰／去冰／熱飲<small>熱飲多數品項 +NT$5</small></span><b>—</b></div>
+ </div>
+ <div class="sweet">
+  <b>甜度可以這樣選</b>
+  <div class="chips"><i>正常糖</i><i>少糖</i><i>半糖</i><i>微糖</i><i>無糖</i></div>
+ </div>
+</div></section>
+
+<section class="booking" id="order"><div class="wrap">
+ <div class="kicker">Pre-order</div>
+ <h2>預訂取餐</h2>
+ <p class="lead">尖峰時段現場可能要等，想準時拿到可以先私訊預訂，到店直接取。</p>
+ <div class="steps">
+  <div class="step"><span class="n">1</span><div><b>私訊品項與時間</b><span>寫下想喝的飲料、甜度冰量、杯數，和大概幾點來拿。</span></div></div>
+  <div class="step"><span class="n">2</span><div><b>我們回覆確認</b><span>確認還做得出來、取餐時間 OK 後，就幫你先排單。</span></div></div>
+  <div class="step"><span class="n">3</span><div><b>到店取餐付款</b><span>報名字或私訊截圖即可，現場付現金或轉帳。</span></div></div>
+ </div>
+ <div class="msg"><b>私訊可以這樣寫</b>「你好，想預訂今天下午 3:30 取：霧島鮮奶茶 L 半糖少冰 1 杯、石牌檸檬青 M 微糖去冰 1 杯，名字小瑜。」</div>
+ <div class="cta"><a class="btn btn-main" href="#" onclick="alert('這是範例網站，不會真的送出喔！');return false">LINE 預訂（範例）</a><a class="btn btn-ghost" href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">IG 私訊</a></div>
+ <ul class="rules">
+  <li><strong>建議提前 30–60 分鐘</strong>預訂；尖峰（12:00–13:30、17:30–19:00）請再提早一點。</li>
+  <li><strong>逾時 20 分鐘未取</strong>，為了品質我們可能會先撤單，還請再私訊重約。</li>
+  <li><strong>暫不外送</strong>，僅提供店內飲用與外帶取餐（虛構設定）。</li>
+  <li><strong>付款方式</strong>：現金、轉帳、LINE Pay，暫不收信用卡。</li>
+  <li>本頁為虛構範例流程，僅供展示，不會真的接到訂單。</li>
+ </ul>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+ <div class="kicker">Hours &amp; Map</div>
+ <h2>營業時間與地圖</h2>
+ <div class="hours-grid">
+  <div class="box">
+   <table class="tbl">
+    <tr><td>週一 – 週五</td><td>11:00 – 21:00</td></tr>
+    <tr><td>週六 – 週日</td><td>12:00 – 21:30</td></tr>
+    <tr class="off"><td>每月第二週三</td><td>公休（設備保養）</td></tr>
+   </table>
+   <div class="info">
+    <div><b>地址</b>台北市北投區石霧路 28 號 1 樓（虛構地址）</div>
+    <div><b>交通</b>捷運石牌站步行約 5 分鐘（示意），門口有淡綠色小燈箱</div>
+    <div><b>座位</b>約 8 席，偏外帶；尖峰請先預訂再過來</div>
+    <div><b>公告</b>臨時公休或售完會放在 IG 限時動態</div>
+   </div>
+  </div>
+  <div class="map">
+   <iframe title="台北市北投區石牌地圖（示意）" src="https://www.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8C%97%E6%8A%95%E5%8D%80%E7%9F%B3%E7%89%8C&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <p>📍 地圖僅為區域示意，此店家與地址皆為虛構，並無實際門市。</p>
+  </div>
+ </div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap">
+ <div class="kicker">FAQ</div>
+ <h2>常見問題</h2>
+ <details><summary>可以先預訂再取餐嗎？</summary><p>可以。用 LINE 或 IG 私訊告訴我們品項、甜度冰量和取餐時間，確認後到店直接拿就好。</p></details>
+ <details><summary>有無糖、去冰或熱飲嗎？</summary><p>有。甜度從正常到無糖都能選；冰量可少冰／去冰；多數品項可改熱飲（+NT$5）。</p></details>
+ <details><summary>珍珠會不會太硬或太軟？</summary><p>我們每天分批煮，尖峰也會補煮。如果你喜歡偏 Q 或偏軟，預訂時跟我們說一聲。</p></details>
+ <details><summary>有座位嗎？可以久坐嗎？</summary><p>店內大約 8 席，偏外帶取向。歡迎坐一下，尖峰時段若有人排隊，還請見諒我們可能會請你先讓位。</p></details>
+ <details><summary>這是真的店嗎？</summary><p>不是喔——本頁是「小門牌」做的虛構範例網站，用來展示獨立店家官網可以長什麼樣子。</p></details>
+</div></section>
+
+<footer><div class="wrap">
+ <div class="fn">霧島手搖</div>
+ <div style="margin-top:2px;letter-spacing:.2em;font-weight:700">MIST ISLAND TEA・北投石牌手搖飲</div>
+ <div class="demo"><span class="lg"><img src="logo.jpg" alt=""></span><div>本頁為「小門牌」製作的範例網站，店家、地址、菜單與價格皆為虛構，僅供展示。<br>想要一個像這樣的網站？IG <a href="https://www.instagram.com/xiaomenpai/" target="_blank" rel="noopener">@xiaomenpai</a></div></div>
+</div></footer>
+
+<div class="sticky"><a class="btn btn-ghost" href="#menu">看菜單</a><a class="btn btn-main" href="#order">立即預訂</a></div>
+</body>
+</html>
