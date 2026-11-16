@@ -100,8 +100,8 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
 
 <header class="nav">
   <div class="nav-in">
-    <a class="brand" href="../hair/">巷口剪髮室<small>ALLEY CUT</small></a>
-    <a class="back" href="../hair/">← 回到巷口剪髮室</a>
+    <a class="brand" href="../hair/index.html">巷口剪髮室<small>ALLEY CUT</small></a>
+    <a class="back" href="../hair/index.html">← 回到巷口剪髮室</a>
   </div>
 </header>
 
@@ -113,6 +113,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
     <p class="lead">看預約表單的欄位。送出不會寄信，也不會把資料送出去。</p>
   </div>
 
+  <noscript><p class="lead">啟用 JavaScript 可操作表單示範。</p><style>#booking-form{display:none}</style></noscript>
   <form id="booking-form" novalidate autocomplete="on" aria-describedby="form-help">
     <p id="form-help" class="hint" style="margin-bottom:22px">標示 <span style="color:var(--gold)">*</span> 為必填。營業時間：週二至週日 11:00–20:00，週一公休，最後一位客人 18:30 進場。</p>
 
@@ -198,7 +199,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
     </div>
 
     <div class="actions">
-      <button class="btn btn-gold" type="submit" id="submit-btn">送出預約申請</button>
+      <button class="btn btn-gold" type="submit" id="submit-btn" disabled>送出預約申請</button>
       <button class="btn btn-ghost" type="reset" id="reset-btn">清除重填</button>
     </div>
     <div id="status" role="status" aria-live="polite"></div>
@@ -214,7 +215,7 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
 <footer>
   <div class="wrap foot">
     <div>巷口剪髮室（虛構示範）<br><span style="opacity:.7">© 2026 示範內容，無任何真實營業資訊</span></div>
-    <div class="credit">網站製作：<b>小門牌</b> @xiaomenpai</div>
+    <div class="credit">網站製作：<a href="../portfolio/index.html#contact">回小門牌詢價</a></div>
   </div>
 </footer>
 
@@ -310,6 +311,8 @@ footer{padding:30px 0 60px;font-size:13.5px;color:var(--soft);border-top:1px sol
     if (Object.keys(errors).length) { setStatus('請先修正標示紅色的欄位。', 'bad'); return; }
     setStatus('示範：不會送出');
   });
+
+  document.getElementById('submit-btn').disabled = false;
 
   // 供自動測試使用
   window.__booking = { validate: validate, collect: collect };
